@@ -138,42 +138,19 @@ select{
     
     }
 }
-@media (min-width:768px){
+@media (min-width:1400px){
     .header .left-div > div{
-        padding: 0 15px;
+        padding: 0 20px;
         cursor: pointer;
-    }
+    }   
     .header .search-box{
-        padding:15px;
+        padding:10px;
         width: 450px;
         border-radius: 19px;
         background: #D0CFFF;
     }
-    .header .logo  img{
-        width: 100px;
-        height: 40px;
-    
-    
-    }
 }
-@media (min-width:992px){
-    .header .left-div > div{
-        padding: 0 15px;
-        cursor: pointer;
-    }
-    .header .search-box{
-        padding:10px;
-        width: 300px;
-        border-radius: 19px;
-        background: #D0CFFF;
-    } .header .logo  img{
-        width: 120px;
-        height: 50px;
-    
-    
-    }
-}
-@media (min-width:1200px){
+@media (min-width:1200px) and(max-width:1399px){
     .header .left-div > div{
         padding: 0 15px;
         cursor: pointer;
@@ -191,18 +168,26 @@ select{
     
     
 }
-@media (min-width:1400px){
+
+
+@media (min-width:992px) and (max-width:1199px){
     .header .left-div > div{
-        padding: 0 20px;
+        padding: 0 15px;
         cursor: pointer;
-    }   
+    }
     .header .search-box{
         padding:10px;
-        width: 450px;
+        width: 300px;
         border-radius: 19px;
         background: #D0CFFF;
+    } .header .logo  img{
+        width: 120px;
+        height: 50px;
+    
+    
     }
 }
+
 .header .search-box button{
     outline: none;
     border: none;
@@ -264,11 +249,11 @@ select{
 aside.menu{
 
     position: fixed;
-    top:90px;
+    top:100px;
     right: 0;
     padding:50px 40px;
     width:300px;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 100px);
     background: linear-gradient(180deg, #9F69B8 0%, rgba(77, 139, 204, 0.99) 91.15%);
     transition: all .4s ease-in-out;
     overflow: hidden;
@@ -377,25 +362,12 @@ aside.menu  .sign-out a:hover .icon svg path{
 
     }
 }
-@media (min-width:992px){
-   
-    .header .search-box{
-        padding:10px;
-        width: 300px;
-        border-radius: 19px;
-        background: #D0CFFF;
-    } .header .logo  img{
-        width: 120px;
-        height: 50px;
-    
-    
-    }
-}
+
 @media(max-width:991px){
     aside.menu{
        right: -300px;
-        top: 85px;
-        height: calc(100vh - 85px);
+        top: 100px;
+        height: calc(100vh - 100px);
 
 
    }
