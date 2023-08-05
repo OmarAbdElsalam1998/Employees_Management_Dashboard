@@ -94,3 +94,18 @@
     margin-bottom: 10px;
    }
   
+   .input.form-check-input{
+    margin: auto !important;
+    display: block !important;
+   }
+   .table .paginate_button.current{
+    border-radius: 4px ; 
+    background: #4D7CFE !important;
+    color:#FFF !important;
+    border: none !important;
+   }
+   .table .paginate_button:hover{
+    border-radius: 4px;
+    background: #4D7CFE !important;
+    border: none !important;
+   }

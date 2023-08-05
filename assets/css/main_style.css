@@ -37,52 +37,7 @@ select{
     background: var(--light-3, #FFF);
 
 }
-input[type=checkbox] + label {
-    display: block;
-    margin: 0.2em;
-    cursor: pointer;
-    padding: 0.2em;
-  }
-  
-  input[type=checkbox] {
-    display: none;
-  }
-  
-  input[type=checkbox] + label:before {
-    content: "\2714";
-    border: 0.1em solid #000;
-    border-radius: 0.2em;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    padding-left: 0.2em;
-    padding-bottom: 0.3em;
-    margin-right: 0.2em;
-    vertical-align: bottom;
-    color: transparent;
-    transition: .2s;
-  }
-  
-  input[type=checkbox] + label:active:before {
-    transform: scale(0);
-  }
-  
-  input[type=checkbox]:checked + label:before {
-    background-color: #9747FF;
-    border-color: #9747FF;
-    color: #fff;
-  }
-  
-  input[type=checkbox]:disabled + label:before {
-    transform: scale(1);
-    border-color: #aaa;
-  }
-  
-  input[type=checkbox]:checked:disabled + label:before {
-    transform: scale(1);
-    background-color: #c9a6f7;
-    border-color:#c9a6f7;
-  }
+
 .toggle-aside select{
     width: 350px;
 }
@@ -332,7 +287,26 @@ aside.menu:hover{
 }
 
 
-
+aside.menu .user img{
+    width:70px;
+    height: 70px;
+    border-radius: 50%;
+}
+aside.menu .user h4{
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+aside.menu .user span{
+    color: #FFF;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.11px;
+}
 aside.menu .options li{
     padding: 10px 0;
 }
