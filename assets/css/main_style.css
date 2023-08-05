@@ -105,7 +105,9 @@ select{
 
 }
 
-
+.header .right-div > div{
+    cursor: pointer;
+}
 
 .header .logo  img{
     width: 160px;
