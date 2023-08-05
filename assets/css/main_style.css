@@ -83,10 +83,6 @@ select{
     background: #234585;
   }
   
- 
-  .dtfc-fixed-left{
-    background-color: red;
-  }
 
 /* Scroll bar style */
 
@@ -109,10 +105,7 @@ select{
 
 }
 
-.header .right-div > div{
-    padding: 0 20px;
-    cursor: pointer;
-}
+
 
 .header .logo  img{
     width: 160px;
@@ -124,33 +117,128 @@ select{
 @media (max-width:767px){
     .header .search{
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 80px;
+        background-color: #00000069;
         width: 100%;
-        height: 100vh;
-        background-color: red;
-        z-index: 9999;
+        height: calc(100vh - 80px);
+        padding: 10px;
+        left: 0;
+        display: none;
+
+        align-items: center;
+        justify-content: center;
+        visibility: none;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        z-index: -1;
+
+     
     } 
+    .header .search.show{
+        opacity: 1;
+        display: flex;
+        visibility: visible;
+        z-index: 999;
+    }
+    .header .search .search-form{
+        position: absolute;
+      
+        padding: 50px 10px;
+        width: 90%;
+
+        /* height: 100vh; */
+        border-radius: 10px;
+        background-color: white;
+    }
+    .header  .search .search-form .search-box{
+        padding:10px;
+        width: 90%;
+
+        width: auto;
+        border-radius: 19px;
+        background: #D0CFFF;
+    }
     .header .logo  img{
         width: 100px;
         height: 40px;
     
     
     }
-}
-@media (min-width:1400px){
-    .header .left-div > div{
-        padding: 0 20px;
+    .header .right-div > div{
+        padding: 0 5px;
         cursor: pointer;
-    }   
-    .header .search-box{
+    }
+}
+
+
+
+
+@media (min-width:768px) and (max-width:991px){
+    .header .left-div > div{
+        padding: 0 15px;
+        cursor: pointer;
+    }
+    .header .search{
+        position: fixed;
+        top: 80px;
+        background-color: #00000069;
+        width: 100%;
+        height: calc(100vh - 80px);
+        padding: 10px;
+        left: 0;
+        display: none;
+
+        align-items: center;
+        justify-content: center;
+        visibility: none;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        z-index: -1;
+     
+    } 
+    .header .search.show{
+        opacity: 1;
+        display: flex;
+        visibility: visible;
+        z-index: 999;
+    }
+    .header .search .search-form{
+        position: absolute;
+      
+        padding: 50px 10px;
+        width: 90%;
+
+        /* height: 100vh; */
+        border-radius: 10px;
+        background-color: white;
+    }
+    .header  .search .search-form .search-box{
         padding:10px;
-        width: 450px;
+        width: auto;
         border-radius: 19px;
         background: #D0CFFF;
     }
 }
-@media (min-width:1200px) and(max-width:1399px){
+
+@media (min-width:992px) and (max-width:1199px){
+    .header .left-div > div{
+        padding: 0 15px;
+        cursor: pointer;
+    }
+    .header .search-box{
+        padding:10px;
+        width: 300px;
+        border-radius: 19px;
+        background: #D0CFFF;
+    } .header .logo  img{
+        width: 120px;
+        height: 50px;
+    
+    
+    }
+}
+
+@media (min-width:1200px) and (max-width:1399px){
     .header .left-div > div{
         padding: 0 15px;
         cursor: pointer;
@@ -168,23 +256,16 @@ select{
     
     
 }
-
-
-@media (min-width:992px) and (max-width:1199px){
+@media (min-width:1400px){
     .header .left-div > div{
-        padding: 0 15px;
+        padding: 0 20px;
         cursor: pointer;
-    }
+    }   
     .header .search-box{
         padding:10px;
-        width: 300px;
+        width: 450px;
         border-radius: 19px;
         background: #D0CFFF;
-    } .header .logo  img{
-        width: 120px;
-        height: 50px;
-    
-    
     }
 }
 
@@ -360,6 +441,7 @@ aside.menu  .sign-out a:hover .icon svg path{
         top:80px !important;
         height: calc(100vh - 80px) !important;
 
+        overflow: scroll;
     }
 }
 
@@ -368,13 +450,23 @@ aside.menu  .sign-out a:hover .icon svg path{
        right: -300px;
         top: 100px;
         height: calc(100vh - 100px);
+        overflow: scroll;
 
 
    }
    .toggle-aside aside.menu{
        right: 0;
+       overflow: scroll;
    }
   
+}
+@media(min-width:992px) and (max-width:1199px){
+    aside.menu{
+         top: 90px;
+         height: calc(100vh - 90px);
+ 
+ 
+    }
 }
 /* aside scroll */
 

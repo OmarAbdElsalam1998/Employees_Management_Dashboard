@@ -70,6 +70,7 @@
     border-radius: 10px;
     overflow: hidden;
 }
+
    .table table thead th{
     background: #D4A8F5;
     text-align: center;
@@ -108,4 +109,18 @@
     border-radius: 4px;
     background: #4D7CFE !important;
     border: none !important;
+   }
+    /* Style for table search box */
+   .table #example_filter input{
+    outline: none;
+    height: 50px;   
+    margin-bottom: 10px;
+
+   }
+   @media (max-width:767px) {
+    .table #example_filter,
+    .table #example_length{
+        display: none !important;
+    }
+    
    }
