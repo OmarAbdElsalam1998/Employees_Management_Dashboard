@@ -116,7 +116,7 @@ select{
 
 }
 
-@media (max-width:767px){
+@media (max-width:768px){
     .header .search{
         position: fixed;
         top: 80px;

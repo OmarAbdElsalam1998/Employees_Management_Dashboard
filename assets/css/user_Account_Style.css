@@ -1,0 +1,398 @@
+/* Global style */
+@font-face {
+    font-family: cairo;
+    src: url(../fonts/Cairo-Medium.ttf);
+}
+body{
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+}
+
+:root{
+    --brand-primary-button-color: #6F4FF2;
+  
+}
+.primary-button{
+    outline: none;
+    border: none;
+    width: 100%;
+    font-family: cairo;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 10px;
+    border-radius: 8px;
+    background: #9747FF;
+    min-width: 200px;
+    padding: 15px 10px;
+    color:#FFF;
+    margin: 10px 0;
+    cursor: pointer;
+
+}
+.secondary-button{
+    outline: none;
+    border: none;
+    width: 100%;
+    font-family: cairo;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 10px;
+    border-radius: 8px;
+    background: #50BB25;
+    min-width: 200px;
+    padding: 15px 10px;
+    color:#FFF;
+    margin: 10px 0px;
+    cursor: pointer;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.secondary-button span:first-of-type{
+    display: flex;
+    margin-left: 10px;
+}
+
+.large-screen-header{
+    display: block;
+}
+.small-screen-header{
+    display: none;
+    text-align: center;
+}
+
+/* Custom check box */
+
+.checkbox{
+    display: none;
+  }
+.label{
+    position: relative;
+    font-family:sans-serif;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    font-size: 22px;
+    user-select: none;
+  }
+ .check-mark{
+    width: 30px;
+    height: 30px;
+    background-color: #E9F1FA ;
+    position: absolute;
+    left:0;
+    display: inline-block;
+    top: 0px;
+    border-radius: 50%;
+  }
+ .label .checkbox:checked + .check-mark{
+    background-color: #9691F4  ;
+    transition: .1s;
+  }
+ .label .checkbox:checked + .check-mark:after{
+    content: "";
+    position: absolute;
+    width: 10px;
+      transition: .1s;
+    height: 5px;
+    background: #9691F4  ;
+    top:45%;
+    left:50%;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: translate(-50%, -50%) rotate(-45deg);  
+  }
+
+
+/* Custom check box style */
+
+
+/* Global style */
+.wrapper{
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+}
+.wrapper .image-right{
+    width: 50%;
+    border-radius: 64px 0px 0px 64px;
+    background: #9747FF;
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper .image-right img{
+    max-width: 100%;
+    height: auto;
+}
+.wrapper .box{
+    width: 50%;
+    padding: 20px 30px;
+}
+.wrapper .box .logo{
+    width: 170px;
+    height: 70px;
+}
+.wrapper  .header{
+    width: 100%;
+    text-align: center;
+}
+.wrapper  .header>h4{
+    color:var(--brand-primary-button-color);
+    text-align: center;
+    font-family: cairo,sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+.wrapper .box .sign-in-form{
+    width: 100%;
+}
+.wrapper .box .sign-in-form h4{
+    color: #000;
+    font-family: cairo;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin:0 0 10px 0;
+}
+
+.wrapper .box .sign-in-form  .form-group .input-field{
+    border-radius: 8px;
+    border: 1px solid #dbdbe4ad;
+    background: var(--light-3, #FFF);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    transition: all .2s ease-in-out;
+    margin: 0 0 25px 0   ;
+
+    
+}
+.wrapper .box .sign-in-form  .form-group label{
+    color: #000;
+    text-align: center;
+    font-family: cairo;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.wrapper .box .sign-in-form  .form-group .input-field input{
+    height: 55px;
+    border: none;
+    outline: none;
+    padding-right: 15px;
+    width: 100%;
+    color: #747474;
+    font-family: Cairo;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.wrapper .box .sign-in-form  .form-group .input-field:focus-within{
+    border:1px solid var(--brand-primary-button-color)
+}
+
+.wrapper .box .sign-in-form .more-options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper .box .sign-in-form .more-options .forget-password{
+    text-decoration: none;
+    color: #E20000;
+    font-family: cairo;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+.wrapper .box .sign-in-form .more-options  .label{
+    color: #000;
+    font-family: cairo,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.wrapper .box  .sign-in-with{
+    display: none;
+}
+.wrapper .box  .create-account{
+    margin-top: 10px;
+    text-align: center;
+}
+.wrapper .box .create-account span{
+    color: #000;
+    font-family: cairo;
+    font-size: 20px;
+    font-weight: 400;
+}
+.wrapper .box  .create-account span a{
+    text-decoration: none;
+    margin-right: 10px;
+    color: var(--brand-primary-button-color);
+}
+
+@media (min-width:576px) and (max-width:768px){
+    .wrapper{
+        flex-direction: column-reverse;
+    }
+    .wrapper .image-right{
+        width: 100%;
+        border-radius:  64px 64px 0 0;
+    }
+    .wrapper .box{
+        width:auto;
+    }
+    .large-screen-header{
+        display: block;
+    }
+}
+
+@media (max-width:576px) {
+
+    .wrapper{
+        display: block ;
+    }
+    .wrapper .image-right{
+        display: none;
+    }
+    .wrapper .logo{
+        padding: 40px 0;
+    }
+    .wrapper .box{
+        position: relative;
+        min-height:calc(100vh - 200px);
+        padding: 20px 0;
+        width:100%;
+        background: #5751B0; /* Chrome 10-25, Safari 5.1-6 */
+        border-radius: 60px 60px 0 0;
+
+
+    }
+    .wrapper .box::before{
+        content: "";
+        position: absolute;
+        top: -10px;
+        right: 0px;
+        width: 100%;
+        opacity: 0.58;
+        box-shadow: 10px 10px 39px 49px #FFF; 
+        
+    }
+    .wrapper .box::after{
+        content: "";
+        position: absolute;
+        top: -101px;
+        right: -160px;
+        width: 350px;
+        height: 345.955px;
+        border-radius: 397px;
+        opacity: 0.58;
+        background: radial-gradient(50% 50.00% at 50% 50.00%, #b379df 0%, rgb(54 0 96 / 0%) 100%);
+        
+    }
+    .wrapper .box .sign-in-form{
+        width: auto;
+        padding: 10px;
+        border-radius: 59px;
+    }
+    .wrapper .box .sign-in-form h4{
+        position: relative;
+        color:#FFF;
+        margin-bottom: 30px;
+        z-index: 5;
+
+    }
+    .wrapper .box .sign-in-form  .form-group .input-field{
+        background: transparent;
+        background-image: url(../images/input_mob_background.webp);
+        background-size: cover;
+        border-color: #5d56be;
+        color: #FFF;
+        margin: 5px 0 15px 0;
+
+    }
+    .wrapper .box .sign-in-form  .form-group .input-field input{
+        color: #A4A4A4;
+    }
+    .wrapper .box .sign-in-form  .form-group .input-field input::placeholder,
+    .wrapper .box .sign-in-form  .form-group .input-field input::-webkit-input-placeholder{
+   
+        color:#A4A4A4
+    }
+    .wrapper .box .sign-in-form  .form-group .input-field:focus-within{
+        border-color: #c1bfde;
+    }
+    .wrapper .box .sign-in-form  .form-group .input-field .icon{
+        filter: invert(1);
+    }
+    .wrapper .box .sign-in-form  .form-group .input-field input{ 
+        background: transparent;
+    }
+    .wrapper .box .sign-in-form  .form-group label{
+        color: #FFF;
+        font-size: 14px;
+
+    }
+    .wrapper .box .sign-in-form .more-options{
+        justify-content: end;
+    }
+    .wrapper .box .sign-in-form .remember-me{
+        display: none;
+    }
+    .wrapper .box .sign-in-form .more-options .forget-password{
+        color: #EEE;
+        font-size: 11.33px;
+        font-weight: 500;
+    }
+    .wrapper .box .sign-in-form  .primary-button{
+        border-radius: 15px;
+        background: linear-gradient(99deg, #9C3FE4 0%, #C65647 100%);
+    }
+    .wrapper .box   .secondary-button{
+        background-image: url(../images/input_mob_background.webp);
+        background-size: cover;
+        border-color: #5d56be;
+        color: #FFF;
+    }
+    .wrapper .box  .sign-in-with{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .wrapper .box  .sign-in-with span{
+        color: #B6B6B6;
+        font-family: cairo;
+        font-size: 14.25px;
+        font-weight: 500;
+    }
+    .wrapper .box  .google-sign-in{
+        padding: 10px;
+    }
+    .wrapper .box .create-account span{
+        color: #FFF;
+    }
+    .wrapper .box .create-account span a{
+        color:#A4A4A4
+
+
+    }
+    .small-screen-header{
+        display: block;
+    }
+
+    .large-screen-header{
+        display: none;
+    }
+    .wrapper  .header>h4{
+        display: none;
+    }
+
+}
