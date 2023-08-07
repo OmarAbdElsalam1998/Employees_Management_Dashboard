@@ -172,6 +172,27 @@ body{
     line-height: normal;
     margin:0 0 10px 0;
 }
+.otp {
+    display: inline-block;
+    outline: none;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background: #ECECEC;
+    text-align: center;
+    margin: 20px 3px 20px 3px;
+    direction: ltr;
+  }
+  
+  /* remove the up/down spinner in number input
+     source - https://css-tricks.com/snippets/css/turn-off-number-input-spinners/
+  */
+  .wrapper .box  input.otp[type=number]::-webkit-inner-spin-button, 
+  .wrapper .box input.otp[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
 .wrapper .box .sign-in-form .form-group{
     margin: 0 0 15px 0   ;
 
@@ -359,12 +380,17 @@ body{
         padding-right: 0;
     }
     .wrapper .box .sign-in-form  .form-group .input-field{
+  
         background: transparent;
         background-image: url(../images/input_mob_background.webp);
         background-size: cover;
         border-color: #5d56be;
         color: #FFF;
 
+    }
+    .wrapper .box .sign-in-form  .otp{
+        background-color:#7268c3;
+        color:#FFF;
     }
     .wrapper .box .sign-in-form  .form-group .input-field input{
         color: #A4A4A4;
@@ -376,6 +402,11 @@ body{
     }
     .wrapper .box .sign-in-form  .form-group .input-field:focus-within{
         border-color: #c1bfde;
+    }
+    
+    .wrapper .box .sign-in-form  .otp:focus{
+        border-color: #c1bfde;
+
     }
     .wrapper .box .sign-in-form  .form-group .input-field .icon{
         filter: invert(1);

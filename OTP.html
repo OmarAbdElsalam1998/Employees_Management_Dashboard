@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هل نسيت كلمة المرور </title>
+    <link rel="shortcut icon" href="assets/images/logo_small.webp" type="image/x-icon">
+
+    <!-- custom style -->
+    <link rel="stylesheet" href="assets/css/user_Account_Style.css">
+    <style>
+        .text-center{
+            position: relative;
+            text-align: center;
+            direction: ltr;
+            z-index: 999999;
+        }
+    </style>
+</head>
+<body>
+    
+  <section class="wrapper">
+    <div class="image-right">
+        <img src="assets/images/Forgot_password_image.webp" loading="lazy" alt="تسجيل الدخول">
+    </div>
+    <div class="header small-screen-header">
+        <img class="logo" src="assets/images/logo_small.webp" loading="lazy" alt="الشعار">
+        <h4>ادخل رمز التحقق</h4>
+
+    </div>
+    <div class="box">
+        <div class="header large-screen-header ">
+            <img class="logo" src="assets/images/logo_small.webp" loading="lazy" alt="الشعار">
+
+            <h4>ادخل رمز التحقق</h4>
+            <span>يرجى التحقق من بريدك الإلكتروني لأخذ رمز للمتابعة</span>    
+        </div>
+        <div class="sign-in-form">
+            <h4 class="small-screen-header">ادخل رمز التحقق</h4>  
+            <form>
+                
+              <div class="text-center">
+                <input class="otp" id="otp-first" type="number" min="0" max="9" step="1" aria-label="first digit" />
+                <input class="otp" id="otp-second" type="number" min="0" max="9" step="1" aria-label="second digit" />
+                <input class="otp" id="otp-third" type="number" min="0" max="9" step="1" aria-label="third digit" />
+                <input class="otp" id="otp-fourth" type="number" min="0" max="9" step="1" aria-label="fourth digit" />
+              </div>
+               
+                <button class="primary-button">إرسال</button>
+            </form>
+        </div>
+      
+    </div>
+  </section>
+<script>
+    console.clear();
+let inputs = document.querySelectorAll("input");
+let values = Array(4);
+let clipData;
+inputs[0].focus();
+
+inputs.forEach((tag, index) => {
+  tag.addEventListener('keyup', (event) => {
+    if(event.code === "Backspace" && hasNoValue(index)) {
+      if(index > 0) inputs[index - 1].focus();
+    }
+    
+    //else if any input move focus to next or out
+    else if (tag.value !== "") {
+      (index < inputs.length - 1) ? inputs[index + 1].focus() : tag.blur();
+    }
+    
+    //add val to array to track prev vals
+    values[index] = event.target.value;
+  });
+  
+  tag.addEventListener('input', () => {
+    //replace digit if already exists
+    if(tag.value > 10) {
+      tag.value = tag.value % 10;
+    }
+  });
+  
+  tag.addEventListener('paste', (event) => {
+    event.preventDefault();
+    clipData = event.clipboardData.getData("text/plain").split('');
+    filldata(index);
+  })
+})
+
+function filldata(index) {
+  for(let i = index; i < inputs.length; i++) {
+    inputs[i].value = clipData.shift();
+  }
+}
+
+function hasNoValue(index) {
+  if(values[index] || values[index] === 0) 
+    return false;
+  
+  return true;
+}
+</script>
+</body>
+</html>
