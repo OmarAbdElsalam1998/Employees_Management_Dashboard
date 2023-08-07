@@ -134,6 +134,9 @@ body{
 .wrapper .box .logo{
     width: 170px;
     height: 70px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
 }
 .wrapper  .header{
     width: 100%;
@@ -148,6 +151,14 @@ body{
     font-weight: 400;
     line-height: normal;
     margin: 0;
+}
+.wrapper  .header>span{
+    display: block;
+    color: #000;
+    font-family: cairo;
+    font-size: 18px;
+    font-weight: 400;
+    margin:15px 0 30px 0;
 }
 .wrapper .box .sign-in-form{
     width: 100%;
