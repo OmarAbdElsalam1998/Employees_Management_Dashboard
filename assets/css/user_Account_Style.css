@@ -161,6 +161,26 @@ body{
     line-height: normal;
     margin:0 0 10px 0;
 }
+.wrapper .box .sign-in-form .form-group{
+    margin: 0 0 15px 0   ;
+
+}
+.wrapper .box .sign-in-form .flex-box{
+    display: flex;
+
+}
+.wrapper .box .sign-in-form .flex-box .form-group:first-child{
+    width: 50%;
+    padding-left: 8px;
+}
+.wrapper .box .sign-in-form .flex-box .form-group:last-child{
+    width: 50%;
+    padding-right: 8px;
+}
+.wrapper .box .sign-in-form  .form-group .error-message{
+    color: #E20000;
+    font-family: cairo;
+}
 
 .wrapper .box .sign-in-form  .form-group .input-field{
     border-radius: 8px;
@@ -170,7 +190,7 @@ body{
     display: flex;
     align-items: center;
     transition: all .2s ease-in-out;
-    margin: 0 0 25px 0   ;
+    margin-top: 5px;
 
     
 }
@@ -310,13 +330,29 @@ body{
         z-index: 5;
 
     }
+    
+    .wrapper .box .sign-in-form .form-group{
+        margin: 5px 0 15px 0;
+    
+    }
+    .wrapper .box .sign-in-form .flex-box{
+        display: block;
+    
+    }
+    .wrapper .box .sign-in-form .flex-box .form-group:first-child{
+        width: 100%;
+        padding-left: 0;
+    }
+    .wrapper .box .sign-in-form .flex-box .form-group:last-child{
+        width: 100%;
+        padding-right: 0;
+    }
     .wrapper .box .sign-in-form  .form-group .input-field{
         background: transparent;
         background-image: url(../images/input_mob_background.webp);
         background-size: cover;
         border-color: #5d56be;
         color: #FFF;
-        margin: 5px 0 15px 0;
 
     }
     .wrapper .box .sign-in-form  .form-group .input-field input{
