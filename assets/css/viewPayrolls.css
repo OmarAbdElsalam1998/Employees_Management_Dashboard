@@ -94,7 +94,12 @@
    .dataTables_length{
     margin-bottom: 10px;
    }
-  
+   .table table tr td.payment-status.paid {
+    color:rgb(80, 187, 37)
+  }
+  .table table tr td.payment-status.not-paied {
+    color:rgb(187, 37, 54)
+  }
    .input.form-check-input{
     margin: auto !important;
     display: block !important;
