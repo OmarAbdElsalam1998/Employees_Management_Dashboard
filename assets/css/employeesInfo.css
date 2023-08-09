@@ -1,0 +1,14 @@
+/* Start Msin section style */
+
+.main{
+    font-family: cairo;
+}
+.header-actions h4{
+    color: #000;
+    text-align: right;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+}

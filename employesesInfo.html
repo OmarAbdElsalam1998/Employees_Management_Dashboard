@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>عرض مسيرات الرواتب</title>
+    <title>الموظفين</title>
 
     <link rel="shortcut icon" href="assets/images/logo_small.webp" type="image/x-icon">
 
     <!-- Bootstrap style -->
-    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Table style -->
     <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
 
@@ -316,61 +316,19 @@
 
 
     <!-- Start Main content -->
-
-    <main class="main" >
-        <div class="query-box ">
-            <form class="d-xxl-flex align-items-center justify-content-between">
-                <h4>مسيرات الرواتب</h4>
-               <div class="d-sm-flex align-items-center">
-                <div class="input px-md-2">
-                    <label>الشهر</label>
-                    <select>
-                        <option>يناير</option>
-                        <option>فبراير</option>
-                        <option>مارس</option>
-                        <option>أبريل</option>
-                        <option>مايو</option>
-                        <option>يونيو</option>
-                        <option>يوليو</option>
-                        <option>أغسطس</option>
-                        <option>سبتمبر</option>
-                        <option>أكتوبر</option>
-                        <option>نوفمبر</option>
-                        <option>دبسمبر</option>
-
-                    </select>
-                </div>
-                <div class="input px-md-2">
-                    <label>السنة</label>
-                    <select>
-                        <option>2023</option>
-                        <option>2022</option>
-                        <option>2021</option>
-                        <option>2020</option>
-                        <option>2019</option>
-                        <option>2018</option>
-
-                    </select>
-                </div>
-               </div>
-                <button class="primary-button">
-                    عرض
+    <main class="main">
+        <div class="header-actions d-md-flex justify-content-between align-items-center mb-5">
+            <h4>معلومات الموظفين</h4>
+            <div class="d-sm-flex ">
+                <button class="primary-button d-sm-flex justify-content-between">
+                    <span>اضافة موظف</span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M6.69133 1.00684V12.2254M1.08203 6.61614H12.3006" stroke="white" stroke-width="1.60586" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
                 </button>
-            </form>
-        </div>
-
-        <div class="query-result py-4">
-            <h4>مسيرات الرواتب لشهر يوليو 2023</h4>
-            <div class="py-2">
-                <button class="primary-button">إعتماد</button>
-                <button class="primary-button">تعديل وحفظ لاحقاً</button>
-                <button class="primary-button">تعديل</button>
-                <button class="primary-button"><img src="assets/images/plus.webp" class="pe-2" loading="lazy" alt="+">إنشاء مسير جديد</button>
-            </div>
-            <div class="py-2 text-xl-end">
-                <button class="secondary-button">دفع الراتب للمحددين</button>
-                <button class="primary-button">تصدير إكسل</button>
-                <button class="primary-button">طباعة</button>
+                <button class="secondary-button">تعديل البيانات</button>
             </div>
         </div>
 
@@ -379,434 +337,644 @@
             <table id="example" class="stripe row-border order-column nowrap" style="width:100% ;direction: rtl;">
                 <thead>
                     <tr>
-                        <th class="select-all" id="select-all">تحديد الكل</th>
-                        <th>التسلسل</th>
-                        <th>الرقم الوظيفي</th>
                         <th>الاسم</th>
+                        <th>الرقم الوظيفي</th>
+                        <th>الجنس</th>
+                        <th>الجنسية</th>
+                        <th>تاريخ الميلاد</th>
+                        <th> تاريخ المباشرة</th>
+                        <th>نوع العقد</th>
+                        <th>رقم الهوية</th>
+                        <th>رصيد الاجازة</th>
+                        <th>عدد أيام الاجازة</th>
+                        <th>حالة الموظف</th>
+                        <th>التقييم</th>
                         <th>الراتب الأساسي</th>
-                        <th>بدل سكن</th>
-                        <th>بدل مواصلات</th>
-                        <th>الحوافز</th>
-                        <th>العمولات</th>
-                        <th>المجموع الإجمالي</th>
-                        <th>غيابات</th>
-                        <th>تأخير</th>
-                        <th>قروض أو سلف</th>
-                        <th>مجموع الحسوم</th>
-                        <th>صافي الراتب</th>
-                        <th>الحالة</th>
+                        <th>بدل السكن</th>
+                        <th>بدل المواصلات</th>
+                        <th>بدلات أخرى</th>
+                        <th>الاجمالي</th>
+                        <th>نسبة التأمينات</th>
+                        <th>مبلغ اشتراك التأمينات</th>
+                        <th>الجوال</th>
+                        <th>الايميل</th>
+                        <th>صديق في حالة الطوارئ</th>
+                        <th>جواله</th>
+                        <th>سجل العهد</th>
+                        <th>فئة التأمينات</th>
+                        <th>تاريخ انتهاء التأمين </th>
+                        <th>ملف الموظف</th>
+                        
+
+
                     </tr>
                 </thead>
                 
                 <tbody>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status not-paied">لم يتم دفع الراتب</td>
-                    
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input " type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status not-paied">لم يتم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status not-paied">لم يتم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-                    <tr>
-                        <td><input class="form-check-input" type="checkbox" value="" ></td>
-                        <td>1</td>
-                        <td>320563</td>
-                        <td>عبد الله السيد</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>0</td>
-                        <td>0</td>
-
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td>6630</td>
-                        <td class="payment-status paid">تم دفع الراتب</td>
-                
-                    </tr>
-
-                    
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
+                   <tr>
+                    <td>Asa Donnelly</td>
+                    <td>1110</td>
+                    <td>ذكر</td>
+                    <td>مصري</td>
+                    <td>12/3/1999</td>
+                    <td>12/6/2022</td>
+                    <td>غير محدد</td>
+                    <td>55555</td>
+                    <td>565</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>جيد جدا</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                    <td>22</td>
+                    <td>فترة تجريبية</td>
+                    <td>omar2323232@gmail.com</td>
+                    <td>6663 </td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55555</td>
+                    <td>20%</td>
+                   </tr>
                 </tbody>
             </table>
 
         </div>
     </main>
 
+    
+    <!-- <div class="table-responsive-lg">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+    </div> -->
+    
+    
     <!-- End Main Content -->
 
 
@@ -820,7 +988,7 @@
        //create table with pagination
        var table= new DataTable('#example', {
             fixedColumns: {
-                left: 4
+                left: 2
             },
             paging: true,
             scrollX: true
@@ -864,9 +1032,7 @@
       let num_of_displayed_rows=document.querySelector("#example_length")
     
       function change_From_english(){
-        let search_lable=document.querySelector("#example_filter label");
-        search_lable.innerHTML=`بحث <input type="search" class="" placeholder="" aria-controls="example">`;
-
+   
 
         let num_of_displayed_rows_from_total_rows =document.querySelector("#example_info");
         num_of_displayed_rows_from_total_rows.innerHTML=num_of_displayed_rows_from_total_rows.innerHTML.replace("Showing","عرض").replace("entries","مدخلا").replace("to","إلي").replace("of","من أصل")
@@ -883,30 +1049,6 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.82332 4.08113C6.15805 3.74639 6.70077 3.74639 7.0355 4.08113L12.1784 9.22399C12.5131 9.55872 12.5131 10.1014 12.1784 10.4362L7.0355 15.579C6.70077 15.9138 6.15805 15.9138 5.82332 15.579C5.48858 15.2443 5.48858 14.7016 5.82332 14.3668L10.3601 9.83008L5.82332 5.29331C5.48858 4.95858 5.48858 4.41586 5.82332 4.08113Z" fill="#98A9BC"/>
                 </svg>رجوع`;
       }
-
-
-      //select all row when ckick on select all button on table
-    //   let selectAllBtn=document.querySelector("#select-all");
-    //   let is_checked=false;
-    //   selectAllBtn.addEventListener("click",function(){
-    //     let AllRowsCheckBoxses=document.querySelectorAll("table td input.form-check-input");
-    //     console.log(AllRowsCheckBoxses.length)
-    //     if(!is_checked){
-    //         AllRowsCheckBoxses.forEach(checkbox=>{
-    //             checkbox.setAttribute("checked","checked")
-    //         })
-    //         is_checked=true;
-    //     }
-    //     else{
-    //         AllRowsCheckBoxses.forEach(checkbox=>{
-    //             checkbox.removeAttribute("checked")
-    //         })
-    //         is_checked=false;
-        
-
-    //     }
-        
-    //   });
     </script>
 </body>
 </html>
