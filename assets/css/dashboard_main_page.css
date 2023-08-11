@@ -148,11 +148,12 @@
 }
 .Operations-awaiting-approval .edits .edit-area textarea{
     width: 100%;
+    padding: 10px;
     display: flex;
     height: 230px;
     justify-content: center;
     align-items: center;
-    border-radius: 43px;
+    border-radius: 20px;
     background: #B5A8F0;
     outline: none;
     border: none;
