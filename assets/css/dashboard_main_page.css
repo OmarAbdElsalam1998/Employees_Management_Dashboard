@@ -1,0 +1,182 @@
+/* Satrt main content style */
+
+
+/* Start statistics style */
+.statictics .box{
+    padding: 25px;
+    border-radius: 16px;
+    background-color: #FFF;
+    border-left: 16px solid #B5A8F0 ;
+}
+.statictics .box .icon{
+    width: 60px;
+    height: 60px;
+    text-align:center ;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #B4FFE8;
+}
+.statictics .box .info h4{
+    color: #000;
+    font-family: cairo;
+    font-size: 20px;
+    font-weight: 500;
+}
+.statictics .box .info span{
+    font-family: cairo;
+    color: #4C5862;
+}
+.statictics .box .info .count{
+    padding-left: 10px;
+    color: #000;
+    font-size: 30px;
+    font-weight: 400;
+    
+   
+}
+.statictics .operations-status-chart,
+.statictics .employees-statistics{
+    margin-top: 20px;
+    padding: 10px 0;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 6px 18px 0px rgba(0, 0, 0, 0.06);
+}
+.statictics .operations-status-chart .box-header,
+.statictics .employees-statistics .box-header,
+.Operations-awaiting-approval .edits  .box-header{
+    text-align: center;
+    padding:10px 0;
+    border-bottom: 1px solid #EBEFF2;
+
+
+}
+.statictics .operations-status-chart .box-header h4,
+.statictics .employees-statistics .box-header h4,
+.Operations-awaiting-approval .edits  .box-header h4 {
+    color: #000;
+    font-family: cairo;
+    font-size: 20px;
+    font-weight: 400;
+}
+.statictics .employees-statistics .statictics-box {
+    padding: 10px;
+}
+.statictics .employees-statistics .statictics-box h4{
+    margin-bottom: 0;
+}
+.statictics .employees-statistics .statictics-box span{
+    color:  #4C5862;
+    font-family: cairo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.16px;
+    
+}
+
+.statictics .employees-statistics .statictics-box span.status{
+    padding: 5px 20px;
+    border-radius: 10px;
+    color:#FFF; 
+}
+
+
+
+/* End statistics style */
+
+
+
+/*start  Operations-awaiting-approval section style */
+.Operations-awaiting-approval {
+    padding: 50px 0 0 0;
+    
+}
+.Operations-awaiting-approval .table {
+    background-color: #FFF;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.Operations-awaiting-approval .table-responsive{
+    background-color: #FFF;
+    border-radius: 12px;
+}
+.Operations-awaiting-approval .table thead {
+    background-color: #B5A8F0;
+    padding: 10px;
+} 
+.Operations-awaiting-approval .table tbody{
+    padding:10px;
+}   
+
+.Operations-awaiting-approval .table thead tr th{
+
+    background-color: #B5A8F0;
+    padding: 20px 0;
+    text-align: center;
+    min-width: 140px ;
+}  
+.Operations-awaiting-approval .table tbody tr td{
+    padding: 20px 5px;
+    text-align: center;
+    min-width: 140px ;
+} 
+.Operations-awaiting-approval .table tbody tr:last-child{
+    border-bottom:0px solid transparent;
+} 
+
+.Operations-awaiting-approval .table .myProgress-bar{
+    background-color: #EEE;
+    width: 100%;
+    height: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.Operations-awaiting-approval .table .myProgress-bar span{
+    background-color:var(--yellow);
+    display: block;
+    width:var(--progress-percent);
+    height: 100%;
+}
+.Operations-awaiting-approval .edits{
+    background-color:#FFF;
+    border-radius: 12px;
+    padding: 10px 0;
+}
+.Operations-awaiting-approval .edits .edit-area{
+    width: 90%;
+}
+.Operations-awaiting-approval .edits .edit-area textarea{
+    width: 100%;
+    display: flex;
+    height: 230px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 43px;
+    background: #B5A8F0;
+    outline: none;
+    border: none;
+}
+.Operations-awaiting-approval .edits .actions{
+    width: 10%;
+}
+.Operations-awaiting-approval .edits .actions ul{
+    margin: auto;
+    padding: 0;
+    list-style: none;
+}
+.Operations-awaiting-approval .edits .actions ul li{
+    margin-bottom: 10px;
+}
+.Operations-awaiting-approval .edits .actions ul li button{
+    background: #EEE;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    border:none;
+    outline: none;
+}
+
+
+/*end  Operations-awaiting-approval section style */

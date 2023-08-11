@@ -3,11 +3,18 @@
 @font-face {
     font-family: cairo;
     src: url(../fonts/Cairo-Medium.ttf);
+    font-display: swap;
+
 }
 *{
     direction: rtl;;
 }
-
+:root{
+    --yellow: #ffc107;
+    --green:#1ddb83;
+    --red: rgb(243, 19, 19);
+    --blue: #206cdb;
+}
 
 body{
     background-color: #DEE6EC;
@@ -92,7 +99,23 @@ table tr td{
 }
 
   /* table style */
-
+.status{
+    padding: 5px 20px;
+    border-radius: 10px;
+    color:#FFF; 
+}
+.status.yellow{
+    background-color: #ffc107;
+}
+.status.green{
+    background-color: #1ddb83;
+}
+.status.red{
+    background-color: rgb(243, 19, 19);
+}
+.status.blue{
+    background-color: #206cdb;
+}
 /* Global style */
 
 /* start Header Style */
@@ -507,6 +530,12 @@ aside.menu::-webkit-scrollbar {
 
 .main{
     padding: 50px 30px;
+    font-family: cairo;
 }
 
+@media (max-width:600px){
+    .main{
+        padding: 20px 0;
+    }
+}
 /* End Main section Style */
