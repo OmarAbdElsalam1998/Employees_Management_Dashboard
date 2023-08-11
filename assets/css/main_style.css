@@ -47,7 +47,16 @@ select{
 .toggle-aside select{
     width: 350px;
 }
-
+a{
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    color: #FFF;
+}
+a:hover,
+a:active{
+    color:#FFF
+}
 .primary-button{
     outline: none;
     border: none;
