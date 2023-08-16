@@ -5,20 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>الأجازات السنوية</title>
+    <title>إضافة موظف</title>
 
     <link rel="shortcut icon" href="assets/images/logo_small.webp" type="image/x-icon">
 
     <!-- Bootstrap style -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
     <!-- Table style -->
     <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
 
     <!-- main style -->
     <link rel="stylesheet" href="assets/css/main_style.css">
-    <link rel="stylesheet" href="assets/css/viewPayrolls.css">
+    <style>
+        
+        select{
+            height: 55px;
+        }
+        input[type="date"] {
+            position: relative;
+            padding: 10px;
+            }
+
+            input[type="date"]::-webkit-calendar-picker-indicator {
+            color: transparent;
+            background: none;
+            z-index: 1;
+            }
+
+            input[type="date"]:before {
+            color: transparent;
+            background: none;
+            display: block;
+            content: url(assets/images/calendar.webp);
+            
+            position: absolute;
+            top: 12px;
+            right: 6px;
+            }
+
+            input[type="file"]{
+            display: none;
+            }
+            textarea{
+                outline: none;
+                padding: 10px;
+                border:1px solid #FFF;
+                display: block;
+                width: 100%;
+                height: 160px;
+                border-radius: 8px;
+                background: #FFF;
+                transition: border .3s ease-in-out;
+            }
+            textarea:focus{
+                border-color: var(--brand-primary-button-color);;
+            }
+            .actions{
+                position: sticky;
+                top:80px;
+                width: 100%;
+                background-color: #dee6ec;
+                z-index: 99;
+                
+            }
+            @media(max-width:576px){
+                .actions{
+                position: relative;
+                top:0;
+                
+                
+            } 
+            }
+            .input-file{
+                display: block;
+                padding: 60px 20px;
+                border-radius: 8px;
+                border: 1px dashed #000;
+            }
 
 
+    </style>
 </head>
 <body>
 
@@ -103,7 +169,7 @@
 
     <!-- Start aside menu section -->
 
-    <aside class="menu ">
+    <aside class="menu active">
         <div class="user text-center py-4">
           <img src="assets/images/user.webp" loading="lazy" alt="عبد الله">
           <h4>عبد الله </h4>
@@ -152,7 +218,7 @@
                   <span class="name">الخطابات</span>
               </a>
           </li>
-          <li class="option ">
+          <li class="option active">
               <a href="employesesInfo.html" >
                   <span class="icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19" fill="none">
@@ -162,7 +228,7 @@
                   <span class="name">الموظفين</span>
               </a>
           </li>
-          <li class="option active">
+          <li class="option ">
               <a href="Vacations_and_holidays.html" >
                   <span class="icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -314,23 +380,359 @@
 
 
     <!-- Start Main content -->
-    <main class="main">
-        <div class="container-fluid">
-            <div class="header-actions mb-5">
-                <h4 class="mb-4 me-2"> الإجازات السنوية</h4>
-                <div class="d-sm-flex ">
-                    <a href="view_annual_holidays.html" class="primary-button m">عرض الإجازات السنوية</a>
 
-                    <a href="Create_vacation.html" class="secondary-button">إنشاء إجازة</a>
-                </div>
+    <main class="main" >
+       <div class="container-fluid">
+       
+
+        <div class="actions py-4">
+            <div class="py-2">
+                <button class="secondary-button">حفظ  </button>
+                <button class="primary-button">حفظ وتعديل لاحقاً</button>
+                <button class="primary-button"><img src="assets/images/plus.webp" class="pe-2" loading="lazy" alt="+"> إضافة موظف</button>
+                <button class="primary-button">رجوع</button>
+
             </div>
+          
         </div>
 
+        <div class="add-employee-form">
+            <form>
+                <div class="flex-box">
+                    <div class="form-group">
+                        <label>الاسم الكامل</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/user_icon.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل اسم المستخدم">
+                        </div>
+                        <small class="error-message">هذا الحقل مطلوب</small>
+                    </div>
+                    <div class="form-group">
+                        <label>رقم الهوية</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/user-square.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل رقم الهوية">
+                        </div>
+                        <small class="error-message"></small>
+
+                    </div>
+                    
+                </div>
+                <div class="flex-box">
+                    <div class="form-group">
+                        <label>الرقم الوظيفي</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/user_icon.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل الرقم الوظيفي">
+                        </div>
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label> الجنسية</label>
+                        <div class="input-field">
+                            <select class="w-100 border-0 ">
+                                <option>سعودي</option>
+                                <option>مصري</option>
+
+                            </select>
+                        </div>   
+                        <small class="error-message"></small>
+
+                    </div>
+                    
+                </div>
+                <div class="flex-box">
+                    <div class="form-group">
+                        <label>البريد الالكتروني</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/email.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل بريدك الإلكتروني">
+                        </div>
+                        <small class="error-message"></small>
     
+                    </div>
+                    <div class="form-group">
+                        <label> النوع</label>
+                        <div class="input-field">
+                            <select class="w-100 border-0 ">
+                                <option>ذكر</option>
+                                <option>أنثي</option>
+
+                            </select>
+                        </div>   
+                        <small class="error-message"></small>
+
+                    </div>
+                    
+                </div>
+                    
+                <div class="flex-box">
+                    <div class="form-group">
+                        <label>تاريخ الميلاد</label>
+                        <div class="input-field ">
+                            <input type="date" >
+                        </div>
+                        <small class="error-message"></small>
+    
+                    </div>
+                    <div class="form-group">
+                        <label>تاريخ المباشرة</label>
+                        <div class="input-field">
+                            <input type="date" >
+                        </div>
+                        <small class="error-message"></small>
+    
+                    </div>
+                   
+                    
+                </div>
+
+                <div class="flex-box">
+                    <div class="form-group">
+                        <label>رقم الهاتف</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/call.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل رقم الهاتف">
+                        </div>
+                        <small class="error-message"></small>
+    
+                    </div>
+                    <div class="form-group">
+                        <label>عدد أيام الإجازة</label>
+                        <div class="input-field">
+                            <input type="text" placeholder="ادخل عدد أيام الإجازة">
+                        </div>
+                        <small class="error-message"></small>
+    
+                    </div>
+                    
+                </div>
+                
+                <div class="flex-box">
+                    
+                    <div class="form-group">
+                        <label> نوع العقد</label>
+                        <div class="input-field">
+                            <select class="w-100 border-0 ">
+                                <option>محدد</option>
+
+                            </select>
+                        </div>   
+                        <small class="error-message"></small>
+
+                    </div>
+                    <div class="form-group">
+                        <label> التقييم</label>
+                        <div class="input-field">
+                            <select class="w-100 border-0 ">
+                                <option>ممتاز</option>
+                                <option>جيد جداً</option>
+                                <option>جيد</option>
+                                <option>مقبول</option>
+                                <option>ضعيف</option>
+
+                            </select>
+                        </div>   
+                        <small class="error-message"></small>
+
+                    </div>
+                    
+                </div>
+                <div class="flex-box">
+                    
+                    <div class="form-group">
+                        <label>تاريخ إنتهاء العقد</label>
+                        <div class="input-field">
+                            <input type="date" >
+                        </div> 
+                        <small class="error-message"></small>
+
+                    </div>
+                    <div class="form-group">
+                        <label> حالة الموظف</label>
+                        <div class="input-field">
+                            <select class="w-100 border-0 ">
+                                <option>على رأس العمل</option>
+                                <option>فترة تجريبية</option>
+                                <option>إجازة عادية</option>
+                                <option>إضطرارية</option>
+                                <option>خرج ولم يعد</option>
+                                <option>مفصول</option>
+                                <option>إستقالة</option>
+                                <option>إنهاء خدمات</option>
+                                <option>إجازة مرضية انتهت ولم يباشر</option>
+                                <option>إجازة عادية انتهت ولم يباشر</option>
+                                <option>متدرب</option>
+
+                            </select>
+                        </div>   
+                        <small class="error-message"></small>
+
+                    </div>
+                    
+                </div>
+                <div class="flex-box">
+                    <div class="form-group">
+                        <label>صديق في حالة الطوارىء</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/user_icon.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل اسم صديق في حالة الطوارىء">
+                        </div>
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label>رقم هاتف صديق حالة الطوارىء</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/call.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل رقم هاتف صديق حالة الطوارىء ">
+                        </div>
+                        <small class="error-message"></small>
+
+                    </div>
+                    
+                </div>
+                <div class="flex-box">
+                    
+                    
+                    <div class="form-group">
+                        <label>فئة التأمين</label>
+                        <div class="input-field">
+                            <select class="w-100 border-0 ">
+                               
+                                <option>VVIP</option>
+                                <option>VIP</option>
+                                <option>a</option>
+                                <option>b</option>
+                                <option>c</option>
+
+                            </select>
+                        </div>   
+                        <small class="error-message"></small>
+
+                    </div>
+                    <div class="form-group">
+                        <label>تاريخ إنتهاء التأمين </label>
+                        <div class="input-field">
+                            <input type="date" >
+                        </div> 
+                        <small class="error-message"></small>
+
+                    </div>
+                    
+                </div>
+                <div class="flex-box">
+                    <div class="form-group">
+                        <label>اسم البنك</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/bank.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل اسم البنك ">
+                        </div>
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label>الحساب البنكي</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/cards.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل الحساب البنكي">
+                        </div>
+                        <small class="error-message"></small>
+
+                    </div>
+                    
+                </div>
+                <div class="flex-box">
+                    <div class="form-group">
+                        <label>الراتب الأساسي</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/dollar-circle.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل الراتب الأساسي ">
+                        </div>
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label>بدلات أخرى</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/dollar-circle.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل  البدلات أخرى">
+                        </div>
+                        <small class="error-message"></small>
+
+                    </div>
+                    
+                </div>
+                <div class="flex-box">
+                    <div class="form-group">
+                        <label>مبلغ اشتراك التأمينات</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/dollar-circle.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل مبلغ اشتراك التأمينات  ">
+                        </div>
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label>بدل السكن</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/dollar-circle.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل  بدل السكن ">
+                        </div>
+                        <small class="error-message"></small>
+
+                    </div>
+                    
+                </div>
+                <div class="flex-box">
+                    <div class="form-group">
+                        <label>بدل المواصلات</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/dollar-circle.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل بدل المواصلات">
+                        </div>
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label>نسبة التأمنات </label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/ticket-discount.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل نسبة التأمنات ">
+                        </div>
+                        <small class="error-message"></small>
+
+                    </div>
+                    
+                </div>
+                <div class="flex-box">
+                    <div class="form-group p-0">
+                        <label> رصيد الإجازة</label>
+                        <div class="input-field">
+                            <img class="icon" src="assets/images/dollar-circle.webp" loading="lazy" alt="">
+                            <input type="text" placeholder="ادخل رصيد الإجازة">
+                        </div>
+                        <small class="error-message"></small>
+                    </div>
+                  
+                
+                </div>
+                <div class="form-group mt-2">
+                    <label for="inputTag" class="input-file">
+                        + إضافة ملفات ومستندات
+                        <input id="inputTag" type="file" multiple/>
+                    </label>
+                  
+                </div>
+                <div class="form-group ">
+                    <label>سجل العهد</label>
+                    <textarea></textarea>
+                  
+                </div>
+                
+            </form>
+        </div>
+
+       </div>
+    </main>
+
     <!-- End Main Content -->
-
-
     <script src="assets/js/main_script.js"></script>
-    
+   
 </body>
 </html>

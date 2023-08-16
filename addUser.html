@@ -5,20 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>الأجازات السنوية</title>
-
+    <title>اضافة مستخدم</title>
     <link rel="shortcut icon" href="assets/images/logo_small.webp" type="image/x-icon">
 
     <!-- Bootstrap style -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- Table style -->
-    <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+
 
     <!-- main style -->
     <link rel="stylesheet" href="assets/css/main_style.css">
-    <link rel="stylesheet" href="assets/css/viewPayrolls.css">
+    <style>
+     
+        .switch {
+            display: inline-block;
+            height: 34px;
+            position: relative;
+            width: 60px;
+        }
 
+        .switch input {
+          display:none;
+        }
 
+        .slider {
+            background-color: #ccc;
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
+            }
+
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px;
+            content: "";
+            height: 26px;
+            left: 4px;
+            position: absolute;
+            transition: .4s;
+            width: 26px;
+        }
+
+        input:checked + .slider {
+            background-color: #66bb6a;
+        }
+
+        input:checked + .slider:before {
+          transform: translateX(26px);
+        }
+
+        .slider.round {
+          border-radius: 34px;
+        }
+
+        .slider.round:before {
+          border-radius: 50%;
+        }
+
+        .permissions .select-all{
+            color: #50BB25;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 400;
+        }
+        .permissions {
+            max-width: 1000px;
+        }
+
+        .permissions .box{
+            background-color: #FFF;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--light-1, #999);
+            background: var(--light-3, #FFF);
+        }
+        .permissions .box .permission{
+           padding: 10px 0;
+           border-bottom: 1px solid #EEE;
+        }
+        .permissions .box .permission:last-child{
+            border: none;
+        }
+        .permissions >h4{
+            color: #000;
+            margin-bottom: 20px;
+             font-size: 27px;
+       
+        }
+        .permissions .top span:first-child{
+            color: #000;
+      
+             font-size: 22px;
+       
+        }
+    </style>
 </head>
 <body>
 
@@ -110,7 +194,7 @@
           <span>abdallah@email.com</span>
         </div>
         <ul class="options list-unstyled">
-          <li class="option ">
+          <li class="option active">
               <a href="dashboard.html" >
                   <span class="icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="21" viewBox="0 0 22 21" fill="none">
@@ -120,7 +204,7 @@
                   <span class="name">لوحة التحكم</span>
               </a>
           </li>
-          <li class="option ">
+          <li class="option active">
               <a href="users.html" >
                   <span class="icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
@@ -162,7 +246,7 @@
                   <span class="name">الموظفين</span>
               </a>
           </li>
-          <li class="option active">
+          <li class="option ">
               <a href="Vacations_and_holidays.html" >
                   <span class="icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -314,23 +398,245 @@
 
 
     <!-- Start Main content -->
-    <main class="main">
-        <div class="container-fluid">
-            <div class="header-actions mb-5">
-                <h4 class="mb-4 me-2"> الإجازات السنوية</h4>
-                <div class="d-sm-flex ">
-                    <a href="view_annual_holidays.html" class="primary-button m">عرض الإجازات السنوية</a>
 
-                    <a href="Create_vacation.html" class="secondary-button">إنشاء إجازة</a>
+    <main class="main" >
+       <div class="container-fluid">
+
+        <form>
+            <div class="header-actions d-md-flex justify-content-between align-items-center mb-5">
+                <h4>المستخدمين</h4>
+                <div class="d-sm-flex ">
+                    <button class="primary-button ">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M6.69133 1.00684V12.2254M1.08203 6.61614H12.3006" stroke="white" stroke-width="1.60586" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span>إضافة المستخدم</span>                        
+                    </button>
                 </div>
             </div>
-        </div>
-
     
+            <div class="add-user">
+                    <div class="flex-box">
+                        <div class="form-group">
+                            <label>الاسم الكامل</label>
+                            <div class="input-field">
+                                <img class="icon" src="assets/images/user_icon.webp" loading="lazy" alt="">
+                                <input type="text" placeholder="ادخل اسم المستخدم">
+                            </div>
+                            <small class="error-message">هذا الحقل مطلوب</small>
+                        </div>
+                     
+                        
+                    </div>
+                    <div class="flex-box">
+                        <div class="form-group">
+                            <label>البريد الإلكتروني </label>
+                            <div class="input-field">
+                                <img class="icon" src="assets/images/email.webp" loading="lazy" alt="">
+                                <input type="text" placeholder="ادخل البريد الإلكتروني ">
+                            </div>
+                            <small class="error-message"></small>
+                        </div>
+                     
+                        
+                    </div>
+                     <div class="flex-box">
+                        <div class="form-group">
+                            <label>رقم الهاتف</label>
+                            <div class="input-field">
+                                <img class="icon" src="assets/images/call.webp" loading="lazy" alt="">
+                                <input type="text" placeholder="ادخل رقم الهاتف">
+                            </div>
+                            <small class="error-message"></small>
+                        </div>
+                     
+                        
+                    </div>
+                    <div class="permissions mt-4">
+                        <h4>الصلاحيات </h4>
+                        <div class="sales-department mb-4">
+                            <div class="top d-flex align-items-center justify-content-between mb-3">
+                                <span>قسم البيع</span>
+                                <span class="select-all">تحديد الكل</span>
+                            </div>
+                            <div class="box">
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span>المبيعات </span>
+                                    <label class="switch" for="sales">
+                                        <input type="checkbox" id="sales" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span>إنشاء الفاتورة</span>
+                                    <label class="switch" for="create_invoice">
+                                        <input type="checkbox" id="create_invoice" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span> عرض الفواتير المعلقة</span>
+                                    <label class="switch" for="view_outstanding_invoices">
+                                        <input type="checkbox" id="view_outstanding_invoices" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span> استكمل الفواتير المعلقة</span>
+                                    <label class="switch" for="complete_outstanding_invoices">
+                                        <input type="checkbox" id="complete_outstanding_invoices" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span>استرجاع فاتورة  </span>
+                                    <label class="switch" for="invoice_recovery">
+                                        <input type="checkbox" id="invoice_recovery" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span>عرض العملاء  </span>
+                                    <label class="switch" for="customer_show">
+                                        <input type="checkbox" id="customer_show" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span>استبدال فاتورة</span>
+                                    <label class="switch" for="replace_invoice">
+                                        <input type="checkbox" id="replace_invoice" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span>تعديل طريقة الدفع  </span>
+                                    <label class="switch" for="modify_payment_method">
+                                        <input type="checkbox" id="modify_payment_method" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span> تعديل الخصم</span>
+                                    <label class="switch" for="discount_adjustment">
+                                        <input type="checkbox" id="discount_adjustment" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="supervision-department">
+                            <div class="top d-flex align-items-center justify-content-between mb-3">
+                                <span>قسم الإشراف</span>
+                                <span class="select-all">تحديد الكل</span>
+                            </div>
+                            <div class="box">
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span>المبيعات </span>
+                                    <label class="switch" for="sales2">
+                                        <input type="checkbox" id="sales2" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span>إنشاء الفاتورة</span>
+                                    <label class="switch" for="create_invoice2">
+                                        <input type="checkbox" id="create_invoice2" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span> عرض الفواتير المعلقة</span>
+                                    <label class="switch" for="view_outstanding_invoices2">
+                                        <input type="checkbox" id="view_outstanding_invoices2" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span> استكمل الفواتير المعلقة</span>
+                                    <label class="switch" for="complete_outstanding_invoices2">
+                                        <input type="checkbox" id="complete_outstanding_invoices2" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span>استرجاع فاتورة  </span>
+                                    <label class="switch" for="invoice_recovery2">
+                                        <input type="checkbox" id="invoice_recovery2" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span>عرض العملاء  </span>
+                                    <label class="switch" for="customer_show2">
+                                        <input type="checkbox" id="customer_show2" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span>استبدال فاتورة</span>
+                                    <label class="switch" for="replace_invoice2">
+                                        <input type="checkbox" id="replace_invoice2" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span>تعديل طريقة الدفع  </span>
+                                    <label class="switch" for="modify_payment_method2">
+                                        <input type="checkbox" id="modify_payment_method2" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                                <div class="permission d-flex align-items-center justify-content-between">
+                                    <span> تعديل الخصم</span>
+                                    <label class="switch" for="discount_adjustment2">
+                                        <input type="checkbox" id="discount_adjustment2" />
+                                        <div class="slider round"></div>
+                                      </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+    
+           </div>
+        </form>
+       </div>
+       
+
+        
+    </main>
+
     <!-- End Main Content -->
-
-
     <script src="assets/js/main_script.js"></script>
-    
+    <script>
+        let selectAllButtons=document.querySelectorAll(".add-user .permissions .select-all");
+        selectAllButtons.forEach(button=>{
+            let is_All_checked=false;
+
+            button.addEventListener("click",function(){
+                let allSwitchs=this.parentNode.nextElementSibling.querySelectorAll("input[type='checkbox']");
+                if(!is_All_checked){
+
+                allSwitchs.forEach(element=>{
+                    element.checked=true
+                });
+                is_All_checked=true;
+            }
+            else{
+                allSwitchs.forEach(element=>{
+                    element.checked=false;
+                });
+                is_All_checked=false;
+            }
+            })
+      
+         
+        })
+
+   </script>
+   
 </body>
 </html>

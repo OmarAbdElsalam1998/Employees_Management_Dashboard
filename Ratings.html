@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>الأجازات السنوية</title>
+    <title>التقييمات </title>
 
     <link rel="shortcut icon" href="assets/images/logo_small.webp" type="image/x-icon">
 
@@ -17,8 +17,33 @@
     <!-- main style -->
     <link rel="stylesheet" href="assets/css/main_style.css">
     <link rel="stylesheet" href="assets/css/viewPayrolls.css">
-
-
+    <style>
+        .table .add-rate{
+            display: block;
+            padding: 4px 8px;
+            border-radius: 3px;
+            background: #9F69B8;
+            color:#FFF;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .table .edit-rate{
+            display: block;
+            padding: 4px 8px;
+            border-radius: 3px;
+            background: #4CAF50;
+            color:#FFF;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .pop-up .inner label{
+            display: block;
+            margin-bottom: 10px;
+        }
+        .pop-up .inner select{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
@@ -103,7 +128,8 @@
 
     <!-- Start aside menu section -->
 
-    <aside class="menu ">
+    
+    <aside class="menu active">
         <div class="user text-center py-4">
           <img src="assets/images/user.webp" loading="lazy" alt="عبد الله">
           <h4>عبد الله </h4>
@@ -162,7 +188,7 @@
                   <span class="name">الموظفين</span>
               </a>
           </li>
-          <li class="option active">
+          <li class="option ">
               <a href="Vacations_and_holidays.html" >
                   <span class="icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -186,8 +212,8 @@
           <li class="option ">
               <a href="Salaries_and_commissions.html" >
                   <span class="icon ">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="25" height="20"><path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,22c-5.514,0-10-4.486-10-10S6.486,2,12,2s10,4.486,10,10-4.486,10-10,10Zm4-8c0,1.654-1.346,3-3,3v1c0,.553-.447,1-1,1s-1-.447-1-1v-1h-.268c-1.067,0-2.063-.574-2.598-1.499-.277-.479-.113-1.09,.364-1.366,.479-.279,1.091-.113,1.366,.364,.179,.31,.511,.501,.867,.501h2.268c.552,0,1-.448,1-1,0-.378-.271-.698-.644-.76l-3.041-.507c-1.342-.223-2.315-1.373-2.315-2.733,0-1.654,1.346-3,3-3v-1c0-.552,.447-1,1-1s1,.448,1,1v1h.268c1.067,0,2.063,.575,2.598,1.5,.277,.478,.113,1.089-.364,1.366-.48,.277-1.091,.113-1.366-.365-.179-.309-.511-.5-.867-.5h-2.268c-.552,0-1,.449-1,1,0,.378,.271,.698,.644,.76l3.041,.507c1.342,.223,2.315,1.373,2.315,2.733Z"  stroke="#F8F8F8" fill="#F8F8F8"/></svg>
-
+                      <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="25" height="20"><path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,22c-5.514,0-10-4.486-10-10S6.486,2,12,2s10,4.486,10,10-4.486,10-10,10Zm4-8c0,1.654-1.346,3-3,3v1c0,.553-.447,1-1,1s-1-.447-1-1v-1h-.268c-1.067,0-2.063-.574-2.598-1.499-.277-.479-.113-1.09,.364-1.366,.479-.279,1.091-.113,1.366,.364,.179,.31,.511,.501,.867,.501h2.268c.552,0,1-.448,1-1,0-.378-.271-.698-.644-.76l-3.041-.507c-1.342-.223-2.315-1.373-2.315-2.733,0-1.654,1.346-3,3-3v-1c0-.552,.447-1,1-1s1,.448,1,1v1h.268c1.067,0,2.063,.575,2.598,1.5,.277,.478,.113,1.089-.364,1.366-.48,.277-1.091,.113-1.366-.365-.179-.309-.511-.5-.867-.5h-2.268c-.552,0-1,.449-1,1,0,.378,.271,.698,.644,.76l3.041,.507c1.342,.223,2.315,1.373,2.315,2.733Z"  stroke="#F8F8F8" fill="#F8F8F8"/></svg>
+  
                   </span>
                   <span class="name">الرواتب و العمولات</span>
               </a>
@@ -217,14 +243,13 @@
           <li class="option ">
               <a href="" >
                   <span class="icon">
-                    <svg id="Layer_1" height="22" width="26" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><path d="m24 19v-15a3 3 0 0 0 -3-3h-18a3 3 0 0 0 -3 3v15h11v2h-5v2h12v-2h-5v-2zm-22-15a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v13h-20zm12.965 5h5.035v2h-3.965l-2.659 3.988-3-6-1.341 2.012h-5.035v-2h3.965l2.659-3.988 3 6z" stroke="#F8F8F8" fill="#F8F8F8"/></svg>
-
+                      <svg id="Layer_1" height="22" width="26" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><path d="m24 19v-15a3 3 0 0 0 -3-3h-18a3 3 0 0 0 -3 3v15h11v2h-5v2h12v-2h-5v-2zm-22-15a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v13h-20zm12.965 5h5.035v2h-3.965l-2.659 3.988-3-6-1.341 2.012h-5.035v-2h3.965l2.659-3.988 3 6z" stroke="#F8F8F8" fill="#F8F8F8"/></svg>
                       
                   </span>
                   <span class="name">التقييم الشهري</span>
               </a>
           </li>
-          <li class="option ">
+          <li class="option active">
               <a href="Ratings.html" >
                   <span class="icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" viewBox="0 0 22 25" fill="none">
@@ -316,21 +341,264 @@
     <!-- Start Main content -->
     <main class="main">
         <div class="container-fluid">
-            <div class="header-actions mb-5">
-                <h4 class="mb-4 me-2"> الإجازات السنوية</h4>
-                <div class="d-sm-flex ">
-                    <a href="view_annual_holidays.html" class="primary-button m">عرض الإجازات السنوية</a>
-
-                    <a href="Create_vacation.html" class="secondary-button">إنشاء إجازة</a>
-                </div>
+            <div class="header-actions d-md-flex justify-content-between align-items-center mb-5">
+                <h4>التقييمات </h4>
+                
             </div>
-        </div>
+    
+            <div class="table">
+    
+                <table id="example" class="stripe row-border order-column nowrap" style="width:100% ;direction: rtl;">
+                    <thead>
+                        <tr>
+                            <th>المعرف</th>
+                            <th> عمليات </th>
+                            <th>الاسم</th>
+                            <th>نوع</th>
+                            <th>رصيد الاجازات</th>
+                            <th>البريد</th>
+                            <th>الحالة</th>
+                            <th>المباشرة </th>
+                            <th> نوع العقد</th>
+                        
+                            
+    
+    
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                       <tr>
+                        <td>1012</td>
+                        <td>
+                            <span class="add-rate pop-up-btn">اضافة تقييم +</span>
+                        </td>
+                        <td>Cordie</td>
+                        <td>دوام كامل</td>
+                        <td>0.08642</td>
+                        <td>fnassar3@gmail.com</td>
+                        <td>فترة تجريبية</td>
+                        <td>22/6/2023</td>
+                        <td>محدد</td>
+                       </tr>
+                       <tr>
+                        <td>1012</td>
+                        <td>
+                            <span class="edit-rate pop-up-btn">تعديل التقييم</span>
+                        </td>
+                        <td>Cordie</td>
+                        <td>دوام كامل</td>
+                        <td>0.08642</td>
+                        <td>fnassar3@gmail.com</td>
+                        <td>فترة تجريبية</td>
+                        <td>22/6/2023</td>
+                        <td>محدد</td>
+                       </tr>
+                       <tr>
+                        <td>1012</td>
+                        <td>
+                            <span class="add-rate pop-up-btn">اضافة تقييم +</span>
+                        </td>
+                        <td>Cordie</td>
+                        <td>دوام كامل</td>
+                        <td>0.08642</td>
+                        <td>fnassar3@gmail.com</td>
+                        <td>فترة تجريبية</td>
+                        <td>22/6/2023</td>
+                        <td>محدد</td>
+                       </tr>
+                       <tr>
+                        <td>1012</td>
+                        <td>
+                            <span class="edit-rate pop-up-btn">تعديل التقييم</span>
+                        </td>
+                        <td>Cordie</td>
+                        <td>دوام كامل</td>
+                        <td>0.08642</td>
+                        <td>fnassar3@gmail.com</td>
+                        <td>فترة تجريبية</td>
+                        <td>22/6/2023</td>
+                        <td>محدد</td>
+                       </tr>
+                       <tr>
+                        <td>1012</td>
+                        <td>
+                            <span class="add-rate pop-up-btn">اضافة تقييم +</span>
+                        </td>
+                        <td>Cordie</td>
+                        <td>دوام كامل</td>
+                        <td>0.08642</td>
+                        <td>fnassar3@gmail.com</td>
+                        <td>فترة تجريبية</td>
+                        <td>22/6/2023</td>
+                        <td>محدد</td>
+                       </tr>
+                       <tr>
+                        <td>1012</td>
+                        <td>
+                            <span class="edit-rate pop-up-btn">تعديل التقييم</span>
+                        </td>
+                        <td>Cordie</td>
+                        <td>دوام كامل</td>
+                        <td>0.08642</td>
+                        <td>fnassar3@gmail.com</td>
+                        <td>فترة تجريبية</td>
+                        <td>22/6/2023</td>
+                        <td>محدد</td>
+                       </tr>
+                       <tr>
+                        <td>1012</td>
+                        <td>
+                            <span class="add-rate pop-up-btn">اضافة تقييم +</span>
+                        </td>
+                        <td>Cordie</td>
+                        <td>دوام كامل</td>
+                        <td>0.08642</td>
+                        <td>fnassar3@gmail.com</td>
+                        <td>فترة تجريبية</td>
+                        <td>22/6/2023</td>
+                        <td>محدد</td>
+                       </tr>
+                       <tr>
+                        <td>1012</td>
+                        <td>
+                            <span class="edit-rate pop-up-btn">تعديل التقييم</span>
+                        </td>
+                        <td>Cordie</td>
+                        <td>دوام كامل</td>
+                        <td>0.08642</td>
+                        <td>fnassar3@gmail.com</td>
+                        <td>فترة تجريبية</td>
+                        <td>22/6/2023</td>
+                        <td>محدد</td>
+                       </tr>
+                    </tbody>
+                </table>
+                
+    
+            </div>
 
+             <!-- rating pop up form -->
+           <div class="pop-up" id="confirm_edit">
+            <div class="inner p-3">
+                <form action="">
+                    <h4 class="mb-3">إضافة تقييم </h4>
+                    <div class="input px-2 nb-3">
+                        <label class="">الشهر</label>
+                        <select>
+                            <option>يناير</option>
+                            <option>فبراير</option>
+                            <option>مارس</option>
+                            <option>أبريل</option>
+                            <option>مايو</option>
+                            <option>يونيو</option>
+                            <option>يوليو</option>
+                            <option>أغسطس</option>
+                            <option>سبتمبر</option>
+                            <option>أكتوبر</option>
+                            <option>نوفمبر</option>
+                            <option>دبسمبر</option>
+    
+                        </select>
+                    </div> 
+                    <div class="input px-2 mb-3">
+                        <label class="">التقييم</label>
+                        <select>
+                            <option>ممتاز</option>
+                            <option>جيد جداً</option>
+                            <option>جيد </option>
+                            <option>مقبول</option>
+                            <option>ضعيف</option>
+                          
+    
+                        </select>
+                    </div> 
+                    <button class="primary-button">إضافة تقييم</button>
+                    <button id="ClosePopUP" class="third-button">إلغاء</button>
+                </form>
+            
+            </div>
+          </div>
+
+          <!-- End rating pop up form  -->
+        </div>
+    </main>
     
     <!-- End Main Content -->
 
 
+    <script src="assets/js/jquery-3.7.0.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.fixedColumns.min.js"></script>
     <script src="assets/js/main_script.js"></script>
+    <script src="assets/js/popUpConfirmationMessage.js"></script>
+    <script>
+
+
+       //create table with pagination
+       var table= new DataTable('#example', {
+            fixedColumns: {
+                left: 3
+            },
+            paging: true,
+            scrollX: true
+        });
+
+
+
+        // Handle click on "Select all" control
+        var is_checked=false;
+        $('#select-all').on('click', function(){
+        // Get all rows with search applied
+            var rows = table.rows({ 'search': 'applied' }).nodes();
+
+                if(is_checked){
+                    for(let i=0;i< rows.length;i++){
+                       // uncheck checkboxes for all rows in the table
+
+                        $(rows[i]).find("td input.form-check-input").removeAttr("checked",)
+
+                    }
+                    is_checked=false;
+                
+                }
+                else{
+                    for(let i=0;i< rows.length;i++){
+                        // Check checkboxes for all rows in the table
+
+                        $(rows[i]).find("td input.form-check-input").attr("checked","checked");
+                    }
+                    is_checked=true;
+                
+
+                }
+        
+
+                
+        });
+        // change words from english to arabic in table
+      document.addEventListener("click",change_From_english);
+      window.addEventListener("load",change_From_english);
+      let num_of_displayed_rows=document.querySelector("#example_length")
     
+      function change_From_english(){
+   
+
+        let num_of_displayed_rows_from_total_rows =document.querySelector("#example_info");
+        num_of_displayed_rows_from_total_rows.innerHTML=num_of_displayed_rows_from_total_rows.innerHTML.replace("Showing","عرض").replace("entries","مدخلا").replace("to","إلي").replace("of","من أصل")
+
+
+            let Pagination_next_button=document.querySelector("#example_next");
+            Pagination_next_button.innerHTML=
+              `النالي <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1784 3.08113C12.5131 3.41586 12.5131 3.95858 12.1784 4.29331L7.64159 8.83008L12.1784 13.3668C12.5131 13.7016 12.5131 14.2443 12.1784 14.579C11.8436 14.9138 11.3009 14.9138 10.9662 14.579L5.82332 9.43617C5.48858 9.10143 5.48858 8.55872 5.82332 8.22399L10.9662 3.08113C11.3009 2.74639 11.8436 2.74639 12.1784 3.08113Z" fill="#98A9BC"/>
+            </svg>`;
+            let Pagination_prev_button=document.querySelector("#example_previous");
+            Pagination_prev_button.innerHTML=
+              ` <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.82332 4.08113C6.15805 3.74639 6.70077 3.74639 7.0355 4.08113L12.1784 9.22399C12.5131 9.55872 12.5131 10.1014 12.1784 10.4362L7.0355 15.579C6.70077 15.9138 6.15805 15.9138 5.82332 15.579C5.48858 15.2443 5.48858 14.7016 5.82332 14.3668L10.3601 9.83008L5.82332 5.29331C5.48858 4.95858 5.48858 4.41586 5.82332 4.08113Z" fill="#98A9BC"/>
+                </svg>رجوع`;
+      }
+    </script>
 </body>
 </html>

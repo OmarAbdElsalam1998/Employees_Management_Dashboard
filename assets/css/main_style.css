@@ -10,10 +10,12 @@
     direction: rtl;;
 }
 :root{
+    --brand-primary-button-color: #6F4FF2;
     --yellow: #ffc107;
     --green:#1ddb83;
     --red: rgb(243, 19, 19);
     --blue: #206cdb;
+
 }
 
 body{
@@ -81,6 +83,42 @@ a:active{
     margin: 5px 10px;
 }
 
+.third-button{
+    outline: none;
+    border: none;
+    margin: 0 10px;
+    border-radius: 8px;
+    background: #747474;
+    min-width: 200px;
+    padding: 15px 10px;
+    color:#FFF;
+    margin: 5px 10px;
+}
+
+@media (max-width:576px){
+    .query-box select{
+        width: 100%;
+    }
+
+    .secondary-button,
+    .primary-button,
+    .third-button{
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (min-width:576px) and (max-width:991px){
+   
+    
+    .secondary-button,
+    .primary-button,
+    .third-button{
+        width: calc(50% - 12px);
+        margin: 10px 5px;
+        display: inline-block;
+    }
+}
 /* Scroll bar style */
 
 /* width */
@@ -125,6 +163,146 @@ table tr td{
 .status.blue{
     background-color: #206cdb;
 }
+
+
+
+
+/* Start input field styles */
+
+ .form-group{
+    margin: 0 0 15px 0   ;
+
+}
+ .flex-box{
+    display: flex;
+
+}
+.flex-box .form-group:first-child{
+    width: 50%;
+    padding-left: 8px;
+}
+.flex-box .form-group:last-child{
+    width: 50%;
+    padding-right: 8px;
+}
+.form-group .error-message{
+    color: #E20000;
+    font-family: cairo;
+}
+
+ .form-group .input-field{
+    border-radius: 8px;
+    border: 1px solid #dbdbe4ad;
+    background: var(--light-3, #FFF);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    transition: all .2s ease-in-out;
+    margin-top: 5px;
+
+    
+}
+ .form-group label{
+    color: #000;
+    text-align: center;
+    font-family: cairo;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+ .form-group .input-field input{
+    height: 55px;
+    border: none;
+    outline: none;
+    padding-right: 15px;
+    width: 100%;
+    color: #747474;
+    font-family: Cairo;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+ .form-group .input-field:focus-within{
+    border:1px solid var(--brand-primary-button-color)
+}
+
+@media (max-width:576px){
+    .flex-box{
+        display: block;
+    }
+    .flex-box .form-group:first-child{
+        width: 100%;
+        padding-left: 0;
+    }
+    .flex-box .form-group:last-child{
+        width: 100%;
+        padding-right: 0;
+    }
+}
+
+   /* Start pop up */
+
+   .pop-up{
+    position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(11,11,11, 80%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+        transition: all .3s ease-in-out;
+    }
+    .pop-up.show{
+    visibility: visible;
+    opacity: 1;
+    z-index: 99999;
+
+
+    }
+    .pop-up .inner{
+        width: 700px;
+        max-width: 90vw;
+        background-color: #FFF;
+        padding: 10px;
+        border-radius: 12px;
+        transform: translateY(-100px);
+        transition: all .3s ease-in-out;
+
+    }
+    .pop-up.show .inner{
+
+        transform: translateY(-50px);
+        cursor: pointer;
+        z-index: 99999999999;
+    
+
+    }
+    .pop-up.show .inner #ClosePopUP{
+        outline: none;
+        border: none;
+        margin: 0 10px;
+        border-radius: 8px;
+        background: #747474;
+        min-width: 200px;
+        padding: 15px 10px;
+        margin: 5px 10px;
+        color: #000;
+        background-color: transparent;
+        border: 1px solid #9747FF;
+    }
+    .pop-up.show .inner #ClosePopUP:active{
+        background-color: transparent;
+    }
+
+    /* end pop up */
+
 /* Global style */
 
 /* start Header Style */
@@ -412,6 +590,10 @@ aside.menu .user span{
     line-height: normal;
     letter-spacing: 0.11px;
 }
+aside.menu .options {
+    margin: 0;
+    padding: 0;
+}
 aside.menu .options li{
     padding: 10px 0;
 }
@@ -538,7 +720,7 @@ aside.menu::-webkit-scrollbar {
 /* Start main section style */
 
 .main{
-    padding: 50px 30px;
+    padding: 30px;
     font-family: cairo;
 }
 
