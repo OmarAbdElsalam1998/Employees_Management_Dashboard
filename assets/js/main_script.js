@@ -21,9 +21,11 @@ displayFullScreenbBtn.addEventListener("click",function()
 let showAsideMenuButton=document.querySelector(".bars");
 showAsideMenuButton.addEventListener("click",function(){
     document.body.classList.toggle("toggle-aside")
+
     
 
 });
+
 
 
 

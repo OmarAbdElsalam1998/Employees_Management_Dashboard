@@ -61,6 +61,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="sign-out d-block d-lg-none">
+                    <a href="signIn.html">
+                        <img src="assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
+                </div>
                 <div class="zoom-out d-none d-md-block" id="zoom_out">
                     <img src="assets/images/zoomPage.webp" loading="lazy" alt="تكبير الصفحة">
                 </div>
@@ -81,7 +87,10 @@
                   
                 </div>
                 <div class="sign-out d-none d-md-block">
-                    <img src="assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+                    <a href="signIn.html">
+                        <img src="assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
                 </div>
                 <div class="user d-flex align-items-center d-none d-md-flex">
                     <div class="user-image">
@@ -928,52 +937,7 @@
     </main>
 
     
-    <!-- <div class="table-responsive-lg">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-    </div> -->
-    
-    
+
     <!-- End Main Content -->
 
 
@@ -984,15 +948,51 @@
     <script>
 
 
-       //create table with pagination
-       var table= new DataTable('#example', {
+        //create table with pagination
+
+        var table= new DataTable('#example', {
             fixedColumns: {
                 left: 2
             },
             paging: true,
-            scrollX: true
+            scrollX: true,
+            responsive: true
+
         });
 
+        function changeNumOfFixedColumns(x) {
+        if (x.matches) { // If media query matches
+            table.destroy();
+            table= new DataTable('#example', {
+                fixedColumns: {
+                        left: 0
+                    },
+                    paging: true,
+                    scrollX: true,
+                    responsive: true
+
+                });
+                change_From_english()
+        } else {
+            table.destroy();
+
+            table= new DataTable('#example', {
+                    fixedColumns: {
+                        left: 2
+                    },
+                    paging: true,
+                    scrollX: true,
+                    responsive: true
+
+                });
+                change_From_english()
+        }
+        }
+
+        var x = window.matchMedia("(max-width: 992px)")
+        changeNumOfFixedColumns(x) // Call listener function at run time
+        x.addListener(changeNumOfFixedColumns) // Attach listener function on state changes
+           
 
 
         // Handle click on "Select all" control

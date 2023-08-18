@@ -87,6 +87,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="sign-out d-block d-lg-none">
+                    <a href="signIn.html">
+                        <img src="assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
+                </div>
                 <div class="zoom-out d-none d-md-block" id="zoom_out">
                     <img src="assets/images/zoomPage.webp" loading="lazy" alt="تكبير الصفحة">
                 </div>
@@ -107,7 +113,10 @@
                   
                 </div>
                 <div class="sign-out d-none d-md-block">
-                    <img src="assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+                    <a href="signIn.html">
+                        <img src="assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
                 </div>
                 <div class="user d-flex align-items-center d-none d-md-flex">
                     <div class="user-image">
@@ -599,6 +608,11 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.82332 4.08113C6.15805 3.74639 6.70077 3.74639 7.0355 4.08113L12.1784 9.22399C12.5131 9.55872 12.5131 10.1014 12.1784 10.4362L7.0355 15.579C6.70077 15.9138 6.15805 15.9138 5.82332 15.579C5.48858 15.2443 5.48858 14.7016 5.82332 14.3668L10.3601 9.83008L5.82332 5.29331C5.48858 4.95858 5.48858 4.41586 5.82332 4.08113Z" fill="#98A9BC"/>
                 </svg>رجوع`;
       }
+
+      setInterval(()=>{
+    table.columns.adjust().draw();
+     change_From_english()
+},0)
     </script>
 </body>
 </html>

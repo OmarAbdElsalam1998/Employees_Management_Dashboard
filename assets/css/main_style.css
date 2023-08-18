@@ -330,6 +330,19 @@ table tr td{
 
 
 }
+.header .user-image{
+    position: relative;
+}
+.header .user-image .user-status{
+    position: absolute;
+    right: 30px;
+    bottom: 2px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #39df17;
+    border-radius: 50%;
+}
 
 @media (max-width:768px){
     .header .search{
@@ -381,8 +394,8 @@ table tr td{
     
     
     }
-    .header .right-div > div{
-        padding: 0 5px;
+    .header .left-div> div{
+        padding: 0 10px;
         cursor: pointer;
     }
 }

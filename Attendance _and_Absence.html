@@ -18,6 +18,15 @@
     <link rel="stylesheet" href="assets/css/main_style.css">
     <link rel="stylesheet" href="assets/css/viewPayrolls.css">
     <style>
+        select{
+            width: auto;
+            
+            background-color: transparent;
+            display: none;
+            margin: auto;
+            padding:10px;
+            height:20px;
+        }
    .table-responsive{
         background-color: #FFF;
         border-radius: 12px;
@@ -91,6 +100,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="sign-out d-block d-lg-none">
+                    <a href="signIn.html">
+                        <img src="assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
+                </div>
                 <div class="zoom-out d-none d-md-block" id="zoom_out">
                     <img src="assets/images/zoomPage.webp" loading="lazy" alt="تكبير الصفحة">
                 </div>
@@ -111,7 +126,10 @@
                   
                 </div>
                 <div class="sign-out d-none d-md-block">
-                    <img src="assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+                    <a href="signIn.html">
+                        <img src="assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
                 </div>
                 <div class="user d-flex align-items-center d-none d-md-flex">
                     <div class="user-image">
@@ -422,328 +440,1492 @@
                         <td>23</td>
                         <td>3</td>
                         <td>5</td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        
 
                        </tr>
+                      
                        <tr>
                         <td>1110</td>
                         <td>Asa Donnelly</td>
                         <td>23</td>
                         <td>3</td>
                         <td>5</td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
 
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        
 
                        </tr>
+                       
                        <tr>
                         <td>1110</td>
                         <td>Asa Donnelly</td>
                         <td>23</td>
                         <td>3</td>
                         <td>5</td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        
 
                        </tr>
+                       
                        <tr>
                         <td>1110</td>
                         <td>Asa Donnelly</td>
                         <td>23</td>
                         <td>3</td>
                         <td>5</td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
 
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        <td class="choose-status">
+                            <span>
+                                <select>
+                                    <option></option>
+
+                                    <option value="حاضر">ح</option>
+                                    <option value="غائب">غ</option>
+                                    <option value="متاخر">م</option>
+                                    <option value="عطلة">ط</option>
+                                </select>
+                            </span>
+                            <span class="status red">غ</span>
+                        </td>
+                        
 
                        </tr>
-                       <tr>
-                        <td>1110</td>
-                        <td>Asa Donnelly</td>
-                        <td>23</td>
-                        <td>3</td>
-                        <td>5</td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
 
-                       </tr>
-                       <tr>
-                        <td>1110</td>
-                        <td>Asa Donnelly</td>
-                        <td>23</td>
-                        <td>3</td>
-                        <td>5</td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-
-
-                       </tr>
-                       <tr>
-                        <td>1110</td>
-                        <td>Asa Donnelly</td>
-                        <td>23</td>
-                        <td>3</td>
-                        <td>5</td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-
-                       </tr>
-                       <tr>
-                        <td>1110</td>
-                        <td>Asa Donnelly</td>
-                        <td>23</td>
-                        <td>3</td>
-                        <td>5</td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-
-
-                       </tr>
-                       <tr>
-                        <td>1110</td>
-                        <td>Asa Donnelly</td>
-                        <td>23</td>
-                        <td>3</td>
-                        <td>5</td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status red">غ</span></td>
-                        <td><span class="status blue">ط</span></td>
-                        <td><span class="status yellow">م</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-                        <td><span class="status green">ح</span></td>
-
-                       </tr>
                       
                     </tbody>
                 </table>
@@ -753,50 +1935,7 @@
     </main>
 
     
-    <!-- <div class="table-responsive-lg">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-    </div> -->
+  
     
     
     <!-- End Main Content -->
@@ -809,14 +1948,51 @@
     <script>
 
 
-       //create table with pagination
-       var table= new DataTable('#example', {
+       
+        //create table with pagination
+
+        var table= new DataTable('#example', {
             fixedColumns: {
                 left: 2
             },
             paging: true,
-            scrollX: true
+            scrollX: true,
+            responsive: true
+
         });
+
+        function changeNumOfFixedColumns(x) {
+        if (x.matches) { // If media query matches
+            table.destroy();
+            table= new DataTable('#example', {
+                fixedColumns: {
+                        left: 0
+                    },
+                    paging: true,
+                    scrollX: true,
+                    responsive: true
+
+                });
+                change_From_english()
+        } else {
+            table.destroy();
+
+            table= new DataTable('#example', {
+                    fixedColumns: {
+                        left: 2
+                    },
+                    paging: true,
+                    scrollX: true,
+                    responsive: true
+
+                });
+                change_From_english()
+        }
+        }
+        var x = window.matchMedia("(max-width: 992px)")
+        changeNumOfFixedColumns(x) // Call listener function at run time
+        x.addListener(changeNumOfFixedColumns) // Attach listener function on state changes
+           
 
 
 
@@ -873,6 +2049,62 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.82332 4.08113C6.15805 3.74639 6.70077 3.74639 7.0355 4.08113L12.1784 9.22399C12.5131 9.55872 12.5131 10.1014 12.1784 10.4362L7.0355 15.579C6.70077 15.9138 6.15805 15.9138 5.82332 15.579C5.48858 15.2443 5.48858 14.7016 5.82332 14.3668L10.3601 9.83008L5.82332 5.29331C5.48858 4.95858 5.48858 4.41586 5.82332 4.08113Z" fill="#98A9BC"/>
                 </svg>رجوع`;
       }
+
+
+
+      //change employee status 
+    
+    let selectFields=document.querySelectorAll("table .choose-status");
+    console.log(selectFields)
+    selectFields.forEach(select=>{
+        let statusField;
+        select.addEventListener("click",function(){
+            let selectbox=this.childNodes[1].childNodes[1].style.display="block";
+             statusField=this.childNodes[3];
+             statusField.style.display="none";
+           
+        });
+        select.childNodes[1].childNodes[1].addEventListener("change",function(e){
+                var value = this.value;
+                console.log(value)
+
+                if(value=="حاضر"){
+                    let classes=['status','green'];
+                    console.log( statusField.className = '');
+                    statusField.style.display="inline"
+                    statusField.innerHTML="ح";
+                    statusField.classList.add(...classes);
+
+                }
+                else if(value=="غائب"){
+                    let classes=['status','red'];
+                    console.log( statusField.className = '');
+                    statusField.style.display="inline"
+                    statusField.innerHTML="غ";
+                    statusField.classList.add(...classes);
+
+                }
+                else if(value=="متاخر"){
+                    let classes=['status','yellow'];
+                    console.log( statusField.className = '');
+                    statusField.style.display="inline"
+                    statusField.innerHTML="م";
+                    statusField.classList.add(...classes);
+
+                }
+                else if(value=="عطلة"){
+                    let classes=['status','blue'];
+                    console.log( statusField.className = '');
+                    statusField.style.display="inline"
+                    statusField.innerHTML="ط";
+                    statusField.classList.add(...classes);
+
+                }
+                this.style.display="none";
+            });
+    })
+
+
     </script>
 </body>
 </html>

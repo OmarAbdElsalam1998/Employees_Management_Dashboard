@@ -72,6 +72,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="sign-out d-block d-lg-none">
+                    <a href="signIn.html">
+                        <img src="assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
+                </div>
                 <div class="zoom-out d-none d-md-block" id="zoom_out">
                     <img src="assets/images/zoomPage.webp" loading="lazy" alt="تكبير الصفحة">
                 </div>
@@ -92,7 +98,10 @@
                   
                 </div>
                 <div class="sign-out d-none d-md-block">
-                    <img src="assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+                    <a href="signIn.html">
+                        <img src="assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
                 </div>
                 <div class="user d-flex align-items-center d-none d-md-flex">
                     <div class="user-image">
@@ -376,8 +385,8 @@
                 <button class="primary-button">تعديل</button>
                 <button class="primary-button"><img src="assets/images/plus.webp" class="pe-2" loading="lazy" alt="+">إنشاء مسير جديد</button>
             </div>
-            <div class="py-2 d-flex justify-content-end no-print">
-                <a href="salary.html" class="secondary-button">دفع الراتب للمحددين</a>
+            <div class="py-2 text-end no-print">
+                <button class="secondary-button">دفع الراتب للمحددين</button>
                 <button class="primary-button">تصدير إكسل</button>
                 <button class="primary-button" id="printPage">طباعة</button>
             </div>
@@ -825,16 +834,51 @@
     <script src="assets/js/dataTables.fixedColumns.min.js"></script>
     <script src="assets/js/main_script.js"></script>
     <script>
+        //create table with pagination
 
-
-       //create table with pagination
-       var table= new DataTable('#example', {
+         var table= new DataTable('#example', {
             fixedColumns: {
                 left: 4
             },
             paging: true,
-            scrollX: true
+            scrollX: true,
+            responsive: true
+
         });
+
+        function changeNumOfFixedColumns(x) {
+        if (x.matches) { // If media query matches
+            table.destroy();
+            table= new DataTable('#example', {
+                fixedColumns: {
+                        left: 0
+                    },
+                    paging: true,
+                    scrollX: true,
+                    responsive: true
+
+                });
+                change_From_english()
+        } else {
+            table.destroy();
+
+            table= new DataTable('#example', {
+                    fixedColumns: {
+                        left: 4
+                    },
+                    paging: true,
+                    scrollX: true,
+                    responsive: true
+
+                });
+                change_From_english()
+        }
+        }
+
+        var x = window.matchMedia("(max-width: 1200px)")
+        changeNumOfFixedColumns(x) // Call listener function at run time
+        x.addListener(changeNumOfFixedColumns) // Attach listener function on state changes
+            
 
 
 
