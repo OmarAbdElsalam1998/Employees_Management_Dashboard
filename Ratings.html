@@ -545,13 +545,51 @@
 
 
        //create table with pagination
-       var table= new DataTable('#example', {
+         //create table with pagination
+
+         var table= new DataTable('#example', {
             fixedColumns: {
                 left: 3
             },
             paging: true,
-            scrollX: true
+            scrollX: true,
+            responsive: true
+
         });
+
+        function changeNumOfFixedColumns(x) {
+        if (x.matches) { // If media query matches
+            table.destroy();
+            table= new DataTable('#example', {
+                fixedColumns: {
+                        left: 0
+                    },
+                    paging: true,
+                    scrollX: true,
+                    responsive: true
+
+                });
+                change_From_english()
+        } else {
+            table.destroy();
+
+            table= new DataTable('#example', {
+                    fixedColumns: {
+                        left: 3
+                    },
+                    paging: true,
+                    scrollX: true,
+                    responsive: true
+
+                });
+                change_From_english()
+        }
+        }
+
+        var x = window.matchMedia("(max-width: 992px)")
+        changeNumOfFixedColumns(x) // Call listener function at run time
+        x.addListener(changeNumOfFixedColumns) // Attach listener function on state changes
+           
 
 
 
