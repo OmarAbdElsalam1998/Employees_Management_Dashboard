@@ -4,8 +4,10 @@ const popUpContainer=document.querySelector(".pop-up");
 const popUpInner=document.querySelector(".pop-up .inner");
 const closePopUpButton=document.querySelector(".pop-up .inner #ClosePopUP");
 popUpBtns.forEach(btn=>{
+
     btn.addEventListener("click",function(){
         popUpContainer.classList.add("show");
+        console.log("gg")
       })
 })
 popUpContainer.addEventListener("click",function(){
