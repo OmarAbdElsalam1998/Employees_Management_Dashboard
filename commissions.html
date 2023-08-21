@@ -18,44 +18,34 @@
     <link rel="stylesheet" href="assets/css/main_style.css">
     <link rel="stylesheet" href="assets/css/viewPayrolls.css">
     <style>
+        .box select{
+            width: 100%;
+        }
+        .box .commission{
+            display: none;
+        }
+        .box .commission.active{
+            display: block;
+        }
        .main .box{
             padding: 25px;
             border-radius: 16px;
             background-color: #FFF;
             border-left: 16px solid #B5A8F0 ;
         }
-       .main .box .icon{
-            width: 60px;
-            height: 60px;
-            text-align:center ;
-            line-height: 60px;
-            border-radius: 50%;
-            background-color: #B4FFE8;
-        }
+     
        .main .box .info h4{
             color: #000;
             font-family: cairo;
             font-size: 20px;
             font-weight: 500;
         }
-        .main .box .info h4>span{
-            color: #000;
-            font-family: cairo;
-            font-size: 17px;
-            font-weight: 500;
-        }
+   
        .main .box .info span{
             font-family: cairo;
             color: #4C5862;
         }
-       .main .box .info .count{
-            padding-left: 10px;
-            color: #000;
-            font-size: 30px;
-            font-weight: 400;
-            
-        
-}
+  
       
         .table .underline-text span{
             color: #699BF7;
@@ -356,13 +346,22 @@
     <!-- Start Main content -->
     <main class="main">
         <div class="container-fluid">
-            <div class="header-actions d-md-flex justify-content-between align-items-center mb-5">
-                <h4>نظام العمولة</h4>
-                
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-xxl-3 h-auto mb-4">
+            <div class="row mb-4">
+                <div class="col-md-6  h-auto mb-3">
+                    <div class="box  h-100">
+                        <h4 class="mb-3">نظام العمولة</h4>
+                        <select class="select">
+                            <option value="1">نسبة من المبيعات</option>
+                            <option value="2">نسبة من الراتب الأساسي </option>
+                            <option value="3">نسبة من الراتب الإجمالي</option>
+                            <option value="4">مبلغ مقطوع</option>
+                        </select>
+                        
+                    </div>
+               </div>
+                <div class="col-md-6 h-auto mb-3">
                     <div class="box h-100">
+                        <div  class="commission active">
                             
                             <div class="info">
                                 <h4 class="mb-2">نسبة من المبيعات</h4>
@@ -379,65 +378,57 @@
                         
                         
                     </div>
-               </div>
-               <div class="col-lg-6 col-xxl-3 h-auto mb-4">
-                    <div class="box h-100">
+                    <div class="commission">
                             
-                            <div class="info">
-                                <h4 class="mb-2">نسبة من الراتب الأساسي </h4>
-                                <hr>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>النسبة</span>
-                                    <span>5%</span>
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                    <span>مبيعات الشهر</span>
-                                    <span>1000</span>
-                                </div>
+                        <div class="info">
+                            <h4 class="mb-2">نسبة من الراتب الأساسي </h4>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>النسبة</span>
+                                <span>5%</span>
                             </div>
+                            <div class="d-flex justify-content-between">
+                                <span>مبيعات الشهر</span>
+                                <span>1000</span>
+                            </div>
+                        </div>
+                    
+                    
+                    </div>
+                    <div class="commission">
+                                
+                                <div class="info">
+                                    <h4 class="mb-2">نسبة من الراتب الإجمالي </h4>
+                                    <hr>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <span>النسبة</span>
+                                        <span>5%</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>مبيعات الشهر</span>
+                                        <span>100000</span>
+                                    </div>
+                                </div>
+                            
+                            
+                    </div>
+                    <div class="commission">
+                        <h4 class="mb-2">مبلغ مقطوع</h4>
+                        <hr>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>المبلغ</span>
+                            <span>500</span>
+                        </div>
                         
-                        
+                    </div>
                     </div>
                 </div>
-                
-                <div class="col-lg-6 col-xxl-3 h-auto mb-4">
-                    <div class="box h-100">
-                            
-                            <div class="info">
-                                <h4 class="mb-2">نسبة من الراتب الإجمالي </h4>
-                                <hr>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>النسبة</span>
-                                    <span>5%</span>
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                    <span>مبيعات الشهر</span>
-                                    <span>100000</span>
-                                </div>
-                            </div>
-                        
-                        
-                    </div>
-                 </div>
-                 <div class="col-lg-6 col-xxl-3 h-auto mb-4">
-                    <div class="box h-100">
-                            
-                            <div class="info">
-                                <h4 class="mb-2">مبلغ مقطوع</h4>
-                                <hr>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>المبلغ</span>
-                                    <span>500</span>
-                                </div>
-                                
-                            </div>
-                        
-                        
-                    </div>
-                 </div>
-                 
-                 
+              
             </div>
+                 
+                 
+            
+            
     
             <div class="table">
     
@@ -541,7 +532,6 @@
     <script src="assets/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/dataTables.fixedColumns.min.js"></script>
     <script src="assets/js/main_script.js"></script>
-    <script src="assets/js/popUpConfirmationMessage.js"></script>
     <script>
 
 var table;
@@ -626,6 +616,15 @@ var table;
             clearInterval(interval)
         },1000)
        
+      });
+
+
+      //show commision type when select box value change
+      document.querySelector(".select").addEventListener("change",function(e){
+        var value = this.value;
+        document.querySelector(".commission.active").classList.remove("active");
+        document.querySelector(".commission:nth-of-type("+value+")").classList.add("active")
+
       });
     </script>
 </body>
