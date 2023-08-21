@@ -24,6 +24,14 @@
         .box .commission{
             display: none;
         }
+        .box .commission input{
+            width: 100px;
+            height: 40px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #c9c9c9;
+            outline: none;
+        }
         .box .commission.active{
             display: block;
         }
@@ -366,14 +374,16 @@
                             <div class="info">
                                 <h4 class="mb-2">نسبة من المبيعات</h4>
                                 <hr>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <span>النسبة</span>
-                                    <span>5%</span>
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                    <span>مبيعات الشهر</span>
-                                    <span>100000</span>
-                                </div>
+                                <form>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <span>النسبة</span>
+                                        <span>% <input type="text"  value="5"></span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>مبيعات الشهر</span>
+                                        <input type="text"  value="1000">
+                                    </div>
+                                </form>
                             </div>
                         
                         
@@ -383,14 +393,16 @@
                         <div class="info">
                             <h4 class="mb-2">نسبة من الراتب الأساسي </h4>
                             <hr>
-                            <div class="d-flex justify-content-between mb-3">
-                                <span>النسبة</span>
-                                <span>5%</span>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <span>مبيعات الشهر</span>
-                                <span>1000</span>
-                            </div>
+                            <form>
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span>النسبة</span>
+                                    <span>% <input type="text"  value="5"></span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>مبيعات الشهر</span>
+                                    <input type="text"  value="1000">
+                                </div>
+                            </form>
                         </div>
                     
                     
@@ -400,14 +412,16 @@
                                 <div class="info">
                                     <h4 class="mb-2">نسبة من الراتب الإجمالي </h4>
                                     <hr>
-                                    <div class="d-flex justify-content-between mb-3">
-                                        <span>النسبة</span>
-                                        <span>5%</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <span>مبيعات الشهر</span>
-                                        <span>100000</span>
-                                    </div>
+                                    <form>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <span>النسبة</span>
+                                            <span>% <input type="text"  value="5"></span>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <span>مبيعات الشهر</span>
+                                            <input type="text"  value="1000">
+                                        </div>
+                                    </form>
                                 </div>
                             
                             
@@ -415,10 +429,14 @@
                     <div class="commission">
                         <h4 class="mb-2">مبلغ مقطوع</h4>
                         <hr>
-                        <div class="d-flex justify-content-between mb-3">
-                            <span>المبلغ</span>
-                            <span>500</span>
-                        </div>
+                        
+                        <form>
+                            <div class="d-flex justify-content-between">
+                                <span>المبلغ</span>
+                               <input type="text"  value="500">
+                               
+                           </div>
+                        </form>
                         
                     </div>
                     </div>
