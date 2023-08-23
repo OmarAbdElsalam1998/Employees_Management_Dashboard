@@ -358,6 +358,13 @@ table tr td{
     transition: all .2s ease-in-out;
 
 }
+.header .user::after{
+    content: url(../images/arrow.webp);
+    position: absolute;
+    left: -10px;
+    top: 3px;
+
+}
 @media (max-width:768px){
     .header .user .dropmenu {
         left: -20px;
@@ -439,6 +446,11 @@ table tr td{
     .header .left-div> div{
         padding: 0 10px;
         cursor: pointer;
+    }
+    .header .user::after{
+        content: "";
+      
+    
     }
 }
 
@@ -572,13 +584,7 @@ table tr td{
 .header .user{
     position: relative;
 }
-.header .user::after{
-    content: url(../images/arrow.webp);
-    position: absolute;
-    left: -10px;
-    top: 3px;
 
-}
 .header .user .user-image img{
     width:40px;
     height: 40px;
