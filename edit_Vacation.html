@@ -5,98 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>انشاء عهدة</title>
+    <title>إجراء على اجازة</title>
 
     <link rel="shortcut icon" href="assets/images/logo_small.webp" type="image/x-icon">
 
     <!-- Bootstrap style -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Table style -->
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
 
     <!-- main style -->
     <link rel="stylesheet" href="assets/css/main_style.css">
+    <link rel="stylesheet" href="assets/css/viewPayrolls.css">
     <style>
-        
-        select{
-            height: 55px;
-        }
-        input[type="date"] {
-            position: relative;
-            padding: 10px;
-            }
+  
+    select{
+        height: 40px;
+    }
+     .table{
+        margin-bottom: 100px;
 
-            input[type="date"]::-webkit-calendar-picker-indicator {
-            color: transparent;
-            background: none;
-            z-index: 1;
-            }
+     }
+     .table #example{
+        overflow-y: scroll;
 
-            input[type="date"]:before {
-            color: transparent;
-            background: none;
-            display: block;
-            content: url(assets/images/calendar.webp);
-            
-            position: absolute;
-            top: 12px;
-            right: 6px;
-            }
 
-            input[type="file"]{
-            display: none;
-            }
-            textarea{
-                outline: none;
-                padding: 10px;
-                border:1px solid #FFF;
-                display: block;
-                width: 100%;
-                height: 160px;
-                border-radius: 8px;
-                background: #FFF;
-                transition: border .3s ease-in-out;
-            }
-            textarea:focus{
-                border-color: var(--brand-primary-button-color);;
-            }
-            .Create_Custody{
-                padding: 20px;
-                border-radius: 16px;
-                background-color: #B5A8F0;
-                margin-bottom: 40px;
-            }
-            .table {
-                background-color: #FFF;
-                border-radius: 12px;
-                overflow: hidden;
-            }
-            .table-responsive{
-                background-color: #FFF;
-                border-radius: 12px;
-            }
-            .table thead {
-                background-color: #B5A8F0;
-                padding: 10px;
-            } 
-            .table tbody{
-                padding:10px;
-            }   
+     }
+    .table thead {
+        background-color: #B5A8F0;
+        padding: 10px;
+    } 
+    .table tbody{
+        padding:10px;
 
-            .table thead tr th{
 
-                background-color: #B5A8F0;
-                padding: 20px 0;
-                text-align: center;
-                min-width: 145px ;
-                width: auto;
-            }  
-            .table tbody tr td{
-                padding: 20px 0px;
-                text-align: center;
-                min-width: 145px ;
-            } 
-            .table tbody tr:last-child{
-                border-bottom:0px solid transparent;
-            } 
+    }   
+
+    .table thead tr th{
+
+        background-color: #B5A8F0;
+        padding: 20px 0;
+        text-align: center;
+        min-width: 145px ;
+        width: auto;
+    }  
+    .table tbody tr td{
+        padding: 20px 0px;
+        text-align: center;
+        min-width: 145px ;
+    } 
+    .table tbody tr:last-child{
+        border-bottom:0px solid transparent;
+    } 
+    .actions{
+        margin-right: 20px;
+        font-family: cairo;
+        position:fixed;
+        padding: 10px;
+        width:calc(100% - 300px);
+        bottom: 0;
+        background-color: #dee6ec;
+        z-index: 9999;
+    }
     </style>
 
 </head>
@@ -192,7 +162,7 @@
 
     <!-- Start aside menu section -->
 
-   
+    
     <aside class="menu active">
         <div class="user text-center py-4">
           <img src="assets/images/user.webp" loading="lazy" alt="عبد الله">
@@ -239,7 +209,7 @@
                     <span class="name">الحضور والغياب</span>
                 </a>
             </li>
-            <li class="option ">
+            <li class="option active">
                 <a href="Vacations_and_holidays.html" >
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -284,7 +254,7 @@
                     <span class="name">القروض و السلف</span>
                 </a>
             </li>
-            <li class="option active">
+            <li class="option ">
                 <a href="Create_Custody_main.html" >
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
@@ -398,71 +368,762 @@
     <!-- Start Main content -->
     <main class="main">
         <div class="container-fluid">
-            <div class="header-actions mb-5">
-                <a href="Create_Custody.html" class="primary-button" >انشاء عهدة</a>
+            <div class="header-actions mb-2">
+                <h4 class="mb-4 me-2">إجراء على اجازة</h4>
             </div>
-      
-
-            <h4>العهد مع الموظفين</h4>
-            <div class="table-responsive mt-3">
-                <table class="table">
+            <div class="table">
+                <table id="example" class="stripe row-border order-column nowrap" style="width:100% ;direction: rtl;">
                     <thead>
                       <tr>
-                        <th scope="col">رقم الموظف</th>
-                        <th scope="col">اسم الموظف</th>
-                        <th scope="col">تخصص الموظف </th>
-                        <th scope="col">نوع العدة</th>
-                        <th scope="col">تاريخ تسليم العدة </th>
-                        <th scope="col">تأكيد التسليم</th>
+                        <th scope="col">الرقم الوظيفي</th>
+                        <th scope="col">الاسم</th>
+                        <th scope="col">نوع الاجازة</th>
+                        <th scope="col">بداية الأجازة</th>
+                        <th scope="col">نهاية الاجازة</th>
+                        <th scope="col">نوع الإجازة</th>
+                        <th scope="col">الإجراء</th>
+                        <th scope="col">تاريخ الإجراء</th>
+                        
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>320563</td>
                         <td> عبد الله السيد</td>
-                        <td>111</td>
-                        <td>111</td>
-                        <td>111</td>
-                        <td>111</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>
+                        <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
 
                       </tr>
                       <tr>
                         <td>320563</td>
                         <td> عبد الله السيد</td>
-                        <td>111</td>
-                        <td>111</td>
-                        <td>111</td>
-                        <td>111</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>                        
+                        <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
 
                       </tr>
                       <tr>
                         <td>320563</td>
                         <td> عبد الله السيد</td>
-                        <td>111</td>
-                        <td>111</td>
-                        <td>111</td>
-                        <td>111</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>                        
+                        <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
 
                       </tr>
                       <tr>
                         <td>320563</td>
                         <td> عبد الله السيد</td>
-                        <td>111</td>
-                        <td>111</td>
-                        <td>111</td>
-                        <td>111</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>
+                         <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
 
                       </tr>
+                      <tr>
+                        <td>320563</td>
+                        <td> عبد الله السيد</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>
+                        <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
+
+                      </tr>
+                      <tr>
+                        <td>320563</td>
+                        <td> عبد الله السيد</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>
+                        <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
+
+                      </tr>
+                      <tr>
+                        <td>320563</td>
+                        <td> عبد الله السيد</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>
+                        <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
+
+                      </tr>
+                      <tr>
+                        <td>320563</td>
+                        <td> عبد الله السيد</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>
+                        <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
+
+                      </tr>
+                      <tr>
+                        <td>320563</td>
+                        <td> عبد الله السيد</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>
+                        <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
+
+                      </tr>
+                      <tr>
+                        <td>320563</td>
+                        <td> عبد الله السيد</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>
+                        <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
+
+                      </tr>
+                      <tr>
+                        <td>320563</td>
+                        <td> عبد الله السيد</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>
+                        <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
+
+                      </tr>
+                      <tr>
+                        <td>320563</td>
+                        <td> عبد الله السيد</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>
+                        <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
+
+                      </tr>
+                       <tr>
+                        <td>320563</td>
+                        <td> عبد الله السيد</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>
+                        <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
+
+                      </tr>
+                      <tr>
+                        <td>320563</td>
+                        <td> عبد الله السيد</td>
+                        <td>
+                            <select class="vacation-type">
+                                <option>أجازة عادية للسعوديين</option>
+                                <option>الإجازة العادية - غياب بعذر</option>
+                                <option>إجازة الوفاة</option>
+                                <option>أجازة إضطرارية للسعوديين</option>
+                                <option>الإجازة المرضية</option>
+                                <option>إجازة مرافقة مريض</option>
+                                <option>الإجازة الإستثنائية</option>
+                                <option>إجازة إستثنائية للمرافقة</option>
+                                <option>إجازة الامتحان الدراسي</option>
+                                <option>إجازة الأبوة</option>
+                                <option>إجازة تعويض تأخير </option>
+                                <option>إجازة وقوع كارثة</option>
+                                <option>إجازة ثقافية داخلية</option>
+                                <option>إجازة ثقافية خارجية</option>
+                                <option>المشاركة في أعمال الإغاثة</option>
+                                <option>إجازة غسيل فشل كلوي</option>
+                                <option>إجازة رياضية داخلية</option>
+                                <option>إجازة رياضية خارجية</option>
+                                <option>إجازة مرضية بسبب مرض خطير</option>
+                               
+                            </select>
+                        </td>
+                        <td>30</td>
+                        <td class="text-success">على رأس العمل</td>
+                        <td>سنوية</td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option value="مباشرة">مباشرة</option>
+                                <option value="تمديد">تمديد</option>
+                                <option value="الغاء">الغاء</option>
+                            </select>
+                        </td>
+                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
+
+                      </tr>
+                     
                     </tbody>
                   </table>
+                  
                </div>
         </div>
-
+       
+     </main>   
+     <div class="actions d-flex align-items-center justify-content-start">
+        <button class="primary-button">تأكيد</button>
+        <button  class="third-button">إلغاء</button>
+    </div>
     
     <!-- End Main Content -->
 
 
+    <script src="assets/js/jquery-3.7.0.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.fixedColumns.min.js"></script>
     <script src="assets/js/main_script.js"></script>
+    <script>
+        //create table with pagination
+
+         var table= new DataTable('#example', {
+            fixedColumns: {
+                left: 2
+            },
+            paging: true,
+            scrollX: true,
+            responsive: true
+
+        });
+
+        function changeNumOfFixedColumns(x) {
+        if (x.matches) { // If media query matches
+            table.destroy();
+            table= new DataTable('#example', {
+                fixedColumns: {
+                        left: 0
+                    },
+                    paging: true,
+                    scrollX: true,
+                    responsive: true
+
+                });
+                change_From_english()
+        } else {
+            table.destroy();
+
+            table= new DataTable('#example', {
+                    fixedColumns: {
+                        left: 2
+                    },
+                    paging: true,
+                    scrollX: true,
+                    responsive: true
+
+                });
+                change_From_english()
+        }
+        }
+
+        var x = window.matchMedia("(max-width: 1200px)")
+        changeNumOfFixedColumns(x) // Call listener function at run time
+        x.addListener(changeNumOfFixedColumns) // Attach listener function on state changes
+            
+
+
+
+        // Handle click on "Select all" control
+        var is_checked=false;
+        $('#select-all').on('click', function(){
+        // Get all rows with search applied
+            var rows = table.rows({ 'search': 'applied' }).nodes();
+
+                if(is_checked){
+                    for(let i=0;i< rows.length;i++){
+                       // uncheck checkboxes for all rows in the table
+
+                        $(rows[i]).find("td input.form-check-input").removeAttr("checked",)
+
+                    }
+                    is_checked=false;
+                
+                }
+                else{
+                    for(let i=0;i< rows.length;i++){
+                        // Check checkboxes for all rows in the table
+
+                        $(rows[i]).find("td input.form-check-input").attr("checked","checked");
+                    }
+                    is_checked=true;
+                
+
+                }
+        
+
+                
+        });
+        // change words from english to arabic in table
+      document.addEventListener("click",change_From_english);
+      window.addEventListener("load",change_From_english);
+      let num_of_displayed_rows=document.querySelector("#example_length")
+    
+      function change_From_english(){
+       
+
+        let num_of_displayed_rows_from_total_rows =document.querySelector("#example_info");
+        num_of_displayed_rows_from_total_rows.innerHTML=num_of_displayed_rows_from_total_rows.innerHTML.replace("Showing","عرض").replace("entries","مدخلا").replace("to","إلي").replace("of","من أصل")
+
+
+            let Pagination_next_button=document.querySelector("#example_next");
+            Pagination_next_button.innerHTML=
+              `النالي <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1784 3.08113C12.5131 3.41586 12.5131 3.95858 12.1784 4.29331L7.64159 8.83008L12.1784 13.3668C12.5131 13.7016 12.5131 14.2443 12.1784 14.579C11.8436 14.9138 11.3009 14.9138 10.9662 14.579L5.82332 9.43617C5.48858 9.10143 5.48858 8.55872 5.82332 8.22399L10.9662 3.08113C11.3009 2.74639 11.8436 2.74639 12.1784 3.08113Z" fill="#98A9BC"/>
+            </svg>`;
+            let Pagination_prev_button=document.querySelector("#example_previous");
+            Pagination_prev_button.innerHTML=
+              ` <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.82332 4.08113C6.15805 3.74639 6.70077 3.74639 7.0355 4.08113L12.1784 9.22399C12.5131 9.55872 12.5131 10.1014 12.1784 10.4362L7.0355 15.579C6.70077 15.9138 6.15805 15.9138 5.82332 15.579C5.48858 15.2443 5.48858 14.7016 5.82332 14.3668L10.3601 9.83008L5.82332 5.29331C5.48858 4.95858 5.48858 4.41586 5.82332 4.08113Z" fill="#98A9BC"/>
+                </svg>رجوع`;
+      }
+      
+
+        //select action name and set date for the selected action
+        let actions_selectboxes=document.querySelectorAll("select.select-action");
+        actions_selectboxes.forEach(selectbox=>{
+            selectbox.addEventListener("change",function(e){
+                var value = this.value;
+                const date = new Date();
+
+                let day = date.getDate();
+                let month = date.getMonth() + 1;
+                let year = date.getFullYear();
+
+                // This arrangement can be altered based on how we want the date's format to appear.
+                let currentDate = `${day}-${month}-${year}`;
+
+                if(value=="مباشرة"){
+                    this.parentNode.nextSibling.nextSibling.innerHTML=`
+                    <span>تاريخ المباشرة</span><br>
+                    <span>${currentDate}</span>`;
+
+                }
+                else if(value=="تمديد"){
+                    this.parentNode.nextSibling.nextSibling.innerHTML=`
+                    <span>تاريخ التمديد</span><br>
+                    <span>${currentDate}</span>`;
+
+                }
+                else if (value=="الغاء"){
+                    this.parentNode.nextSibling.nextSibling.innerHTML=`
+                    <span>تاريخ الالغاء</span><br>
+                    <span>${currentDate}</span>`;
+
+                }
+            });
+        })
+        
+    </script>
+    </script>
+</body>
+</html>
     
 </body>
 </html>

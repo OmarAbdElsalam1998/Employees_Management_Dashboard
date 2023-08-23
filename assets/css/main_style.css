@@ -330,8 +330,44 @@ table tr td{
 
 
 }
+.header .user{
+    position: relative;
+}
 .header .user-image{
     position: relative;
+}
+.header .user:hover .dropmenu {
+    top: 50px;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+ 
+
+}
+.header .user .dropmenu {
+    position: absolute;
+    top: 100px;
+    width: 150px;
+    background-color: #FFF;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 18px 1px #b7b7b7;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: all .2s ease-in-out;
+
+}
+.header .user .dropmenu ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.header .user .dropmenu ul li{
+    padding: 10px 0;
+}
+.header .user .dropmenu ul li a{
+    color:rgb(76, 76, 76);
 }
 .header .user-image .user-status{
     position: absolute;

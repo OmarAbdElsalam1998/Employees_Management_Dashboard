@@ -15,6 +15,8 @@ displayFullScreenbBtn.addEventListener("click",function()
 });
 
 
+//show drop down menu when click on user name in header
+
 
 //show aside menu when click on bars
 
