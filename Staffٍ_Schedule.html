@@ -49,6 +49,9 @@
     .table tbody tr:last-child{
         border-bottom:0px solid transparent;
     } 
+    .table .appointments select{
+        width: auto;
+    }
     </style>
 
 </head>
@@ -429,13 +432,33 @@
                       <tr>
                         <td>320563</td>
                         <td> عبد الله السيد</td>
-                        <td>
-                            <select class="select-period">
-                                <option value="1">8 ص -2 م</option>
-                                <option value="2">9 ص -3 م</option>
-                                <option value="3">10 ص -4 م</option>
-                            
-                            </select>
+                        <td class="appointments"> 
+                           <span>من</span>
+                           <select class=" from">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">12</option>
+                            <option value="12">12</option>
+                        
+                        </select>
+                           <span> ص: </span>
+                           <span>إلي</span>
+                           <select class="to">
+                            <option value="1">8 ص -2 م</option>
+                            <option value="2">9 ص -3 م</option>
+                            <option value="3">10 ص -4 م</option>
+                        
+                        </select>
+                           <span>م</span>
                         </td>
                         <td>
                             <select class="select-period">
