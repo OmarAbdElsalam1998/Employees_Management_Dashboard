@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>الرئيسية</title>
+
+    <link rel="shortcut icon" href="../assets/images/logo_small.webp" type="image/x-icon">
+
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.min.css">
+   
+
+    <!-- main style -->
+    <link rel="stylesheet" href="../assets/css/main_style.css">
+    <style>
+        body{
+            margin: 0;
+        }
+        
+      /* Start options section */
+      .options .option{
+        display: block;
+        background-color: #FFF;
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid #9747ff;
+        transition: all .4s ease-in-out;
+        color:#333;
+        
+      }
+    
+      .options .option .image {
+        
+
+      }
+     
+      .options .option .main-img{
+        display: block;
+      }
+      .options .option .hovering{
+        display: none;
+
+      }
+      .options .option .image img{
+        width: 140px;
+        transition: all .4s ease-in-out;
+        border: 1px solid #EEE;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        padding: 30px;
+     
+
+      }
+      .options .option:hover{
+        background-color: #9747ff;
+        color: #FFF;
+      }
+      .options .option:hover img.main-img{
+        display: none;
+      }
+      .options .option:hover img.hovering{
+        display: block;
+      }
+      @media (max-width:600px) {
+        .options .option{
+            padding: 15px 0;
+        }
+        .options .option .text h4{
+            font-size: .8rem;
+        }
+        .options .option .image img{
+            width: 110px;
+        }
+      }
+      /* End Options section */
+
+    </style>
+</head>
+<body>
+
+    <!-- Start Header Section -->
+
+    <header class="header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="right-div d-flex align-items-center justify-content-start">
+                
+                <div class="logo">
+                    <img src="../assets/images/logo.webp" loading="lazy" alt="الشعار">
+                </div>
+            </div>
+
+            
+           <div class=" left-div d-flex align-items-center justify-content-end">
+               
+            
+                <div class="zoom-out d-none d-md-block" id="zoom_out">
+                    <img src="../assets/images/zoomPage.webp" loading="lazy" alt="تكبير الصفحة">
+                </div>
+                <div class="messages d-none d-md-block">
+                    <img src="../assets/images/messages.webp" loading="lazy" alt="الرسائل">
+                    <div class="has_messages">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none">
+                        <ellipse cx="3.33984" cy="2.5" rx="2.54688" ry="2.5" fill="#F2515A"/>
+                    </svg></div>
+                </div>
+                <div class="notifications d-none d-md-block">
+                    <img src="../assets/images/notifications.webp" loading="lazy" alt="الإشعارات">
+                    <div class="has_notifications">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none">
+                            <ellipse cx="3.08398" cy="2.5" rx="2.54688" ry="2.5" fill="#FFB946"/>
+                        </svg>
+                    </div>
+                  
+                </div>
+                <div class="sign-out d-none d-md-block">
+                    <a href="../signIn.html">
+                        <img src="../assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
+                </div>
+                <div class="user d-flex align-items-center d-flex">
+                    <div class="user-image">
+                        <img src="../assets/images/user.webp" loading="lazy" alt="عبد الله">
+                        <span class="user-status"></span>
+                    </div>
+                    <h4 class="user-name d-none d-md-flex">عبد الله </h4>
+
+                    <div class="dropmenu active">
+                        <ul>
+                        
+                            <li>
+                                <a href="">الحساب</a>
+                            </li>
+                            <li>
+                                <a href="changePassword.html">الإعدادات</a>
+                            </li>
+                            <li>
+                                <a href="../signIn.html">تسجيل الخروج</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+           </div>
+        </div>
+    </header>
+
+    <!-- End Header Section -->
+
+
+
+
+    <!-- Start Main content -->
+
+    <main class="main" >
+        <section class="options">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-3 h-auto mb-4 ">
+                        <a href="" class="option h-100">
+                            <div class="image d-flex justify-content-center">
+                                <img class="main-img" src="../assets/images/attendance_report_1.webp">
+                                <img class="hovering" src="../assets/images/attendance_report_2.webp">
+                            </div>
+                            <div class="text text-center">
+                                <h4>سجل الحضور</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 h-auto mb-4 ">
+                        <a href="" class="option h-100">
+                            <div class="image d-flex justify-content-center">
+                                <img class="main-img" src="../assets/images/job_info_1.webp">
+                                <img class="hovering" src="../assets/images/job_info_2.webp">
+                            </div>
+                            <div class="text text-center">
+                                <h4>البيانات الوظيفة</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 h-auto mb-4 ">
+                        <a href="" class="option h-100">
+                            <div class="image d-flex justify-content-center">
+                                <img class="main-img" src="../assets/images/id_1.webp">
+                                <img class="hovering" src="../assets/images/id_2.webp">
+                            </div>
+                            <div class="text text-center">
+                                <h4>البطاقات الوظيفة</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 h-auto mb-4 ">
+                        <a href="" class="option h-100">
+                            <div class="image d-flex justify-content-center">
+                                <img class="main-img" src="../assets/images/job_info_1.webp">
+                                <img class="hovering" src="../assets/images/job_info_2.webp">
+                            </div>
+                            <div class="text text-center">
+                                <h4>الرواتب</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 h-auto mb-4 ">
+                        <a href="" class="option h-100">
+                            <div class="image d-flex justify-content-center">
+                                <img class="main-img" src="../assets/images/job_info_1.webp">
+                                <img class="hovering" src="../assets/images/job_info_2.webp">
+                            </div>
+                            <div class="text text-center">
+                                <h4>الاجازات</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 h-auto mb-4 ">
+                        <a href="" class="option h-100">
+                            <div class="image d-flex justify-content-center">
+                                <img class="main-img" src="../assets/images/job_info_1.webp">
+                                <img class="hovering" src="../assets/images/job_info_2.webp">
+                            </div>
+                            <div class="text text-center">
+                                <h4>سجل العهدة</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 h-auto mb-4 ">
+                        <a href="" class="option h-100">
+                            <div class="image d-flex justify-content-center">
+                                <img class="main-img" src="../assets/images/job_info_1.webp">
+                                <img class="hovering" src="../assets/images/job_info_2.webp">
+                            </div>
+                            <div class="text text-center">
+                                <h4>القروض</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 h-auto mb-4 ">
+                        <a href="" class="option h-100">
+                            <div class="image d-flex justify-content-center">
+                                <img class="main-img" src="../assets/images/job_info_1.webp">
+                                <img class="hovering" src="../assets/images/job_info_2.webp">
+                            </div>
+                            <div class="text text-center">
+                                <h4>الطلبات</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 h-auto mb-4 ">
+                        <a href="" class="option h-100">
+                            <div class="image d-flex justify-content-center">
+                                <img class="main-img" src="../assets/images/job_info_1.webp">
+                                <img class="hovering" src="../assets/images/job_info_2.webp">
+                            </div>
+                            <div class="text text-center">
+                                <h4>التعريف الالكتروني</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 h-auto mb-4 ">
+                        <a href="" class="option h-100">
+                            <div class="image d-flex justify-content-center">
+                                <img class="main-img" src="../assets/images/job_info_1.webp">
+                                <img class="hovering" src="../assets/images/job_info_2.webp">
+                            </div>
+                            <div class="text text-center">
+                                <h4>الوصف الوضيفي</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3 h-auto mb-4 ">
+                        <a href="" class="option h-100">
+                            <div class="image d-flex justify-content-center">
+                                <img class="main-img" src="../assets/images/job_info_1.webp">
+                                <img class="hovering" src="../assets/images/job_info_2.webp">
+                            </div>
+                            <div class="text text-center">
+                                <h4>لائحة  العمل الداخلية</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- <div class="col-6 col-md-4 col-lg-3 h-auto mb-4 ">
+                        <a href="" class="option h-100">
+                            <div class="image d-flex justify-content-center">
+                                <img class="main-img" src="../assets/images/job_info_1.webp">
+                                <img class="hovering" src="../assets/images/job_info_2.webp">
+                            </div>
+                            <div class="text text-center">
+                                <h4>البيانات الوظيفة</h4>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- End Main Content -->
+    <script src="../assets/js/main_script.js"></script>
+   
+</body>
+</html>
