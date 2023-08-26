@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>الطلبات</title>
+
+    <link rel="shortcut icon" href="../assets/images/logo_small.webp" type="image/x-icon">
+
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.min.css">
+   
+
+    <!-- main style -->
+    <link rel="stylesheet" href="../assets/css/main_style.css">
+    <style>
+        body{
+            margin: 0;
+        }
+        
+      /* Start options section */
+      .requests{
+        display: block;
+        background-color: #FFF;
+        padding: 15px;
+        border-radius: 12px;
+        color:#333;
+        
+      }
+      
+      .requests .requests-box .title{
+        background-color: #f8f8f9;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .requests .title img{
+        background-color:#d4f0fb;
+        padding: 10px;
+        border-radius: 10px;
+    }
+      .requests .title img{
+        width:50px
+
+      }
+      .requests .requests-box{
+        margin-bottom: 30px;
+      }
+      .requests .requests-box .request{
+        padding: 10px;
+
+      }
+      .requests .requests-box .request span{
+        color: rgb(74, 73, 73);
+      }
+      
+    
+      
+      /* End Options section */
+
+    </style>
+</head>
+<body>
+
+    <!-- Start Header Section -->
+
+    <header class="header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="right-div d-flex align-items-center justify-content-start">
+                
+                <a href="main_Page.html" class="logo">
+                    <img src="../assets/images/logo.webp" loading="lazy" alt="الشعار">
+                </a>
+            </div>
+
+            
+           <div class=" left-div d-flex align-items-center justify-content-end">
+               
+            
+                <div class="zoom-out d-none d-md-block" id="zoom_out">
+                    <img src="../assets/images/zoomPage.webp" loading="lazy" alt="تكبير الصفحة">
+                </div>
+                <div class="messages d-none d-md-block">
+                    <img src="../assets/images/messages.webp" loading="lazy" alt="الرسائل">
+                    <div class="has_messages">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none">
+                        <ellipse cx="3.33984" cy="2.5" rx="2.54688" ry="2.5" fill="#F2515A"/>
+                    </svg></div>
+                </div>
+                <div class="notifications d-none d-md-block">
+                    <img src="../assets/images/notifications.webp" loading="lazy" alt="الإشعارات">
+                    <div class="has_notifications">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none">
+                            <ellipse cx="3.08398" cy="2.5" rx="2.54688" ry="2.5" fill="#FFB946"/>
+                        </svg>
+                    </div>
+                  
+                </div>
+                <div class="sign-out d-none d-md-block">
+                    <a href="../signIn.html">
+                        <img src="../assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
+                </div>
+                <div class="user d-flex align-items-center d-flex">
+                    <div class="user-image">
+                        <img src="../assets/images/user.webp" loading="lazy" alt="عبد الله">
+                        <span class="user-status"></span>
+                    </div>
+                    <h4 class="user-name d-none d-md-flex">عبد الله </h4>
+
+                    <div class="dropmenu active">
+                        <ul>
+                        
+                            <li>
+                                <a href="">الحساب</a>
+                            </li>
+                            <li>
+                                <a href="changePassword.html">الإعدادات</a>
+                            </li>
+                            <li>
+                                <a href="../signIn.html">تسجيل الخروج</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+           </div>
+        </div>
+    </header>
+
+    <!-- End Header Section -->
+
+
+
+
+    <!-- Start Main content -->
+
+    <main class="main" >
+        <section class="job-info">
+            <div class="container">
+            <div class="requests">
+                <div class="title d-flex align-items-center border-bottom py-3 mb-3">
+                    <div class="image pe-2 ">
+                        <img src="../assets/images/request_1.webp" alt="">
+                    </div>
+                    <div class="heading">
+                        <h4>الطلبات</h4>
+                    </div>
+                </div>
+                <div class="requests-box">
+                    <div class="title d-flex align-items-center  py-3">
+                       
+                        <div class="heading">
+                            <h4>المالية</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                       
+                        <div class="col-md-4 ">
+                            <div class="request py-3">
+                                <a href="">
+                                    <span class="pe-2"><img src="../assets/images/wallet.webp" loading="lazy" alt=""></span>
+                                    <span>تعويض مالي</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="requests-box">
+                    <div class="title d-flex align-items-center py-3">
+                       
+                        <div class="heading">
+                            <h4>الحضور</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4  ">
+                            <div  class="request py-3">
+                                <a href="">
+                                    <span class="pe-2"><img src="../assets/images/exit.webp" loading="lazy" alt=""></span>
+                                    <span>إستئذان</span>
+                                </a>
+                            </div>
+
+                            
+                        </div>
+                        <div class="col-md-4 ">
+                            <div class="request py-3">
+                                <a href="">
+                                    <span class="pe-2"><img src="../assets/images/fingerprint.webp" loading="lazy" alt=""></span>
+                                    <span>تصحيح</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="requests-box">
+                    <div class="title d-flex align-items-center  py-3">
+                       
+                        <div class="heading">
+                            <h4>اخري</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4  ">
+                            <div class="request py-3 ">
+                                <a href="">
+                                    <span class="pe-2"><img src="../assets/images/vacations.webp" loading="lazy" alt=""></span>
+                                    <span>الإجازات</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4  ">
+                            <div class="request py-3 ">
+                                <a href="">
+                                    <span class="pe-2"><img src="../assets/images/visa.webp" loading="lazy" alt=""></span>
+                                    <span>تاشيرة خروج وعودة</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4  ">
+                            <div class="request py-3 ">
+                                <a href="">
+                                    <span class="pe-2"><img src="../assets/images/suitcase.webp" loading="lazy" alt=""></span>
+                                    <span>توظيف</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4  ">
+                            <div class="request py-3 ">
+                                <a href="">
+                                    <span class="pe-2"><img src="../assets/images/letters.webp" loading="lazy" alt=""></span>
+                                    <span>خطاب </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4  ">
+                            <div class="request py-3 ">
+                                <a href="">
+                                    <span class="pe-2"><img src="../assets/images/cube.webp" loading="lazy" alt=""></span>
+                                    <span>عهدة</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4  ">
+                            <div class="request py-3 ">
+                                <a href="">
+                                    <span class="pe-2"><img src="../assets/images/cube.webp" loading="lazy" alt=""></span>
+                                    <span>إخلاء عهدة</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4  ">
+                            <div class="request py-3 ">
+                                <a href="">
+                                    <span class="pe-2"><img src="../assets/images/resign.webp" loading="lazy" alt=""></span>
+                                    <span>إستقالة</span>
+                                </a>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+               
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- End Main Content -->
+    <script>
+        let select_type_of_request=document.querySelectorAll(".requests ul li")
+        select_type_of_request.forEach(select=>{
+            select.addEventListener("click",function(){
+                //swape between two selects
+                let other_select=document.querySelector(".requests ul li.active");
+                other_select.classList.remove("active")
+                this.classList.add("active")
+
+
+                //show the select table
+                let display_table=document.querySelector(".requests-table.active");
+                display_table.classList.remove("active");
+                document.querySelector(this.dataset.target).classList.add("active")
+               
+            })
+        })
+    </script>
+   
+</body>
+</html>
