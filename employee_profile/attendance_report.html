@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>الراتب</title>
+    <title>سجل الحضور</title>
 
     <link rel="shortcut icon" href="../assets/images/logo_small.webp" type="image/x-icon">
 
@@ -21,7 +21,7 @@
         }
         
       /* Start options section */
-      .salary{
+      .attendance-report{
         display: block;
         background-color: #FFF;
         padding: 15px;
@@ -29,20 +29,27 @@
         color:#333;
         
       }
-      .salary .title img{
+      .attendance-report .title img{
         background-color:#d4f0fb;
         padding: 10px;
         border-radius: 10px;
     }
-      .salary .title img{
+      .attendance-report .title img{
         width:60px
 
       }
     
-      .salary .data h4{
+      .attendance-report .data h4{
         font-size: 1.3rem;
         color: #8660df;
 
+      }
+      .attendance-report .box span.alert{
+        min-width: 50px;
+        text-align: center;
+        padding: 0px 10px ;
+        margin: 0;
+      
       }
       .secondary-button,
         .primary-button,
@@ -52,18 +59,19 @@
             padding: 12px 20px;
         }
       @media (max-width:768px){
-            .query-box .input{
-                width: 100%;
-                display: block;
-            }
+    .query-box .input{
+        width: 100%;
+        display: block;
+    }
 
-            .secondary-button,
-            .primary-button,
-            .third-button{
-                width: 100%;
-                margin: 10px 0;
-            }
-        }
+    .secondary-button,
+    .primary-button,
+    .third-button{
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+    
       
       /* End Options section */
 
@@ -149,13 +157,13 @@
     <main class="main" >
         <section class="job-info">
             <div class="container">
-            <div class="salary">
+            <div class="attendance-report">
                 <div class="title d-flex align-items-center border-bottom py-3">
                     <div class="image pe-2 ">
-                        <img src="../assets/images/salary_1.webp" alt="">
+                        <img src="../assets/images/attendance_report_1.webp" alt="">
                     </div>
                     <div class="heading">
-                        <h4>الراتب</h4>
+                        <h4>سجل الحضور</h4>
                     </div>
                 </div>
                 <div class="query-box no-print py-4 border-bottom">
@@ -200,8 +208,40 @@
                     </form>
                 </div>
                 <div class="query-result data py-3">
-                    <h4>الراتب</h4>
-                    <span>8000</span>
+                    <h4 class="mb-5">سجل الحضور لشهر يوليو 2023 م</h4>
+                    <div class="row">
+                        <div class="col-lg-4 mb-3">
+                            <div class="box p-4 rounded border d-flex align-items-center justify-content-between">
+                                <span>مجموع ايام العمل</span>
+                                <span class="alert alert-success">18</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-3">
+                            <div class="box p-4 rounded border d-flex align-items-center justify-content-between">
+                                <span>أيام بسجلات غير مكتملة</span>
+                                <span class="alert alert-secondary">0</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-3">
+                            <div class="box p-4 rounded border d-flex align-items-center justify-content-between">
+                                <span>الغياب</span>
+                                <span class="alert alert-danger">2</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-3">
+                            <div class="box p-4 rounded border d-flex align-items-center justify-content-between">
+                                <span>حضور غير مطلوب</span>
+                                <span class="alert alert-warning">10</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-3">
+                            <div class="box p-4 rounded border d-flex align-items-center justify-content-between">
+                                <span>أيام الراحة</span>
+                                <span class="alert alert-primary">10</span>
+                            </div>
+                        </div>
+                      
+                    </div>
                 </div>
             </div>
             </div>
