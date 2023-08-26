@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>الرئيسية</title>
+
+    <link rel="shortcut icon" href="../assets/images/logo_small.webp" type="image/x-icon">
+
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.min.css">
+   
+
+    <!-- main style -->
+    <link rel="stylesheet" href="../assets/css/main_style.css">
+    <style>
+        body{
+            margin: 0;
+        }
+        
+      /* Start options section */
+      .employee-info{
+        display: block;
+        background-color: #FFF;
+        padding: 15px;
+        border-radius: 12px;
+        color:#333;
+        
+      }
+      .employee-info .title img{
+        background-color:#d4f0fb;
+        padding: 10px;
+        border-radius: 10px;
+    }
+      .employee-info .title img{
+        width:50px
+
+      }
+    
+      .employee-info .data h4{
+        font-size: 1.3rem;
+        color: #8660df;
+
+      }
+    
+      
+      /* End Options section */
+
+    </style>
+</head>
+<body>
+
+    <!-- Start Header Section -->
+
+    <header class="header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="right-div d-flex align-items-center justify-content-start">
+                
+                <div class="logo">
+                    <img src="../assets/images/logo.webp" loading="lazy" alt="الشعار">
+                </div>
+            </div>
+
+            
+           <div class=" left-div d-flex align-items-center justify-content-end">
+               
+            
+                <div class="zoom-out d-none d-md-block" id="zoom_out">
+                    <img src="../assets/images/zoomPage.webp" loading="lazy" alt="تكبير الصفحة">
+                </div>
+                <div class="messages d-none d-md-block">
+                    <img src="../assets/images/messages.webp" loading="lazy" alt="الرسائل">
+                    <div class="has_messages">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none">
+                        <ellipse cx="3.33984" cy="2.5" rx="2.54688" ry="2.5" fill="#F2515A"/>
+                    </svg></div>
+                </div>
+                <div class="notifications d-none d-md-block">
+                    <img src="../assets/images/notifications.webp" loading="lazy" alt="الإشعارات">
+                    <div class="has_notifications">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none">
+                            <ellipse cx="3.08398" cy="2.5" rx="2.54688" ry="2.5" fill="#FFB946"/>
+                        </svg>
+                    </div>
+                  
+                </div>
+                <div class="sign-out d-none d-md-block">
+                    <a href="../signIn.html">
+                        <img src="../assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
+                </div>
+                <div class="user d-flex align-items-center d-flex">
+                    <div class="user-image">
+                        <img src="../assets/images/user.webp" loading="lazy" alt="عبد الله">
+                        <span class="user-status"></span>
+                    </div>
+                    <h4 class="user-name d-none d-md-flex">عبد الله </h4>
+
+                    <div class="dropmenu active">
+                        <ul>
+                        
+                            <li>
+                                <a href="">الحساب</a>
+                            </li>
+                            <li>
+                                <a href="changePassword.html">الإعدادات</a>
+                            </li>
+                            <li>
+                                <a href="../signIn.html">تسجيل الخروج</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+           </div>
+        </div>
+    </header>
+
+    <!-- End Header Section -->
+
+
+
+
+    <!-- Start Main content -->
+
+    <main class="main" >
+        <section class="job-info">
+            <div class="container">
+            <div class="employee-info">
+                <div class="title d-flex align-items-center border-bottom py-3">
+                    <div class="image pe-2 ">
+                        <img src="../assets/images/job-description_1.webp" alt="">
+                    </div>
+                    <div class="heading">
+                        <h4>البيانات الوظيفية</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4  ">
+                        <div class="data py-3 border-bottom">
+                            <h4>تاريخ التعيين</h4>
+                            <span>25/7/2023</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="data py-3 border-bottom">
+                            <h4>المسمي الوظيفي</h4>
+                            <span>مهندس</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="data py-3 border-bottom">
+                            <h4>الإدارة</h4>
+                            <span>الادارة الهندسية</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4  ">
+                        <div class="data py-3 border-bottom">
+                            <h4>الحالة</h4>
+                            <span>علي راس العمل</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="data py-3 border-bottom">
+                            <h4>تاريخ الالتحاق</h4>
+                            <span>25/7/2023</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="data py-3 border-bottom">
+                            <h4>البنك</h4>
+                            <span>ََََQNB</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="data py-3 border-bottom">
+                            <h4>رقم حساب البنك</h4>
+                            <span>23545315356513553</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- End Main Content -->
+    <script src="../assets/js/main_script.js"></script>
+   
+</body>
+</html>
