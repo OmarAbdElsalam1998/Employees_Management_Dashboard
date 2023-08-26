@@ -805,9 +805,7 @@
       let num_of_displayed_rows=document.querySelector("#example_length")
     
       function change_From_english(){
-        let search_lable=document.querySelector("#example_filter label");
-        search_lable.innerHTML=`بحث <input type="search" class="" placeholder="" aria-controls="example">`;
-
+       
 
         let num_of_displayed_rows_from_total_rows =document.querySelector("#example_info");
         num_of_displayed_rows_from_total_rows.innerHTML=num_of_displayed_rows_from_total_rows.innerHTML.replace("Showing","عرض").replace("entries","مدخلا").replace("to","إلي").replace("of","من أصل")
