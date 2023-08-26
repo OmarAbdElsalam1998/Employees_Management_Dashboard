@@ -21,7 +21,7 @@
         }
         
       /* Start options section */
-      .employee-info{
+      .vacations{
         display: block;
         background-color: #FFF;
         padding: 15px;
@@ -29,20 +29,41 @@
         color:#333;
         
       }
-      .employee-info .title img{
+      .vacations .title img{
         background-color:#d4f0fb;
-        padding: 10px;
+        padding: 5px;
         border-radius: 10px;
     }
-      .employee-info .title img{
-        width:60px
+      .vacations .title img{
+        width:50px
 
       }
     
-      .employee-info .data h4{
-        font-size: 1.3rem;
-        color: #8660df;
+      .vacations .box{
+        background-color: #FFF;
+        border: 1px solid #EEE;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 20px ;
+      }
+      .vacations .box .title{
+        padding: 15px 10px;
+        background-color: #8660df;
 
+      }
+      .vacations .box .title h4{
+        font-size: 1.2rem;
+        margin: 0;
+        color: #FFF;
+      }
+      .vacations .box .vacations-count{
+        padding: 30px 10px;
+      }
+      .vacations .box .vacations-count .count{
+        background: #44f15959;
+        color: #12aa25;
+        padding: 5px 20px;
+        border-radius: 6px;
       }
     
       
@@ -130,56 +151,39 @@
     <main class="main" >
         <section class="job-info">
             <div class="container">
-            <div class="employee-info">
-                <div class="title d-flex align-items-center border-bottom py-3">
+            <div class="vacations">
+                <div class="title d-flex align-items-center border-bottom py-3 mb-5">
                     <div class="image pe-2 ">
-                        <img src="../assets/images/job_info_1.webp" alt="">
+                        <img src="../assets/images/vacation_1.webp" alt="">
                     </div>
                     <div class="heading">
-                        <h4>البيانات الوظيفية</h4>
+                        <h4>الأجازات</h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4  ">
-                        <div class="data py-3 border-bottom">
-                            <h4>تاريخ التعيين</h4>
-                            <span>25/7/2023</span>
+                    
+                    <div class="col-md-6">
+                        <div class="box ">
+                            <div class="title">
+                                <h4>أجازة اعتيادية</h4>
+                            </div>
+                            <div class="vacations-count d-flex align-items-center justify-content-between">
+                                <span>رصيد الأجازات</span>
+                                <span class="count">22</span>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="col-md-4 ">
-                        <div class="data py-3 border-bottom">
-                            <h4>المسمي الوظيفي</h4>
-                            <span>مهندس</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4 ">
-                        <div class="data py-3 border-bottom">
-                            <h4>الإدارة</h4>
-                            <span>الادارة الهندسية</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4  ">
-                        <div class="data py-3 border-bottom">
-                            <h4>الحالة</h4>
-                            <span>علي راس العمل</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4 ">
-                        <div class="data py-3 border-bottom">
-                            <h4>تاريخ الالتحاق</h4>
-                            <span>25/7/2023</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4 ">
-                        <div class="data py-3 border-bottom">
-                            <h4>البنك</h4>
-                            <span>ََََQNB</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4 ">
-                        <div class="data py-3">
-                            <h4>رقم حساب البنك</h4>
-                            <span>23545315356513553</span>
+                    <div class="col-md-6">
+                        <div class="box ">
+                            <div class="title">
+                                <h4>أجازة اضطرارية</h4>
+                            </div>
+                            <div class="vacations-count d-flex align-items-center justify-content-between">
+                                <span>رصيد الأجازات</span>
+                                <span class="count">7</span>
+                            </div>
+
                         </div>
                     </div>
                 </div>
