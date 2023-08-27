@@ -29,7 +29,8 @@
     }
 
     .secondary-button,
-    .primary-button{
+    .primary-button,
+    .third-button{
         width: 100%;
         margin: 10px 0;
     }

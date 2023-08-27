@@ -262,7 +262,7 @@ table tr td{
     .pop-up.show{
     visibility: visible;
     opacity: 1;
-    z-index: 99999;
+    z-index: 999999;
 
 
     }
@@ -270,7 +270,7 @@ table tr td{
         width: 700px;
         max-width: 90vw;
         background-color: #FFF;
-        padding: 10px;
+        padding:30px !important;
         border-radius: 12px;
         transform: translateY(-100px);
         transition: all .3s ease-in-out;
@@ -287,12 +287,10 @@ table tr td{
     .pop-up.show .inner #ClosePopUP{
         outline: none;
         border: none;
-        margin: 0 10px;
         border-radius: 8px;
         background: #747474;
         min-width: 200px;
         padding: 15px 10px;
-        margin: 5px 10px;
         color: #000;
         background-color: transparent;
         border: 1px solid #9747FF;
@@ -312,7 +310,7 @@ table tr td{
     top: 0;
     right: 0;
     width: 100%;
-    padding: 20px;
+    padding: 20px 10px;
     background-color: #ffffff;
     box-shadow: 0px 0px 15px #b9b6b666;
     font-family: cairo,sans-serif;
@@ -617,7 +615,7 @@ aside.menu{
     transition: all .4s ease-in-out;
     overflow: hidden;
     font-family: cairo,sans-serif;
-    z-index: 9999;
+    z-index: 99999;
 
 }
 aside.menu:hover{
