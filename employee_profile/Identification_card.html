@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>البطاقة الوظيفية</title>
+
+    <link rel="shortcut icon" href="../assets/images/logo_small.webp" type="image/x-icon">
+
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.min.css">
+   
+
+    <!-- main style -->
+    <link rel="stylesheet" href="../assets/css/main_style.css">
+    <style>
+        body{
+            margin: 0;
+        }
+        
+      /* Start options section */
+      .identification-card{
+        display: block;
+        background-color: #FFF;
+        padding: 15px;
+        border-radius: 12px;
+        color:#333;
+        overflow: hidden;
+        
+      }
+      
+      .identification-card .requests-box .title{
+        background-color: #f8f8f9;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .identification-card .title img{
+        background-color:#d4f0fb;
+        padding: 10px;
+        border-radius: 10px;
+    }
+      .identification-card .title img{
+        width:50px
+
+      }
+     .identification-card .card{
+        background-color: #8A74F9;
+        padding: 15px 10px;
+        border-radius: 10px;
+        position: relative;
+     }
+     .identification-card .card::before{
+        content: "";
+        position: absolute;
+        top:210px;
+        right: -15px; 
+        width: 30px;
+        height: 30px;
+        background-color: #FFF;
+        border-radius: 50%;    
+    }
+     .identification-card .card::after{
+        content: "";
+        position: absolute;
+        top:210px;
+        left: -15px; 
+        width: 30px;    
+        height: 30px;
+        background-color: #FFF;
+        border-radius: 50%; 
+     }
+     .identification-card .card .image{
+  
+      
+
+     }
+     .identification-card .card .image img{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 10px solid #ffffff45;
+     }
+     .identification-card .card .name-job{
+        padding: 15px 0;
+        border-bottom: 2px dashed #EEE;
+     }
+     .identification-card .card .name-job> h4{
+        color: #FFF;
+
+     }
+     .identification-card .card .name-job> span{
+        color: #dee3e8;
+
+     }
+     .identification-card .card .employee-data  h5{
+        color: #FFF;
+
+     }
+     .identification-card .card .employee-data  span{
+        color: #dee3e8;
+
+     }
+      
+
+     .identification-card .qr-code{
+        background-color: #f6f6f6;
+        padding: 15px 10px;
+        border-radius: 10px;
+        text-align: center;
+     }
+     .identification-card .qr-code .image{
+        width:200px;
+        margin: auto;
+        text-align:center
+     }
+    
+      
+      /* End Options section */
+
+    </style>
+</head>
+<body>
+
+    <!-- Start Header Section -->
+
+    <header class="header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="right-div d-flex align-items-center justify-content-start">
+                
+                <a href="main_Page.html" class="logo">
+                    <img src="../assets/images/logo.webp" loading="lazy" alt="الشعار">
+                </a>
+            </div>
+
+            
+           <div class=" left-div d-flex align-items-center justify-content-end">
+               
+            
+                <div class="zoom-out d-none d-md-block" id="zoom_out">
+                    <img src="../assets/images/zoomPage.webp" loading="lazy" alt="تكبير الصفحة">
+                </div>
+                <div class="messages d-none d-md-block">
+                    <img src="../assets/images/messages.webp" loading="lazy" alt="الرسائل">
+                    <div class="has_messages">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none">
+                        <ellipse cx="3.33984" cy="2.5" rx="2.54688" ry="2.5" fill="#F2515A"/>
+                    </svg></div>
+                </div>
+                <div class="notifications d-none d-md-block">
+                    <img src="../assets/images/notifications.webp" loading="lazy" alt="الإشعارات">
+                    <div class="has_notifications">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none">
+                            <ellipse cx="3.08398" cy="2.5" rx="2.54688" ry="2.5" fill="#FFB946"/>
+                        </svg>
+                    </div>
+                  
+                </div>
+                <div class="sign-out d-none d-md-block">
+                    <a href="../signIn.html">
+                        <img src="../assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
+                </div>
+                <div class="user d-flex align-items-center d-flex">
+                    <div class="user-image">
+                        <img src="../assets/images/user.webp" loading="lazy" alt="عبد الله">
+                        <span class="user-status"></span>
+                    </div>
+                    <h4 class="user-name d-none d-md-flex">عبد الله </h4>
+
+                    <div class="dropmenu active">
+                        <ul>
+                        
+                            <li>
+                                <a href="">الحساب</a>
+                            </li>
+                            <li>
+                                <a href="changePassword.html">الإعدادات</a>
+                            </li>
+                            <li>
+                                <a href="../signIn.html">تسجيل الخروج</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+           </div>
+        </div>
+    </header>
+
+    <!-- End Header Section -->
+
+
+
+
+    <!-- Start Main content -->
+
+    <main class="main" >
+        <section class="job-info">
+            <div class="container">
+                <div class="identification-card">
+                    <div class="title d-flex align-items-center border-bottom py-3 mb-3">
+                        <div class="image pe-2 ">
+                            <img src="../assets/images/id_1.webp" alt="">
+                        </div>
+                        <div class="heading">
+                            <h4>البطاقة الوظيفية</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 py-3  h-auto">
+                            <div class="card h-100 ">
+                                <div class="image text-center">
+                                    <img src="../assets/images/person_image.webp" loading="lazy" alt="person">
+                                </div>
+                                <div class="name-job text-center">
+                                    <h4>عمرو منصور</h4>
+                                    <span>مطور واجهات أمامية</span>
+                                </div>
+                                <div class="employee-data ">
+                                    <div class="d-flex  py-3">
+                                        <div class="w-50">
+                                            <h5>رقم الموظف</h5>
+                                            <span>1234</span>
+                                        </div>
+                                        <div class="w-50">
+                                            <h5>رقم الهوية</h5>
+                                            <span>12334343444</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex   py-3">
+                                        <div class="w-50">
+                                            <h5>الحالة الوظيفية</h5>
+                                            <span>علي راس العمل</span>
+                                        </div>
+                                        <div class="w-50">
+                                            <h5>البريد الإلكتروني</h5>
+                                            <span>ِamr121@gmail.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 h-auto py-3">
+                            <div class="qr-code text-center h-100">
+                                <h4 class="mb-5">رابط التحقق</h4>
+                                <div class="image">
+                                    <img class="img-fluid" src="../assets/images/qrCode.webp" loading="lazy" alt="QR_Code">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- End Main Content -->
+
+   
+</body>
+</html>
