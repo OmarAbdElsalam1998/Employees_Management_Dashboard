@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>القروض</title>
+
+    <link rel="shortcut icon" href="../assets/images/logo_small.webp" type="image/x-icon">
+
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.min.css">
+   
+
+    <!-- main style -->
+    <link rel="stylesheet" href="../assets/css/main_style.css">
+    <style>
+        body{
+            margin: 0;
+        }
+        
+      /* Start options section */
+      .loans{
+        display: block;
+        background-color: #FFF;
+        padding: 15px;
+        border-radius: 12px;
+        color:#333;
+        
+      }
+      .loans .title img{
+        background-color:#d4f0fb;
+        padding: 10px;
+        border-radius: 10px;
+    }
+      .loans .title img{
+        width:50px
+
+      }
+
+      .loans ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .loans ul li{
+        display: inline-block;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+      .loans ul li:first-of-type{
+        border-left: 1px solid #EEE;
+      }
+      .loans ul li.active{
+        border-bottom: 4px solid #9747ff;
+      }
+     
+    
+      .loans .table-responsive table {
+        border:1px solid #EEE;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .loans .table-responsive{
+        border-radius: 10px;
+      }
+     
+
+      .loans .table-responsive table thead{
+        background-color: #f8f8f9;
+        border-radius: 10px;
+      }
+      .loans .table-responsive table tr th,
+      .loans .table-responsive table tr td{
+        min-width: 60px;
+        padding: 20px 5px;
+
+      }
+      .loans .table-responsive table tr td span.alert{
+        padding: 0px 10px ;
+      }
+
+      
+    
+      
+      /* End Options section */
+
+    </style>
+</head>
+<body>
+
+    <!-- Start Header Section -->
+
+    <header class="header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="right-div d-flex align-items-center justify-content-start">
+                
+                <a href="main_Page.html" class="logo">
+                    <img src="../assets/images/logo.webp" loading="lazy" alt="الشعار">
+                </a>
+            </div>
+
+            
+           <div class=" left-div d-flex align-items-center justify-content-end">
+               
+            
+                <div class="zoom-out d-none d-md-block" id="zoom_out">
+                    <img src="../assets/images/zoomPage.webp" loading="lazy" alt="تكبير الصفحة">
+                </div>
+                <div class="messages d-none d-md-block">
+                    <img src="../assets/images/messages.webp" loading="lazy" alt="الرسائل">
+                    <div class="has_messages">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none">
+                        <ellipse cx="3.33984" cy="2.5" rx="2.54688" ry="2.5" fill="#F2515A"/>
+                    </svg></div>
+                </div>
+                <div class="notifications d-none d-md-block">
+                    <img src="../assets/images/notifications.webp" loading="lazy" alt="الإشعارات">
+                    <div class="has_notifications">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none">
+                            <ellipse cx="3.08398" cy="2.5" rx="2.54688" ry="2.5" fill="#FFB946"/>
+                        </svg>
+                    </div>
+                  
+                </div>
+                <div class="sign-out d-none d-md-block">
+                    <a href="../signIn.html">
+                        <img src="../assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
+                </div>
+                <div class="user d-flex align-items-center d-flex">
+                    <div class="user-image">
+                        <img src="../assets/images/user.webp" loading="lazy" alt="عبد الله">
+                        <span class="user-status"></span>
+                    </div>
+                    <h4 class="user-name d-none d-md-flex">عبد الله </h4>
+
+                    <div class="dropmenu active">
+                        <ul>
+                        
+                            <li>
+                                <a href="">الحساب</a>
+                            </li>
+                            <li>
+                                <a href="changePassword.html">الإعدادات</a>
+                            </li>
+                            <li>
+                                <a href="../signIn.html">تسجيل الخروج</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+           </div>
+        </div>
+    </header>
+
+    <!-- End Header Section -->
+
+
+
+
+    <!-- Start Main content -->
+
+    <main class="main" >
+        <section class="job-info">
+            <div class="container">
+                <div class="loans">
+                    <div class="title d-flex align-items-center border-bottom py-3 mb-3">
+                        <div class="image pe-2 ">
+                            <img src="../assets/images/loan_1.webp" alt="">
+                        </div>
+                        <div class="heading">
+                            <h4>القروض</h4>
+                        </div>
+                    </div>
+            
+                        <div class="table-responsive ">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">مبلغ القرض</th>
+                                    <th scope="col">تاريخ إنتهاء القرض </th>
+                                    <th scope="col">ملاحظات</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>100000</td>
+                                    <td>31/12/2023</td>
+                                    <td></td>
+                                    
+            
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>100000</td>
+                                    <td>31/12/2023</td>
+                                    <td></td>
+                                    
+            
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>100000</td>
+                                    <td>31/12/2023</td>
+                                    <td></td>
+                                    
+            
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>100000</td>
+                                    <td>31/12/2023</td>
+                                    <td></td>
+                                    
+            
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- End Main Content -->
+
+   
+</body>
+</html>
