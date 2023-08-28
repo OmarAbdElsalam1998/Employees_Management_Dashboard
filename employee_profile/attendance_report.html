@@ -71,9 +71,25 @@
                 margin: 10px 0;
             }
         }
-    
+        .attendance-report .record-attendance .time{
+            color: #7d7979;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .attendance-report .record-attendance a{
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #7d7979;
+        }
+        .attendance-report .record-attendance .primary-button {
+            width: 200px !important;
+        }
       
       /* End Options section */
+
+
+
+      
 
     </style>
 </head>
@@ -166,6 +182,26 @@
                         <h4>سجل الحضور</h4>
                     </div>
                 </div>
+                <div class="record-attendance py-4 border-bottom text-center">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-4 mb-5 mb-md-3">
+                            <div class="time">
+                                <div id="MyClockDisplay" class="clock" onload="showTime()"></div> 
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-3">
+                            <a href="https://www.google.com/maps" target="_blank">
+                                <img src="../assets/images/location.webp" loading="lazy" alt="location">
+                                <span class="ps-2">منطقة العمل</span>
+                            </a>
+                           
+                        </div>
+                        <div class="col-lg-4 mb-3">
+                            <button class="primary-button" >تسجيل الحضور
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <div class="query-box no-print py-4 border-bottom">
                     <form class="d-block d-md-flex align-items-center">
                        <div class="d-block d-sm-flex align-items-center">
@@ -250,6 +286,37 @@
 
     <!-- End Main Content -->
     <script src="../assets/js/main_script.js"></script>
+        <script>
+            function showTime(){
+        var date = new Date();
+        var h = date.getHours(); // 0 - 23
+        var m = date.getMinutes(); // 0 - 59
+        var s = date.getSeconds(); // 0 - 59
+        var session = "ص";
+        
+        if(h == 0){
+            h = 12;
+        }
+        
+        if(h > 12){
+            h = h - 12;
+            session = "م";
+        }
+        
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
+        
+        var time = h + ":" + m + ":" + s + " " + session;
+        document.getElementById("MyClockDisplay").innerText = time;
+        document.getElementById("MyClockDisplay").textContent = time;
+        
+        setTimeout(showTime, 1000);
+        
+    }
+
+    showTime();
+    </script>
    
 </body>
 </html>
