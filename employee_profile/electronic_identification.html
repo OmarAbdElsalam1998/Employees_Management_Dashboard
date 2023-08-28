@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>التعريف الإلكتروني</title>
+
+    <link rel="shortcut icon" href="../assets/images/logo_small.webp" type="image/x-icon">
+
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.min.css">
+   
+
+    <!-- main style -->
+    <link rel="stylesheet" href="../assets/css/main_style.css">
+    <style>
+        body{
+            margin: 0;
+        }
+        
+      /* Start options section */
+      .electronic_identification{
+        display: block;
+        background-color: #FFF;
+        padding: 15px;
+        border-radius: 12px;
+        color:#333;
+        
+      }
+      .electronic_identification .title img{
+        background-color:#d4f0fb;
+        padding: 10px;
+        border-radius: 10px;
+    }
+      .electronic_identification .title img{
+        width:50px
+
+      }
+
+     .electronic_identification .changePassword .box{
+        width: 70%;
+        margin: auto;
+        background-color: #f6f6f6;
+        padding:50px 30px;
+        border-radius: 30px;
+    
+     }
+     @media (max-width:992px) {
+
+        .electronic_identification .changePassword .box{
+        width: 100%;
+        padding: 0 ;
+        background-color: transparent;
+     }        
+     }
+
+     
+      
+    
+      
+      /* End Options section */
+
+    </style>
+</head>
+<body>
+
+    <!-- Start Header Section -->
+
+    <header class="header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="right-div d-flex align-items-center justify-content-start">
+                
+                <a href="main_Page.html" class="logo">
+                    <img src="../assets/images/logo.webp" loading="lazy" alt="الشعار">
+                </a>
+            </div>
+
+            
+           <div class=" left-div d-flex align-items-center justify-content-end">
+               
+            
+                <div class="zoom-out d-none d-md-block" id="zoom_out">
+                    <img src="../assets/images/zoomPage.webp" loading="lazy" alt="تكبير الصفحة">
+                </div>
+                <div class="messages d-none d-md-block">
+                    <img src="../assets/images/messages.webp" loading="lazy" alt="الرسائل">
+                    <div class="has_messages">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none">
+                        <ellipse cx="3.33984" cy="2.5" rx="2.54688" ry="2.5" fill="#F2515A"/>
+                    </svg></div>
+                </div>
+                <div class="notifications d-none d-md-block">
+                    <img src="../assets/images/notifications.webp" loading="lazy" alt="الإشعارات">
+                    <div class="has_notifications">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none">
+                            <ellipse cx="3.08398" cy="2.5" rx="2.54688" ry="2.5" fill="#FFB946"/>
+                        </svg>
+                    </div>
+                  
+                </div>
+                <div class="sign-out d-none d-md-block">
+                    <a href="../signIn.html">
+                        <img src="../assets/images/signOut.webp" loading="lazy" alt="تسجيل الخروج">
+
+                    </a>
+                </div>
+                <div class="user d-flex align-items-center d-flex">
+                    <div class="user-image">
+                        <img src="../assets/images/user.webp" loading="lazy" alt="عبد الله">
+                        <span class="user-status"></span>
+                    </div>
+                    <h4 class="user-name d-none d-md-flex">عبد الله </h4>
+
+                    <div class="dropmenu active">
+                        <ul>
+                        
+                            <li>
+                                <a href="">الحساب</a>
+                            </li>
+                            <li>
+                                <a href="changePassword.html">الإعدادات</a>
+                            </li>
+                            <li>
+                                <a href="../signIn.html">تسجيل الخروج</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+           </div>
+        </div>
+    </header>
+
+    <!-- End Header Section -->
+
+
+
+
+    <!-- Start Main content -->
+
+    <main class="main" >
+        <section class="job-info">
+            <div class="container">
+                <div class="electronic_identification">
+                    <div class="title d-flex align-items-center border-bottom py-3 mb-3">
+                        <div class="image pe-2 ">
+                            <img src="../assets/images/electronic_identification_1.webp" alt="">
+                        </div>
+                        <div class="heading">
+                            <h4>التعريف الإلكتروني</h4>
+                        </div>
+                    </div>
+                    <div class="changePassword p-2 p-md-5">
+                        <div class="box">
+                            <form>
+                                <div class="form-group">
+                                    <label>نوع التعريف</label>
+                                    <div class="input-field">
+                                        <select class="w-100 border-0 ">
+                                            <option>تعريف بالراتب غير مالي</option>
+                                            <option> تعريف بالراتب مالي إجمالي</option>
+                                            <option>تعريف بالراتب مالي مفصل</option>
+            
+                                        </select>
+                                    </div>   
+                                    <small class="error-message"></small>
+            
+                                </div>
+                                <div class="form-group">
+                                    <label>الجهة</label>
+                                    <div class="input-field">
+                                        <select class="w-100 border-0 ">
+                                            <option>البنك</option>
+                                            <option>البنك</option>
+                                            <option>البنك</option>
+                                            <option>البنك</option>
+                                          
+            
+                                        </select>
+                                    </div>   
+                                    <small class="error-message"></small>
+            
+                                </div>
+                               
+                                <div class="form-group mb-3 text-center">
+                                    <button class="primary-button">عرض</button>
+                                   
+                                </div>
+                            </form>
+                           
+                           
+                        </div>
+
+                    </div>
+            
+                       
+                
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- End Main Content -->
+
+   
+</body>
+</html>
