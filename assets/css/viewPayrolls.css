@@ -73,6 +73,7 @@
     overflow: hidden;
 }
 
+
    .table table thead th{
     background: #D4A8F5;
     text-align: center;
@@ -83,6 +84,16 @@
     text-align: center;
     border: 1px solid transparent;
 
+   }
+   .table table tfoot td{
+    background: #ffffff !important;
+    text-align: center;
+    border: 1px solid transparent;
+    direction: rtl;
+
+   }
+   .table table tfoot td:first-child{
+    right: 0 !important;
    }
    .dtfc-fixed-left{
     z-index: 99;

@@ -76,6 +76,32 @@
             margin-bottom: 180px;
         }
     }
+    input[type="date"] {
+            position: relative;
+            padding: 10px;
+            height: 40px;
+             border-radius: 8px;
+            border: 1px solid var(--light-1, #999);
+            background: var(--light-3, #FFF);
+
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            color: transparent;
+            background: none;
+            z-index: 1;
+        }
+
+        input[type="date"]:before {
+            color: transparent;
+            background: none;
+            display: block;
+            content: url(assets/images/calendar.webp);
+            
+            position: absolute;
+            top: 8px;
+            right: 6px;
+        }
     </style>
 
 </head>
@@ -411,140 +437,98 @@
                     </thead>
                     <tbody>
                      
-                      <tr>
-                        <td>320563</td>
-                        <td> عبد الله السيد</td>
-                        <td>
-                            إجازة مرافقة مريض
-                        </td>                         
-                        <td>20/8/2023</td>
-                        <td >23/8/2023</td>
-                        <td>
-                            <select class="select-action">
-                                <option>---</option>
-                                <option value="مباشرة">مباشرة</option>
-                                <option value="تمديد">تمديد</option>
-                                <option value="الغاء">الغاء</option>
-                            </select>
-                        </td>
-                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
-
-                      </tr>
-                      <tr>
-                        <td>320563</td>
-                        <td> عبد الله السيد</td>
-                        <td>
-                            إجازة مرافقة مريض
-                        </td>                        
-                        <td>20/8/2023</td>
-                        <td >23/8/2023</td>
-                        <td>
-                            <select class="select-action">
-                                <option>---</option>
-                                <option value="مباشرة">مباشرة</option>
-                                <option value="تمديد">تمديد</option>
-                                <option value="الغاء">الغاء</option>
-                            </select>
-                        </td>
-                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
-
-                      </tr>
-                      <tr>
-                        <td>320563</td>
-                        <td> عبد الله السيد</td>
-                        <td>
-                            إجازة مرافقة مريض
-                        </td>                         
-                        <td>20/8/2023</td>
-                        <td >23/8/2023</td>
-                        <td>
-                            <select class="select-action">
-                                <option>---</option>
-                                <option value="مباشرة">مباشرة</option>
-                                <option value="تمديد">تمديد</option>
-                                <option value="الغاء">الغاء</option>
-                            </select>
-                        </td>
-                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
-
-                      </tr>
-                      <tr>
-                        <td>320563</td>
-                        <td> عبد الله السيد</td>
-                        <td>
-                            إجازة مرافقة مريض
-                        </td>                        
-                        <td>20/8/2023</td>
-                        <td >23/8/2023</td>
-                        <td>
-                            <select class="select-action">
-                                <option>---</option>
-                                <option value="مباشرة">مباشرة</option>
-                                <option value="تمديد">تمديد</option>
-                                <option value="الغاء">الغاء</option>
-                            </select>
-                        </td>
-                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
-
-                      </tr>
-                      <tr>
-                        <td>320563</td>
-                        <td> عبد الله السيد</td>
-                        <td>
-                            إجازة مرافقة مريض
-                        </td>                        
-                        <td>20/8/2023</td>
-                        <td >23/8/2023</td>
-                        <td>
-                            <select class="select-action">
-                                <option>---</option>
-                                <option value="مباشرة">مباشرة</option>
-                                <option value="تمديد">تمديد</option>
-                                <option value="الغاء">الغاء</option>
-                            </select>
-                        </td>
-                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
-
-                      </tr>
-                      <tr>
-                        <td>320563</td>
-                        <td> عبد الله السيد</td>
-                        <td>
-                            إجازة رياضية خارجية
-                        </td>                        
-                        <td>20/8/2023</td>
-                        <td >23/8/2023</td>
-                        <td>
-                            <select class="select-action">
-                                <option>---</option>
-                                <option value="مباشرة">مباشرة</option>
-                                <option value="تمديد">تمديد</option>
-                                <option value="الغاء">الغاء</option>
-                            </select>
-                        </td>
-                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
-
-                      </tr>
-                      <tr>
-                        <td>320563</td>
-                        <td> عبد الله السيد</td>
-                        <td>
-                           أجازة عادية للسعوديين
-
-                        </td>                        
-                        <td>20/8/2023</td>
-                        <td >23/8/2023</td>
-                        <td>
-                            <select class="select-action">
-                                <option>---</option>
-                                <option value="مباشرة">مباشرة</option>
-                                <option value="تمديد">تمديد</option>
-                                <option value="الغاء">الغاء</option>
-                            </select>
-                        </td>
-                        <td class="action-date">لم يتم تحديد الاجراء بعد</td>
-
-                      </tr>
+                        <tr>
+                            <td>320563</td>
+                            <td> عبد الله السيد</td>
+                            <td>
+                                إجازة مرافقة مريض
+                            </td>                         
+                            <td>20/8/2023</td>
+                            <td >23/8/2023</td>
+                            <td>
+                                <select class="select-action">
+                                    <option>---</option>
+                                    <option value="مباشرة">مباشرة</option>
+                                    <option value="تمديد">تمديد</option>
+                                    <option value="الغاء">الغاء</option>
+                                </select>
+                            </td>
+                            <td class="action-date">
+                                <div class="input-field">
+                                    <input type="date">
+                                </div>
+                            </td>
+    
+                          </tr>
+                          <tr>
+                            <td>320563</td>
+                            <td> عبد الله السيد</td>
+                            <td>
+                                إجازة مرافقة مريض
+                            </td>                         
+                            <td>20/8/2023</td>
+                            <td >23/8/2023</td>
+                            <td>
+                                <select class="select-action">
+                                    <option>---</option>
+                                    <option value="مباشرة">مباشرة</option>
+                                    <option value="تمديد">تمديد</option>
+                                    <option value="الغاء">الغاء</option>
+                                </select>
+                            </td>
+                            <td class="action-date">
+                                <div class="input-field">
+                                    <input type="date">
+                                </div>
+                            </td>
+    
+                          </tr>
+                          <tr>
+                            <td>320563</td>
+                            <td> عبد الله السيد</td>
+                            <td>
+                                إجازة مرافقة مريض
+                            </td>                         
+                            <td>20/8/2023</td>
+                            <td >23/8/2023</td>
+                            <td>
+                                <select class="select-action">
+                                    <option>---</option>
+                                    <option value="مباشرة">مباشرة</option>
+                                    <option value="تمديد">تمديد</option>
+                                    <option value="الغاء">الغاء</option>
+                                </select>
+                            </td>
+                            <td class="action-date">
+                                <div class="input-field">
+                                    <input type="date">
+                                </div>
+                            </td>
+    
+                          </tr>
+                          <tr>
+                            <td>320563</td>
+                            <td> عبد الله السيد</td>
+                            <td>
+                                إجازة مرافقة مريض
+                            </td>                         
+                            <td>20/8/2023</td>
+                            <td >23/8/2023</td>
+                            <td>
+                                <select class="select-action">
+                                    <option>---</option>
+                                    <option value="مباشرة">مباشرة</option>
+                                    <option value="تمديد">تمديد</option>
+                                    <option value="الغاء">الغاء</option>
+                                </select>
+                            </td>
+                            <td class="action-date">
+                                <div class="input-field">
+                                    <input type="date">
+                                </div>
+                            </td>
+    
+                          </tr>
                      
                     </tbody>
                   </table>
@@ -670,39 +654,39 @@
       
 
         //select action name and set date for the selected action
-        let actions_selectboxes=document.querySelectorAll("select.select-action");
-        actions_selectboxes.forEach(selectbox=>{
-            selectbox.addEventListener("change",function(e){
-                var value = this.value;
-                const date = new Date();
+        // let actions_selectboxes=document.querySelectorAll("select.select-action");
+        // actions_selectboxes.forEach(selectbox=>{
+        //     selectbox.addEventListener("change",function(e){
+        //         var value = this.value;
+        //         const date = new Date();
 
-                let day = date.getDate();
-                let month = date.getMonth() + 1;
-                let year = date.getFullYear();
+        //         let day = date.getDate();
+        //         let month = date.getMonth() + 1;
+        //         let year = date.getFullYear();
 
-                // This arrangement can be altered based on how we want the date's format to appear.
-                let currentDate = `${day}-${month}-${year}`;
+        //         // This arrangement can be altered based on how we want the date's format to appear.
+        //         let currentDate = `${day}-${month}-${year}`;
 
-                if(value=="مباشرة"){
-                    this.parentNode.nextSibling.nextSibling.innerHTML=`
-                    <span>تاريخ المباشرة</span><br>
-                    <span>${currentDate}</span>`;
+        //         if(value=="مباشرة"){
+        //             this.parentNode.nextSibling.nextSibling.innerHTML=`
+        //             <span>تاريخ المباشرة</span><br>
+        //             <span>${currentDate}</span>`;
 
-                }
-                else if(value=="تمديد"){
-                    this.parentNode.nextSibling.nextSibling.innerHTML=`
-                    <span>تاريخ التمديد</span><br>
-                    <span>${currentDate}</span>`;
+        //         }
+        //         else if(value=="تمديد"){
+        //             this.parentNode.nextSibling.nextSibling.innerHTML=`
+        //             <span>تاريخ التمديد</span><br>
+        //             <span>${currentDate}</span>`;
 
-                }
-                else if (value=="الغاء"){
-                    this.parentNode.nextSibling.nextSibling.innerHTML=`
-                    <span>تاريخ الالغاء</span><br>
-                    <span>${currentDate}</span>`;
+        //         }
+        //         else if (value=="الغاء"){
+        //             this.parentNode.nextSibling.nextSibling.innerHTML=`
+        //             <span>تاريخ الالغاء</span><br>
+        //             <span>${currentDate}</span>`;
 
-                }
-            });
-        })
+        //         }
+        //     });
+        // })
         
     </script>
     </script>

@@ -705,8 +705,32 @@
                     
                     </tr>
 
+
+
+                    <!-- / -->
+
                     
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td  colspan="4">الإجمالي</td>
+                        <td>6630</td>
+                        <td>6630</td>
+                        <td>6630</td>
+                        <td>01:34:09</td>
+                        <td>6630</td>
+                        <td>6630</td>
+                        <td>6630</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>6630</td>
+                        <td>6630</td>
+                        <td>6630</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+                
+              
             </table>
 
         </div>
@@ -726,6 +750,9 @@
          var table= new DataTable('#example', {
             fixedColumns: {
                 left: 4
+            },
+            fixedHeader: {
+                 footer: true
             },
             paging: true,
             scrollX: true,

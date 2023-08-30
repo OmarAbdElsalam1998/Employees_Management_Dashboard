@@ -11,8 +11,7 @@
 
     <!-- Bootstrap style -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- Table style -->
-    <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+  
 
     <!-- main style -->
     <link rel="stylesheet" href="assets/css/main_style.css">
@@ -358,306 +357,24 @@
     <!-- Start Main content -->
     <main class="main">
         <div class="container-fluid">
-            <div class="header-actions d-md-flex justify-content-between align-items-center mb-5">
-                <h4>التقييمات </h4>
-                
-            </div>
-    
-            <div class="table">
-    
-                <table id="example" class="stripe row-border order-column nowrap" style="width:100% ;direction: rtl;">
-                    <thead>
-                        <tr>
-                            <th>المعرف</th>
-                            <th> عمليات </th>
-                            <th>الاسم</th>
-                            <th>نوع</th>
-                            <th>رصيد الاجازات</th>
-                            <th>البريد</th>
-                            <th>الحالة</th>
-                            <th>المباشرة </th>
-                            <th> نوع العقد</th>
-                        
-                            
-    
-    
-                        </tr>
-                    </thead>
-                    
-                    <tbody>
-                       <tr>
-                        <td>1012</td>
-                        <td>
-                            <span class="add-rate pop-up-btn">اضافة تقييم +</span>
-                        </td>
-                        <td>Cordie</td>
-                        <td>دوام كامل</td>
-                        <td>0.08642</td>
-                        <td>fnassar3@gmail.com</td>
-                        <td>فترة تجريبية</td>
-                        <td>22/6/2023</td>
-                        <td>محدد</td>
-                       </tr>
-                       <tr>
-                        <td>1012</td>
-                        <td>
-                            <span class="edit-rate pop-up-btn">تعديل التقييم</span>
-                        </td>
-                        <td>Cordie</td>
-                        <td>دوام كامل</td>
-                        <td>0.08642</td>
-                        <td>fnassar3@gmail.com</td>
-                        <td>فترة تجريبية</td>
-                        <td>22/6/2023</td>
-                        <td>محدد</td>
-                       </tr>
-                       <tr>
-                        <td>1012</td>
-                        <td>
-                            <span class="add-rate pop-up-btn">اضافة تقييم +</span>
-                        </td>
-                        <td>Cordie</td>
-                        <td>دوام كامل</td>
-                        <td>0.08642</td>
-                        <td>fnassar3@gmail.com</td>
-                        <td>فترة تجريبية</td>
-                        <td>22/6/2023</td>
-                        <td>محدد</td>
-                       </tr>
-                       <tr>
-                        <td>1012</td>
-                        <td>
-                            <span class="edit-rate pop-up-btn">تعديل التقييم</span>
-                        </td>
-                        <td>Cordie</td>
-                        <td>دوام كامل</td>
-                        <td>0.08642</td>
-                        <td>fnassar3@gmail.com</td>
-                        <td>فترة تجريبية</td>
-                        <td>22/6/2023</td>
-                        <td>محدد</td>
-                       </tr>
-                       <tr>
-                        <td>1012</td>
-                        <td>
-                            <span class="add-rate pop-up-btn">اضافة تقييم +</span>
-                        </td>
-                        <td>Cordie</td>
-                        <td>دوام كامل</td>
-                        <td>0.08642</td>
-                        <td>fnassar3@gmail.com</td>
-                        <td>فترة تجريبية</td>
-                        <td>22/6/2023</td>
-                        <td>محدد</td>
-                       </tr>
-                       <tr>
-                        <td>1012</td>
-                        <td>
-                            <span class="edit-rate pop-up-btn">تعديل التقييم</span>
-                        </td>
-                        <td>Cordie</td>
-                        <td>دوام كامل</td>
-                        <td>0.08642</td>
-                        <td>fnassar3@gmail.com</td>
-                        <td>فترة تجريبية</td>
-                        <td>22/6/2023</td>
-                        <td>محدد</td>
-                       </tr>
-                       <tr>
-                        <td>1012</td>
-                        <td>
-                            <span class="add-rate pop-up-btn">اضافة تقييم +</span>
-                        </td>
-                        <td>Cordie</td>
-                        <td>دوام كامل</td>
-                        <td>0.08642</td>
-                        <td>fnassar3@gmail.com</td>
-                        <td>فترة تجريبية</td>
-                        <td>22/6/2023</td>
-                        <td>محدد</td>
-                       </tr>
-                       <tr>
-                        <td>1012</td>
-                        <td>
-                            <span class="edit-rate pop-up-btn">تعديل التقييم</span>
-                        </td>
-                        <td>Cordie</td>
-                        <td>دوام كامل</td>
-                        <td>0.08642</td>
-                        <td>fnassar3@gmail.com</td>
-                        <td>فترة تجريبية</td>
-                        <td>22/6/2023</td>
-                        <td>محدد</td>
-                       </tr>
-                    </tbody>
-                </table>
-                
-    
-            </div>
+            <div class="header-actions mb-5">
+                <h4 class="mb-4 me-2">التقييمات</h4>
+                <div class="d-md-flex ">
+                    <a href="traditional_rating.html" class="primary-button m">تقييم تقليدي</a>
+                    <a href="" class="primary-button m">تقييم عادي</a>
+                    <a href="" class="secondary-button m">تقييم 360 درجة</a>
 
-             <!-- rating pop up form -->
-           <div class="pop-up" id="confirm_edit">
-            <div class="inner p-3">
-                <form action="">
-                    <h4 class="mb-3">إضافة تقييم </h4>
-                    <div class="input px-md-2 nb-3">
-                        <label class="">السنة</label>
-                        <select>
-                            <option>2022</option>
-                            <option>2023</option>
-                            <option>2024</option>
-                          
-    
-                        </select>
-                    </div> 
-                    <div class="input px-md-2 mb-3">
-                        <label class="">التقييم</label>
-                        <select>
-                            <option>ممتاز</option>
-                            <option>جيد جداً</option>
-                            <option>جيد </option>
-                            <option>مقبول</option>
-                            <option>ضعيف</option>
-                          
-    
-                        </select>
-                    </div> 
-                    <button class="primary-button">إضافة تقييم</button>
-                    <button id="ClosePopUP" class="third-button">إلغاء</button>
-                </form>
-            
-            </div>
-          </div>
 
-          <!-- End rating pop up form  -->
+                </div>
+            </div>
         </div>
-    </main>
+    </main> 
     
     <!-- End Main Content -->
 
 
-    <script src="assets/js/jquery-3.7.0.js"></script>
-    <script src="assets/js/jquery.dataTables.min.js"></script>
-    <script src="assets/js/dataTables.fixedColumns.min.js"></script>
+ 
     <script src="assets/js/main_script.js"></script>
-    <script src="assets/js/popUpConfirmationMessage.js"></script>
-    <script>
-
-
-       //create table with pagination
-         //create table with pagination
-
-         var table= new DataTable('#example', {
-            fixedColumns: {
-                left: 3
-            },
-            paging: true,
-            scrollX: true,
-            responsive: true
-
-        });
-
-        function changeNumOfFixedColumns(x) {
-        if (x.matches) { // If media query matches
-            table.destroy();
-            table= new DataTable('#example', {
-                fixedColumns: {
-                        left: 0
-                    },
-                    paging: true,
-                    scrollX: true,
-                    responsive: true
-
-                });
-                change_From_english()
-        } else {
-            table.destroy();
-
-            table= new DataTable('#example', {
-                    fixedColumns: {
-                        left: 3
-                    },
-                    paging: true,
-                    scrollX: true,
-                    responsive: true
-
-                });
-                change_From_english()
-        }
-        }
-
-        var x = window.matchMedia("(max-width: 992px)")
-        changeNumOfFixedColumns(x) // Call listener function at run time
-        x.addListener(changeNumOfFixedColumns) // Attach listener function on state changes
-           
-
-
-
-        // Handle click on "Select all" control
-        var is_checked=false;
-        $('#select-all').on('click', function(){
-        // Get all rows with search applied
-            var rows = table.rows({ 'search': 'applied' }).nodes();
-
-                if(is_checked){
-                    for(let i=0;i< rows.length;i++){
-                       // uncheck checkboxes for all rows in the table
-
-                        $(rows[i]).find("td input.form-check-input").removeAttr("checked",)
-
-                    }
-                    is_checked=false;
-                
-                }
-                else{
-                    for(let i=0;i< rows.length;i++){
-                        // Check checkboxes for all rows in the table
-
-                        $(rows[i]).find("td input.form-check-input").attr("checked","checked");
-                    }
-                    is_checked=true;
-                
-
-                }
-        
-
-                
-        });
-        // change words from english to arabic in table
-      document.addEventListener("click",change_From_english);
-      window.addEventListener("load",change_From_english);
-      let num_of_displayed_rows=document.querySelector("#example_length")
     
-      function change_From_english(){
-   
-
-        let num_of_displayed_rows_from_total_rows =document.querySelector("#example_info");
-        num_of_displayed_rows_from_total_rows.innerHTML=num_of_displayed_rows_from_total_rows.innerHTML.replace("Showing","عرض").replace("entries","مدخلا").replace("to","إلي").replace("of","من أصل")
-
-
-            let Pagination_next_button=document.querySelector("#example_next");
-            Pagination_next_button.innerHTML=
-              `النالي <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1784 3.08113C12.5131 3.41586 12.5131 3.95858 12.1784 4.29331L7.64159 8.83008L12.1784 13.3668C12.5131 13.7016 12.5131 14.2443 12.1784 14.579C11.8436 14.9138 11.3009 14.9138 10.9662 14.579L5.82332 9.43617C5.48858 9.10143 5.48858 8.55872 5.82332 8.22399L10.9662 3.08113C11.3009 2.74639 11.8436 2.74639 12.1784 3.08113Z" fill="#98A9BC"/>
-            </svg>`;
-            let Pagination_prev_button=document.querySelector("#example_previous");
-            Pagination_prev_button.innerHTML=
-              ` <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.82332 4.08113C6.15805 3.74639 6.70077 3.74639 7.0355 4.08113L12.1784 9.22399C12.5131 9.55872 12.5131 10.1014 12.1784 10.4362L7.0355 15.579C6.70077 15.9138 6.15805 15.9138 5.82332 15.579C5.48858 15.2443 5.48858 14.7016 5.82332 14.3668L10.3601 9.83008L5.82332 5.29331C5.48858 4.95858 5.48858 4.41586 5.82332 4.08113Z" fill="#98A9BC"/>
-                </svg>رجوع`;
-      }
-
-      document.querySelector(".bars").addEventListener("click",function(){
-        var interval=setInterval(()=>{
-            table.columns.adjust().draw();
-            change_From_english()
-        },0)
-
-        setTimeout(()=>{
-            clearInterval(interval)
-        },1000)
-       
-      });
-    </script>
 </body>
 </html>

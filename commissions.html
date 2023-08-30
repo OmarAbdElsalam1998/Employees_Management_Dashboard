@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="assets/css/main_style.css">
     <link rel="stylesheet" href="assets/css/viewPayrolls.css">
     <style>
+        .main{
+            margin-bottom: 100px;
+        }
         .box select{
             width: 100%;
         }
@@ -68,6 +71,25 @@
             border-bottom: 1px solid #699BF7;
             cursor: pointer;
         }
+        .actions{
+        font-family: cairo;
+        position:fixed;
+        padding: 10px 30px;
+        width:calc(100%);
+        bottom: 0;
+        background-color: #dee6ec;
+        z-index: 9999;
+    }
+    @media (max-width:768px){
+        .actions{
+            width: 100%;
+            padding: 10px;
+
+        }
+        .main{
+            margin-bottom:100px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -567,6 +589,11 @@
            
         </div>
     </main>
+    <div class="actions d-md-flex align-items-center justify-content-start">
+        <button class="secondary-button">إنشاء</button>
+        <button class="primary-button">إعتماد</button>
+        <button  class="primary-button">حفظ وتعديل لاحقاً</button>
+    </div>
 
   
     

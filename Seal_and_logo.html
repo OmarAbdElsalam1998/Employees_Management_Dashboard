@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>إنشاء قرض</title>
+    <title>الإعدادات</title>
 
     <link rel="shortcut icon" href="assets/images/logo_small.webp" type="image/x-icon">
 
@@ -15,94 +15,27 @@
     <!-- main style -->
     <link rel="stylesheet" href="assets/css/main_style.css">
     <style>
-        
+
         select{
             height: 55px;
         }
-        input[type="date"] {
-            position: relative;
-            padding: 10px;
-            }
-
-            input[type="date"]::-webkit-calendar-picker-indicator {
-            color: transparent;
-            background: none;
-            z-index: 1;
-            }
-
-            input[type="date"]:before {
-            color: transparent;
-            background: none;
+        .input-file {
             display: block;
-            content: url(assets/images/calendar.webp);
-            
-            position: absolute;
-            top: 12px;
-            right: 6px;
-            }
+            padding:15px;
+            border-radius: 8px;
+            border: 1px dashed #000;
+        }
 
-            input[type="file"]{
+        input[type="file"] {
             display: none;
-            }
-            textarea{
-                outline: none;
-                padding: 10px;
-                border:1px solid #FFF;
-                display: block;
-                width: 100%;
-                height: 160px;
-                border-radius: 8px;
-                background: #FFF;
-                transition: border .3s ease-in-out;
-            }
-            textarea:focus{
-                border-color: var(--brand-primary-button-color);;
-            }
-            .create-loan{
-                padding: 20px;
-                border-radius: 16px;
-                background-color: #B5A8F0;
-                margin-bottom: 40px;
-            }
-            .table {
-                background-color: #FFF;
-                border-radius: 12px;
-                overflow: hidden;
-            }
-            .table-responsive{
-                background-color: #FFF;
-                border-radius: 12px;
-            }
-            .table thead {
-                background-color: #B5A8F0;
-                padding: 10px;
-            } 
-            .table tbody{
-                padding:10px;
-            }   
-
-            .table thead tr th{
-
-                background-color: #B5A8F0;
-                padding: 20px 0;
-                text-align: center;
-                min-width: 145px ;
-                width: auto;
-            }  
-            .table tbody tr td{
-                padding: 20px 0px;
-                text-align: center;
-                min-width: 145px ;
-            } 
-            .table tbody tr:last-child{
-                border-bottom:0px solid transparent;
-            } 
+        }
+     
     </style>
-
 </head>
 <body>
 
     <!-- Start Header Section -->
+
     <header class="header">
         <div class="container-fluid d-flex align-items-center ">
            <div class="row w-100">
@@ -224,7 +157,7 @@
                     <span class="name">الشاشة الرئيسية</span>
                 </a>
             </li>
-            <li class="option ">
+            <li class="option">
                 <a href="employesesInfo.html" >
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19" fill="none">
@@ -288,7 +221,7 @@
                     <span class="name">الخطابات</span>
                 </a>
             </li>
-            <li class="option active">
+            <li class="option ">
                 <a href="loans.html" >
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
@@ -362,7 +295,7 @@
                     <span class="name">ادارة الاشتراك</span>
                 </a>
             </li>
-            <li class="option ">
+            <li class="option active">
                 <a href="settings.html" >
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
@@ -412,77 +345,49 @@
     <!-- Start Main content -->
     <main class="main">
         <div class="container-fluid">
-            <div class="header-actions mb-4">
-                <h4>إنشاء قرض</h4>
-                
+          <form>
+            <div class="header-actions d-md-flex justify-content-between align-items-center mb-5">
+                <h4>الإعدادات</h4>
+                <div class="d-sm-flex ">
+                    <button class="secondary-button">
+                       
+                        <span>حفظ</span>
+                        
+                    </button>
+                </div>
             </div>
-            <div class="create-loan">
-                    <form>
-                        <div class="flex-box">
-                            <div class="form-group">
-                                <label>اسم الموظف</label>
-                                <div class="input-field">
-                                    <img class="icon" src="assets/images/user_icon.webp" loading="lazy" alt="">
-                                    <input type="text" placeholder="ادخل اسم الموظف">
-                                </div>
-                                <small class="error-message">هذا الحقل مطلوب</small>
-                            </div>
-                            <div class="form-group">
-                                <label>الرقم الوظيفي</label>
-                                <div class="input-field">
-                                    <img class="icon" src="assets/images/user_icon.webp" loading="lazy" alt="">
-                                    <input type="text" placeholder="ادخل الرقم الوظيفي">
-                                </div>
-                                <small class="error-message"></small>
-        
-                            </div>
-                            
+            <div class="add-employee-form">
+                  
+                    <div class="flex-box">
+                        
+                        <div class="form-group">
+                            <label>الشعار</label>
+
+                            <label for="inputTag" class="input-file">
+                                + إضافة  الشعار
+                                <input id="inputTag" type="file" multiple="">
+                            </label>
+                            <small class="error-message"></small>
                         </div>
-                        <div class="flex-box">
-                            <div class="form-group">
-                                <label>تاريخ تسديد القرض</label>
-                                <div class="input-field">
-                                    <input type="date">
-                                </div>
-                                <small class="error-message"></small>
-                            </div>
-                            <div class="form-group">
-                                <label>مبلغ القرض</label>
-                                <div class="input-field">
-                                    <img class="icon" src="assets/images/dollar-circle.webp" loading="lazy" alt="">
-                                    <input type="text" placeholder="ادخل مبلغ القرض">
-                                </div>
-                                <small class="error-message"></small>
-        
-                            </div>
-                            
+                        <div class="form-group">
+                            <label>الختم</label>
+
+                            <label for="inputTag" class="input-file">
+                                + إضافة  الختم
+                                <input id="inputTag" type="file" multiple="">
+                            </label>
+                            <small class="error-message"></small>
                         </div>
-                        <div class="flex-box ">
-                            
-                            <div class="form-group">
-                                <label>مبلغ القسط الشهري</label>
-                                <div class="input-field">
-                                    <img class="icon" src="assets/images/dollar-circle.webp" loading="lazy" alt="">
-                                    <input type="text" placeholder="ادخل مبلغ القسط الشهري">
-                                </div>
-                                <small class="error-message"></small>
-        
-                            </div>
-                            
-                        </div>
-                    
-                        <div class="mt-3 text-center">
-                            <button class="secondary-button">اضافة</button>
-                            <button class="third-button">إنهاء</button>
-                        </div>
-                 </form>   
+                        
+                    </div>
+                   
             </div>
+          </form>
         </div>
+          
     </main>
 
-    
-    <!-- End Main Content -->
-
+   
 
     <script src="assets/js/main_script.js"></script>
     
