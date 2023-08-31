@@ -18,22 +18,9 @@
     <link rel="stylesheet" href="assets/css/main_style.css">
     <link rel="stylesheet" href="assets/css/viewPayrolls.css">
     <style>
-         /* .actions{
-                position: sticky;
-                top:99px;
-                width: 100%;
-                background-color: #dee6ec;
-                z-index: 9900;
-                
-            }
-            @media(max-width:576px){
-                .actions{
-                position: relative;
-                top:0;
-                
-                
-            } 
-            } */
+        .main{
+            margin-bottom: 100px;
+        }
           @media print {
             .header,
             .no-print{
@@ -44,8 +31,37 @@
             }
             
         }
-        .actions>div{
+        .query-box{
             border-bottom: 1px solid #999;
+        }
+        input{
+            min-width: 100px;
+            height: 40px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #c9c9c9;
+            outline: none;
+        }
+
+    
+        .actions{
+            font-family: cairo;
+            position:fixed;
+            padding: 10px 30px;
+            width:calc(100%);
+            bottom: 0;
+            background-color: #dee6ec;
+            z-index: 9999;
+        }
+        @media (max-width:768px){
+            .actions{
+                width: 100%;
+                padding: 10px;
+
+            }
+            .main{
+                margin-bottom:230px;
+            }
         }
        
     </style>
@@ -185,7 +201,7 @@
                     <span class="name">الموظفين</span>
                 </a>
             </li>
-            <li class="option active">
+            <li class="option ">
                 <a href="Salaries_and_commissions.html" >
                     <span class="icon ">
                     <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="25" height="20"><path d="M12,0C5.383,0,0,5.383,0,12s5.383,12,12,12,12-5.383,12-12S18.617,0,12,0Zm0,22c-5.514,0-10-4.486-10-10S6.486,2,12,2s10,4.486,10,10-4.486,10-10,10Zm4-8c0,1.654-1.346,3-3,3v1c0,.553-.447,1-1,1s-1-.447-1-1v-1h-.268c-1.067,0-2.063-.574-2.598-1.499-.277-.479-.113-1.09,.364-1.366,.479-.279,1.091-.113,1.366,.364,.179,.31,.511,.501,.867,.501h2.268c.552,0,1-.448,1-1,0-.378-.271-.698-.644-.76l-3.041-.507c-1.342-.223-2.315-1.373-2.315-2.733,0-1.654,1.346-3,3-3v-1c0-.552,.447-1,1-1s1,.448,1,1v1h.268c1.067,0,2.063,.575,2.598,1.5,.277,.478,.113,1.089-.364,1.366-.48,.277-1.091,.113-1.366-.365-.179-.309-.511-.5-.867-.5h-2.268c-.552,0-1,.449-1,1,0,.378,.271,.698,.644,.76l3.041,.507c1.342,.223,2.315,1.373,2.315,2.733Z"  stroke="#F8F8F8" fill="#F8F8F8"/></svg>
@@ -313,6 +329,17 @@
                     <span class="name">ادارة الاشتراك</span>
                 </a>
             </li>
+            <li class="option active">
+                <a href="extra_Time.html" >
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z" fill="white"/>
+                            <path d="M20 9.83984H4C3.45 9.83984 3 10.2898 3 10.8398V16.9998C3 19.9998 4.5 21.9998 8 21.9998H16C19.5 21.9998 21 19.9998 21 16.9998V10.8398C21 10.2898 20.55 9.83984 20 9.83984ZM9.21 18.2098C9.16 18.2498 9.11 18.2998 9.06 18.3298C9 18.3698 8.94 18.3998 8.88 18.4198C8.82 18.4498 8.76 18.4698 8.7 18.4798C8.63 18.4898 8.57 18.4998 8.5 18.4998C8.37 18.4998 8.24 18.4698 8.12 18.4198C7.99 18.3698 7.89 18.2998 7.79 18.2098C7.61 18.0198 7.5 17.7598 7.5 17.4998C7.5 17.2398 7.61 16.9798 7.79 16.7898C7.89 16.6998 7.99 16.6298 8.12 16.5798C8.3 16.4998 8.5 16.4798 8.7 16.5198C8.76 16.5298 8.82 16.5498 8.88 16.5798C8.94 16.5998 9 16.6298 9.06 16.6698C9.11 16.7098 9.16 16.7498 9.21 16.7898C9.39 16.9798 9.5 17.2398 9.5 17.4998C9.5 17.7598 9.39 18.0198 9.21 18.2098ZM9.21 14.7098C9.02 14.8898 8.76 14.9998 8.5 14.9998C8.24 14.9998 7.98 14.8898 7.79 14.7098C7.61 14.5198 7.5 14.2598 7.5 13.9998C7.5 13.7398 7.61 13.4798 7.79 13.2898C8.07 13.0098 8.51 12.9198 8.88 13.0798C9.01 13.1298 9.12 13.1998 9.21 13.2898C9.39 13.4798 9.5 13.7398 9.5 13.9998C9.5 14.2598 9.39 14.5198 9.21 14.7098ZM12.71 18.2098C12.52 18.3898 12.26 18.4998 12 18.4998C11.74 18.4998 11.48 18.3898 11.29 18.2098C11.11 18.0198 11 17.7598 11 17.4998C11 17.2398 11.11 16.9798 11.29 16.7898C11.66 16.4198 12.34 16.4198 12.71 16.7898C12.89 16.9798 13 17.2398 13 17.4998C13 17.7598 12.89 18.0198 12.71 18.2098ZM12.71 14.7098C12.66 14.7498 12.61 14.7898 12.56 14.8298C12.5 14.8698 12.44 14.8998 12.38 14.9198C12.32 14.9498 12.26 14.9698 12.2 14.9798C12.13 14.9898 12.07 14.9998 12 14.9998C11.74 14.9998 11.48 14.8898 11.29 14.7098C11.11 14.5198 11 14.2598 11 13.9998C11 13.7398 11.11 13.4798 11.29 13.2898C11.38 13.1998 11.49 13.1298 11.62 13.0798C11.99 12.9198 12.43 13.0098 12.71 13.2898C12.89 13.4798 13 13.7398 13 13.9998C13 14.2598 12.89 14.5198 12.71 14.7098ZM16.21 18.2098C16.02 18.3898 15.76 18.4998 15.5 18.4998C15.24 18.4998 14.98 18.3898 14.79 18.2098C14.61 18.0198 14.5 17.7598 14.5 17.4998C14.5 17.2398 14.61 16.9798 14.79 16.7898C15.16 16.4198 15.84 16.4198 16.21 16.7898C16.39 16.9798 16.5 17.2398 16.5 17.4998C16.5 17.7598 16.39 18.0198 16.21 18.2098ZM16.21 14.7098C16.16 14.7498 16.11 14.7898 16.06 14.8298C16 14.8698 15.94 14.8998 15.88 14.9198C15.82 14.9498 15.76 14.9698 15.7 14.9798C15.63 14.9898 15.56 14.9998 15.5 14.9998C15.24 14.9998 14.98 14.8898 14.79 14.7098C14.61 14.5198 14.5 14.2598 14.5 13.9998C14.5 13.7398 14.61 13.4798 14.79 13.2898C14.89 13.1998 14.99 13.1298 15.12 13.0798C15.3 12.9998 15.5 12.9798 15.7 13.0198C15.76 13.0298 15.82 13.0498 15.88 13.0798C15.94 13.0998 16 13.1298 16.06 13.1698C16.11 13.2098 16.16 13.2498 16.21 13.2898C16.39 13.4798 16.5 13.7398 16.5 13.9998C16.5 14.2598 16.39 14.5198 16.21 14.7098Z" fill="white"/>
+                        </svg>
+                    </span>
+                    <span class="name">الوقت الإضافي</span>
+                </a>
+            </li>
             <li class="option ">
                 <a href="settings.html" >
                     <span class="icon">
@@ -364,31 +391,9 @@
 
     <main class="main" >
        <div class="container-fluid">
-        <div class="actions">
-            <div class="query-box py-4">
-                    <form class="d-xxl-flex align-items-center justify-content-between ">
-                       <div class="d-sm-flex align-items-center">
-                        <div class="input px-md-2">
-                            <h4>التعويض عن</h4>
-
-                            <select>
-                                <option></option>
-                                <option>دوام عيد الفطر</option>
-                                <option>دوام عيد الأضحي</option>
-                                <option>دوام يوم عرفة</option>
-                                <option>دوام اليوم الوطني </option>
-                                <option>دوام وقت التأسيس</option>
-                                <option>وقت إضافي</option>
-                              
-        
-                            </select>
-                        </div>
-                     
-                       </div>
-                      
-                    </form>
-            </div>
-            <div class="query-box no-print mb-5 py-4 ">
+        <div class="">
+            
+            <div class="query-box no-print  py-4 ">
                 <form class="d-xxl-flex align-items-center justify-content-between ">
                     <h4>تعويضات سابقة</h4>
                    <div class="d-sm-flex align-items-center">
@@ -429,11 +434,35 @@
                 </form>
             </div>
     
-          
+            <div class="query-box mb-5 py-4">
+                <form class="d-xxl-flex align-items-center justify-content-between ">
+                   <div class="d-sm-flex align-items-center">
+                    <div class="input px-md-2">
+                        <h4>التعويض عن</h4>
+
+                        <select>
+                            <option></option>
+                            <option>دوام عيد الفطر</option>
+                            <option>دوام عيد الأضحي</option>
+                            <option>دوام يوم عرفة</option>
+                            <option>دوام اليوم الوطني </option>
+                            <option>دوام وقت التأسيس</option>
+                            <option>وقت إضافي</option>
+                          
+    
+                        </select>
+                    </div>
+                 
+                   </div>
+                  
+                </form>
+        </div>
         </div>
 
         <div class="table">
 
+
+           <form>
             <table id="example" class="stripe row-border order-column nowrap" style="width:100% ;direction: rtl;">
                 <thead>
                     <tr>
@@ -453,48 +482,48 @@
                         <td>1</td>
                         <td>1455</td>
                         <td>عبد الله</td>
-                        <td>1</td>
-                        <td>08:00</td>
+                        <td><input type="text"> </td>
+                        <td><input type="text"> </td>
                         <td>400</td>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>1455</td>
                         <td>عبد الله</td>
-                        <td>1</td>
-                        <td>08:00</td>
+                        <td><input type="text"> </td>
+                        <td><input type="text"> </td>
                         <td>400</td>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>1455</td>
                         <td>عبد الله</td>
-                        <td>1</td>
-                        <td>08:00</td>
+                        <td><input type="text"> </td>
+                        <td><input type="text"> </td>
                         <td>400</td>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>1455</td>
                         <td>عبد الله</td>
-                        <td>1</td>
-                        <td>08:00</td>
+                        <td><input type="text"> </td>
+                        <td><input type="text"> </td>
                         <td>400</td>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>1455</td>
                         <td>عبد الله</td>
-                        <td>1</td>
-                        <td>08:00</td>
+                        <td><input type="text"> </td>
+                        <td><input type="text"> </td>
                         <td>400</td>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>1455</td>
                         <td>عبد الله</td>
-                        <td>1</td>
-                        <td>08:00</td>
+                        <td><input type="text"> </td>
+                        <td><input type="text"> </td>
                         <td>400</td>
                     </tr>
 
@@ -509,10 +538,18 @@
                 
               
             </table>
+           </form>
 
         </div>
        </div>
+          
+      
     </main>
+    <div class="actions d-md-flex align-items-center justify-content-start">
+        <button class="secondary-button">إنشاء</button>
+        <button class="primary-button">إعتماد</button>
+        <button  class="primary-button">حفظ وتعديل لاحقاً</button>
+       </div>
 
     <!-- End Main Content -->
 
