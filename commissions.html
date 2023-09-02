@@ -90,6 +90,84 @@
                 margin-bottom:100px;
             }
         }
+        select{
+        height: 40px;
+    }
+     .table{
+        margin-bottom: 100px;
+
+     }
+     .table #example{
+        overflow-y: scroll;
+
+
+     }
+    .table thead {
+        background-color: #B5A8F0;
+        padding: 10px;
+    } 
+    .table tbody{
+        padding:10px;
+
+
+    }   
+
+    .table thead tr th{
+
+        background-color: #B5A8F0;
+        padding: 20px 0;
+        text-align: center;
+        min-width: 145px ;
+        width: auto;
+    }  
+    .table tbody tr td{
+        padding: 20px 0px;
+        text-align: center;
+        min-width: 145px ;
+    } 
+    .table tbody tr:last-child{
+        border-bottom:0px solid transparent;
+    } 
+
+    input[type="date"] {
+            position: relative;
+            padding: 10px;
+            height: 40px;
+             border-radius: 8px;
+            border: 1px solid var(--light-1, #999);
+            background: var(--light-3, #FFF);
+
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            color: transparent;
+            background: none;
+            z-index: 1;
+        }
+
+        input[type="date"]:before {
+            color: transparent;
+            background: none;
+            display: block;
+            content: url(assets/images/calendar.webp);
+            
+            position: absolute;
+            top: 8px;
+            right: 6px;
+        }
+        @media (min-width:1200px) {
+            .primary-button{
+            min-width: 140px !important;
+        } 
+            
+        }
+        .query-box{
+            padding: 25px;
+            border-radius: 16px;
+            background-color: #FFF;
+            border-left: 16px solid #B5A8F0 ;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
@@ -424,6 +502,7 @@
                             <option value="2">نسبة من الراتب الأساسي </option>
                             <option value="3">نسبة من الراتب الإجمالي</option>
                             <option value="4">مبلغ مقطوع</option>
+                           
                         </select>
                         
                     </div>
@@ -508,7 +587,61 @@
                  
             
             
+            <div class="query-box no-print  py-4 ">
+                <h4>عمولات سابقة</h4>
+
+                <form class="d-xxl-flex align-items-center justify-content-between ">
+                   <div class="d-sm-flex align-items-center">
+                    <div class="input px-md-2">
+                        <label>الفرع</label>
+                        <select>
+                            <option disabled selected>---</option>
+                            <option>فرع 1</option>
+                            <option>فرع 2</option>
+                            <option>فرع 3</option>
+                            <option>فرع 4</option>
+                            <option>فرع 5</option>
+                            <option>فرع 6</option>
+                          
     
+                        </select>
+                    </div>
+                    <div class="input px-md-2">
+                        <label>الشهر</label>
+                        <select>
+                            <option>يناير</option>
+                            <option>فبراير</option>
+                            <option>مارس</option>
+                            <option>أبريل</option>
+                            <option>مايو</option>
+                            <option>يونيو</option>
+                            <option>يوليو</option>
+                            <option>أغسطس</option>
+                            <option>سبتمبر</option>
+                            <option>أكتوبر</option>
+                            <option>نوفمبر</option>
+                            <option>دبسمبر</option>
+    
+                        </select>
+                    </div>
+                    <div class="input px-md-2">
+                        <label>السنة</label>
+                        <select>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+    
+                        </select>
+                    </div>
+                   </div>
+                    <button class="primary-button">
+                        عرض
+                    </button>
+                </form>
+            </div>
             <div class="table">
     
                 <table id="example" class="stripe row-border order-column nowrap" style="width:100% ;direction: rtl;">
@@ -521,6 +654,8 @@
                             <th>اجمالي الراتب</th>
                             <th>نسبة العمولة</th>
                             <th>مبلغ العمولة</th>
+                            <th>التاريخ</th>
+                            <th>الفرع </th>
                            
                             
     
@@ -537,6 +672,23 @@
                         <td>7000</td>
                         <td>5</td>
                         <td>1000</td>
+                        <td class="action-date">
+                            <div class="input-field">
+                                <input type="date">
+                            </div>
+                        </td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option>فرع 1</option>
+                                <option>فرع 2</option>
+                                <option>فرع 3</option>
+                                <option>فرع 4</option>
+                                <option>فرع 5</option>
+                                <option>فرع 6</option>
+                            </select>
+                        </td>
+                       
                        
                         
                      
@@ -549,6 +701,23 @@
                         <td>7000</td>
                         <td>5</td>
                         <td>1000</td>
+                        <td class="action-date">
+                            <div class="input-field">
+                                <input type="date">
+                            </div>
+                        </td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option>فرع 1</option>
+                                <option>فرع 2</option>
+                                <option>فرع 3</option>
+                                <option>فرع 4</option>
+                                <option>فرع 5</option>
+                                <option>فرع 6</option>
+                            </select>
+                        </td>
+                       
                        
                         
                      
@@ -561,34 +730,28 @@
                         <td>7000</td>
                         <td>5</td>
                         <td>1000</td>
+                        <td class="action-date">
+                            <div class="input-field">
+                                <input type="date">
+                            </div>
+                        </td>
+                        <td>
+                            <select class="select-action">
+                                <option>---</option>
+                                <option>فرع 1</option>
+                                <option>فرع 2</option>
+                                <option>فرع 3</option>
+                                <option>فرع 4</option>
+                                <option>فرع 5</option>
+                                <option>فرع 6</option>
+                            </select>
+                        </td>
+                       
                        
                         
                      
                        </tr>
-                       <tr>
-                        <td>324224</td>
-                        <td>عبد الله السيد</td>
-                        <td>5000</td>
-                        <td>2000</td>
-                        <td>7000</td>
-                        <td>5</td>
-                        <td>1000</td>
                        
-                        
-                     
-                       </tr>
-                       <tr>
-                        <td>324224</td>
-                        <td>عبد الله السيد</td>
-                        <td>5000</td>
-                        <td>2000</td>
-                        <td>7000</td>
-                        <td>5</td>
-                        <td>1000</td>
-                       
-                        
-                     
-                       </tr>
                     </tbody>
                 </table>
     
