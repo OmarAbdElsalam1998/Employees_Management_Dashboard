@@ -19,6 +19,26 @@
         select{
             height: 55px;
         }
+         .selected-days-box{
+            display: none;
+        }
+        .selected-days-box .days .day
+        {   display: inline-block;
+            padding: 3px 10px;
+            background: #4c62af;
+            border-radius: 17px;
+            color: #FFF;
+            margin: 2px;
+        }
+       .selected-days-box .days .day .icon
+        {
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+            background-color: #fff;
+            cursor: pointer;
+        }
      
     </style>
 </head>
@@ -392,16 +412,43 @@
     
                         </div>
                         <div class="form-group">
-                            <label>عدد أيام الإجازة الأسبوعية ( يوم )</label>
+                            <label> أيام الإجازة الأسبوعية ( يوم )</label>
+                            <div class="input-field">
+                                <select class="w-100 border-0 " id="select_day">
+                                    <option selected disabled>اختر اليوم</option>
+                                    <option>السبت</option>
+                                    <option>الأحد</option>
+                                    <option>الإثنين</option>
+                                    <option>الثلاثاء</option>
+                                    <option>الأربعاء</option>
+                                    <option>الخميس</option>
+                                    <option>الجمعة</option>
+    
+                                </select>
+                            </div> 
+                            <small class="error-message"></small>
+                            <div class="selected-days-box mb-3 ">
+                                <label class="mb-2"> الأيام المختارة</label>
+                                <div class="days p-3 rounded border ">
+                                
+                                    
+                                </div>
+                                <div class="input-field">
+                                    <input type="text"  id="selected_days_string">
+                                </div> 
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div class="flex-box">
+                        <div class="form-group">
+                            <label>صلاحية الأجازة السنوية</label>
                             <div class="input-field">
                                 <input type="text" >
                             </div> 
                             <small class="error-message"></small>
     
                         </div>
-                    </div>
-                    <div class="flex-box">
-                        
                         <div class="form-group">
                             <label>كفالة للمقترض</label>
                             <div class="input-field">
@@ -415,7 +462,30 @@
     
                         </div>
                   
-            </div>
+                    </div>
+                    <div class="flex-box">
+                        <div class="form-group">
+                            <label>هل سيتم دفع راتب مقدم للموظفين؟</label>
+                            <div class="input-field">
+                                <select class="w-100 border-0 ">
+                                    <option>نعم</option>
+                                    <option> لا</option>
+    
+                                </select>
+                            </div>   
+                            <small class="error-message"></small>
+    
+                        </div>
+                        <div class="form-group">
+                            <label>عدد الموظفين في الاقصى للتمتع بالاجازة في وقت واحد</label>
+                            <div class="input-field">
+                                <input type="text" >
+                            </div> 
+                            <small class="error-message"></small>
+    
+                        </div>
+                  
+                    </div>
             </div>
           </form>
         </div>
@@ -425,6 +495,89 @@
    
 
     <script src="assets/js/main_script.js"></script>
+    <script>
+        let daysBox=document.querySelector(".selected-days-box ");
+        let daysDiv=document.querySelector(".selected-days-box .days");
+        var selectDayFromSelectBox = document.getElementById("select_day");
+        let selected_days_string_input_fiels=document.getElementById("selected_days_string");
+        let daysArray=[];
+
+        //when select from select box
+selectDayFromSelectBox.addEventListener("change", (e) => {
+    // log(`e.target`, e.target);
+    const select = e.target;
+    const day = select.selectedOptions[0].text;
+    
+    if(daysArray.length==0){
+        daysArray.push(day);
+
+    }else{
+        let checkExist=daysArray.filter((value)=>value==day);
+        console.log(checkExist);
+        if(checkExist.length>0){
+            console.log("true")
+        }else{
+            daysArray.push(day);
+
+        }
+    }
+    //DON'T DISPLAY THE SELECTED days DIV IF USER DON'T SELECT ANY day YET
+    if(daysArray.length>0){
+        daysBox.style.display="block";
+    }
+    else{
+        daysBox.style.display="none";
+
+
+    }
+    daysDiv.innerHTML="";
+    selected_days_string_input_fiels.value=daysArray.join(",");
+
+    daysArray.forEach((day,index)=>{
+        daysDiv.innerHTML+=
+        `
+        <span class="day">`+day+`
+            <span class="delete-day" id="`+index+`"><img class="icon" src="assets/images/close.webp" loading="lazy" alt="delete"></span>
+        </span>
+        
+        `
+    })
+  });
+
+
+  //delete selected day
+  document.onclick=function(e){
+
+    console.log(e.target.parentElement.classList);
+    if(e.target.parentElement.classList.contains('delete-day')){
+       var id=e.target.parentElement.id;
+       daysArray.splice(id,1);
+       if(daysArray.length>0){
+        daysBox.style.display="block";
+    }
+    else{
+        daysBox.style.display="none";
+
+
+    }
+       daysDiv.innerHTML="";
+       
+       selected_days_string_input_fiels.value=daysArray.join(",");
+
+       daysArray.forEach((day,index)=>{
+        daysDiv.innerHTML+=
+        `
+        <span class="day">`+day+`
+            <span class="delete-day" id="`+index+`"><img class="icon"  src="assets/images/close.webp" loading="lazy" alt="delete"></span>
+        </span>
+        
+        `;
+    })
+    }
+  }
+
+    </script>
+
     
 </body>
 </html>
