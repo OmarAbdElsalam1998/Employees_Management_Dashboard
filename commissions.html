@@ -493,17 +493,75 @@
     <!-- Start Main content -->
     <main class="main">
         <div class="container-fluid">
+            <div class="query-box no-print  py-4 ">
+                <h4>عمولات سابقة</h4>
+
+                <form class="d-xxl-flex align-items-center justify-content-start ">
+                   <div class="d-sm-flex align-items-center">
+                  
+                    <div class="input px-md-2">
+                        <label>الشهر</label>
+                        <select>
+                            <option>يناير</option>
+                            <option>فبراير</option>
+                            <option>مارس</option>
+                            <option>أبريل</option>
+                            <option>مايو</option>
+                            <option>يونيو</option>
+                            <option>يوليو</option>
+                            <option>أغسطس</option>
+                            <option>سبتمبر</option>
+                            <option>أكتوبر</option>
+                            <option>نوفمبر</option>
+                            <option>دبسمبر</option>
+    
+                        </select>
+                    </div>
+                    <div class="input px-md-2">
+                        <label>السنة</label>
+                        <select>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+    
+                        </select>
+                    </div>
+                   </div>
+                    <button class="primary-button">
+                        عرض
+                    </button>
+                </form>
+            </div>
             <div class="row mb-4">
                 <div class="col-md-6  h-auto mb-3">
                     <div class="box  h-100">
-                        <h4 class="mb-3">نظام العمولة</h4>
+                        <label class="mb-2">نظام العمولة</label>
+
                         <select class="select">
+
                             <option value="1">نسبة من المبيعات</option>
                             <option value="2">نسبة من الراتب الأساسي </option>
                             <option value="3">نسبة من الراتب الإجمالي</option>
                             <option value="4">مبلغ مقطوع</option>
                            
                         </select>
+                        <div class="input  mt-2">
+                            <label class="mb-2">الفرع</label>
+                            <select>
+                                <option disabled selected>---</option>
+                                <option>فرع 1</option>
+                                <option>فرع 2</option>
+                                <option>فرع 3</option>
+                                <option>فرع 4</option>
+                                <option>فرع 5</option>
+                                <option>فرع 6</option>
+                              
+        
+                            </select>
+                        </div>
                         
                     </div>
                </div>
@@ -587,61 +645,7 @@
                  
             
             
-            <div class="query-box no-print  py-4 ">
-                <h4>عمولات سابقة</h4>
-
-                <form class="d-xxl-flex align-items-center justify-content-between ">
-                   <div class="d-sm-flex align-items-center">
-                    <div class="input px-md-2">
-                        <label>الفرع</label>
-                        <select>
-                            <option disabled selected>---</option>
-                            <option>فرع 1</option>
-                            <option>فرع 2</option>
-                            <option>فرع 3</option>
-                            <option>فرع 4</option>
-                            <option>فرع 5</option>
-                            <option>فرع 6</option>
-                          
-    
-                        </select>
-                    </div>
-                    <div class="input px-md-2">
-                        <label>الشهر</label>
-                        <select>
-                            <option>يناير</option>
-                            <option>فبراير</option>
-                            <option>مارس</option>
-                            <option>أبريل</option>
-                            <option>مايو</option>
-                            <option>يونيو</option>
-                            <option>يوليو</option>
-                            <option>أغسطس</option>
-                            <option>سبتمبر</option>
-                            <option>أكتوبر</option>
-                            <option>نوفمبر</option>
-                            <option>دبسمبر</option>
-    
-                        </select>
-                    </div>
-                    <div class="input px-md-2">
-                        <label>السنة</label>
-                        <select>
-                            <option>2023</option>
-                            <option>2022</option>
-                            <option>2021</option>
-                            <option>2020</option>
-                            <option>2019</option>
-                            <option>2018</option>
-    
-                        </select>
-                    </div>
-                   </div>
-                    <button class="primary-button">
-                        عرض
-                    </button>
-                </form>
-            </div>
+            
             <div class="table">
     
                 <table id="example" class="stripe row-border order-column nowrap" style="width:100% ;direction: rtl;">
