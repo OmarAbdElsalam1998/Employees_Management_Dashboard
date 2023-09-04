@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="assets/css/main_style.css">
     <link rel="stylesheet" href="assets/css/viewPayrolls.css">
     <style>
+        .main{
+            margin-bottom: 50px;
+        }
        .choose-status select{
             width: auto;
             
@@ -55,6 +58,38 @@
     .status{
         padding: 2px 20px;
     }
+       @media (min-width:1200px) {
+            .primary-button.show-data{
+            min-width: 140px !important;
+        } 
+            
+        }
+        .query-box{
+            padding: 25px;
+            border-radius: 16px;
+            background-color: #FFF;
+            border-left: 16px solid #B5A8F0 ;
+            margin-bottom: 30px;
+        }
+        .actions{
+        font-family: cairo;
+        position:fixed;
+        padding: 10px 30px;
+        width:calc(100%);
+        bottom: 0;
+        background-color: #dee6ec;
+        z-index: 9999;
+        }
+        @media (max-width:768px){
+            .actions{
+                width: 100%;
+                padding: 10px;
+
+            }
+            .main{
+                margin-bottom:220px;
+            }
+        }
     </style>
 
 </head>
@@ -383,26 +418,45 @@
         <div class="container-fluid">
             <div class="header-actions d-md-flex justify-content-between align-items-center mb-5">
                 <h4>كشف الحضور والغياب</h4>
-                <div class="d-sm-flex ">
+             
+            </div>
+            <div class="query-box no-print  py-4 ">
+                <h4>كشوفات سابقة</h4>
+
+                <form class="d-xxl-flex align-items-center justify-content-start ">
+                   <div class="d-sm-flex align-items-center">
+                  
                     <div class="input px-md-2">
-                        <label>الشهر</label>
+                        <label>الفرع</label>
                         <select>
-                            <option>يناير</option>
-                            <option>فبراير</option>
-                            <option>مارس</option>
-                            <option>أبريل</option>
-                            <option>مايو</option>
-                            <option>يونيو</option>
-                            <option>يوليو</option>
-                            <option>أغسطس</option>
-                            <option>سبتمبر</option>
-                            <option>أكتوبر</option>
-                            <option>نوفمبر</option>
-                            <option>دبسمبر</option>
+                            <option disabled selected>---</option>
+                            <option>فرع 1</option>
+                            <option>فرع 2</option>
+                            <option>فرع 3</option>
+                            <option>فرع 4</option>
+                            <option>فرع 5</option>
+                            <option>فرع 6</option>
+                          
     
                         </select>
                     </div>
-                </div>
+                    <div class="input px-md-2">
+                        <label>السنة</label>
+                        <select>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+    
+                        </select>
+                    </div>
+                   </div>
+                    <button class="primary-button show-data">
+                        عرض
+                    </button>
+                </form>
             </div>
     
             <div class="table">
@@ -1857,6 +1911,12 @@
             </div>
         </div>
     </main>
+    <div class="actions d-md-flex align-items-center justify-content-start">
+        <button class="secondary-button">إنشاء</button>
+        <button class="primary-button">إعتماد</button>
+        <button  class="primary-button">حفظ وتعديل لاحقاً</button>
+    </div>
+
 
     
   

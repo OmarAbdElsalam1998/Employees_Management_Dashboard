@@ -71,6 +71,28 @@
     .table .appointments select.from{
         width: auto;
     }
+      .actions{
+        font-family: cairo;
+        position:fixed;
+        padding: 10px 30px;
+        width:calc(100%);
+        bottom: 0;
+        background-color: #dee6ec;
+        z-index: 9999;
+        }
+        @media (max-width:768px){
+            .actions{
+                width: 100%;
+                padding: 10px;
+
+            }
+            .main{
+                margin-bottom:100px;
+            }
+        }
+        select{
+        height: 40px;
+    }
    
     </style>
 
@@ -1926,6 +1948,14 @@
                   </table>
                </div>
         </div>
+     
+    </main>
+    <div class="actions d-md-flex align-items-center justify-content-start">
+        <button class="secondary-button">إنشاء</button>
+        <button class="primary-button">إعتماد</button>
+        <button  class="primary-button">حفظ وتعديل لاحقاً</button>
+    </div>
+
 
     
     <!-- End Main Content -->

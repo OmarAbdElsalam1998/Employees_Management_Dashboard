@@ -15,16 +15,19 @@
     <!-- main style -->
     <link rel="stylesheet" href="assets/css/main_style.css">
     <style>
+        
+
+        
 
         select{
             height: 55px;
         }
-        .selected-countries-box,
-        .selected-days-box{
+
+        #work-locations-box{
             display: none;
         }
-        .selected-countries-box .countries .country,
-        .selected-days-box .days .day
+ 
+        #work-locations-box .work-locations  .work-location
         {   display: inline-block;
             padding: 3px 10px;
             background: #4c62af;
@@ -32,8 +35,8 @@
             color: #FFF;
             margin: 2px;
         }
-        .selected-countries-box  .countries .country .icon,
-       .selected-days-box .days .day .icon
+
+       #work-locations-box .work-locations  .work-location .icon
         {
             border-radius: 50%;
             width: 20px;
@@ -42,26 +45,16 @@
             background-color: #fff;
             cursor: pointer;
         }
-        input[type="date"] {
-            position: relative;
+        textarea {
+            outline: none;
             padding: 10px;
-        }
-
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            color: transparent;
-            background: none;
-            z-index: 1;
-        }
-
-        input[type="date"]:before {
-            color: transparent;
-            background: none;
+            border: 1px solid #FFF;
             display: block;
-            content: url(assets/images/calendar.webp);
-            
-            position: absolute;
-            top: 12px;
-            right: 6px;
+            width: 100%;
+            height: 160px;
+            border-radius: 8px;
+            background: #FFF;
+            transition: border .3s ease-in-out;
         }
      
     </style>
@@ -401,210 +394,61 @@
                     </button>
                 </div>
             </div>
-            <div class="add-employee-form">
-                  
-                    <div class="flex-box">
-                        
-                        <div class="form-group">
-                            <label>عدد أيام الشهر</label>
-                            <div class="input-field">
-                                <select class="w-100 border-0 ">
-                                    <option>30 يوم</option>
-                                    <option> الفعلية</option>
-    
-                                </select>
-                            </div>   
-                            <small class="error-message"></small>
-    
-                        </div>
-                        <div class="form-group">
-                            <label>اقل مدة إجازة ( يوم )</label>
-                            <div class="input-field">
-                                <input type="text">
-                            </div>
-                            <small class="error-message"></small>
-                        </div>
-                        
-                    </div>
-                    <div class="flex-box">
+            <div class="add-workLocations-form">
+
+                <div class="flex-box ">
                        
-                        <div class="form-group">
-                            <label>الجنسيات</label>
-                            <div class="input-field">
-                                <select class="w-100 border-0 " id="select_country">
-                                    <option selected disabled>اختر البلد</option>
-                                    <option>السعودية</option>
-                                    <option>مصر</option>
-                                    <option>الأمارات</option>
-                                    <option>الكويت</option>
-                                 
-    
-                                </select>
-                            </div> 
-                            <small class="error-message"></small>
-                            <div class="selected-countries-box mb-3 ">
-                                <label class="mb-2"> الجنسيات المختارة</label>
-                                <div class="countries p-3 rounded border ">
-
-                                    <!-- If There Is countries in data base from brevious submittion you can get them and display ther using below code  -->
-
-                                   
-                                    <!-- <span class="country">
-                                        السعودية
-                                        <span class="delete-country" id="`+index+`"><img class="icon" src="assets/images/close.webp" loading="lazy" alt="delete"></span>
-                                    </span> -->
-                                
-                                    
-                                </div>
-                                <div class="input-field">
-                                    <input type="text"  id="selected_countries_string">
-                                </div> 
-                            </div>
-    
-                        </div>
-                        <div class="form-group">
-                            <label> أيام الإجازة الأسبوعية ( يوم )</label>
-                            <div class="input-field">
-                                <select class="w-100 border-0 " id="select_day">
-                                    <option selected disabled>اختر اليوم</option>
-                                    <option>السبت</option>
-                                    <option>الأحد</option>
-                                    <option>الإثنين</option>
-                                    <option>الثلاثاء</option>
-                                    <option>الأربعاء</option>
-                                    <option>الخميس</option>
-                                    <option>الجمعة</option>
-    
-                                </select>
-                            </div> 
-                            <small class="error-message"></small>
-                            <div class="selected-days-box mb-3 ">
-                                <label class="mb-2"> الأيام المختارة</label>
-                                <div class="days p-3 rounded border ">
-                                
-                                     <!-- If There Is day in data base from brevious submittion you can get them and display ther using below code  -->
-
-                                   
-                                    <!-- <span class="day">
-                                        السبت
-                                        <span class="delete-day" id="`+index+`"><img class="icon" src="assets/images/close.webp" loading="lazy" alt="delete"></span>
-                                    </span> -->
-                                    
-                                </div>
-                                <div class="input-field">
-                                    <input type="text"  id="selected_days_string">
-                                </div> 
-                            </div>
-    
-                        </div>
-                    </div>
-                    <div class="flex-box">
-                        <div class="form-group">
-                            <label>صلاحية الأجازة السنوية</label>
-                            <div class="input-field">
-                                <input type="text" >
-                            </div> 
-                            <small class="error-message"></small>
-    
-                        </div>
-                        <div class="form-group">
-                            <label>كفالة للمقترض</label>
-                            <div class="input-field">
-                                <select class="w-100 border-0 ">
-                                    <option>نعم</option>
-                                    <option> لا</option>
-    
-                                </select>
-                            </div>   
-                            <small class="error-message"></small>
-    
-                        </div>
-                  
-                    </div>
-                    <div class="flex-box">
-                        <div class="form-group">
-                            <label>هل سيتم دفع راتب مقدم للموظفين؟</label>
-                            <div class="input-field">
-                                <select class="w-100 border-0 ">
-                                    <option>نعم</option>
-                                    <option> لا</option>
-    
-                                </select>
-                            </div>   
-                            <small class="error-message"></small>
-    
-                        </div>
-                        <div class="form-group">
-                            <label>عدد الموظفين في الاقصى للتمتع بالاجازة في وقت واحد</label>
-                            <div class="input-field">
-                                <input type="text" >
-                            </div> 
-                            <small class="error-message"></small>
-    
-                        </div>
-                  
-                    </div>
-                    <div class="flex-box">
-                        <div class="form-group">
-                            <label>تاريخ إنشاء المسير</label>
-                            <div class="input-field">
-                                <input type="date" >
-                            </div> 
-                            <small class="error-message"></small>
-    
-                        </div>
-                        <div class="form-group">
-                            <label>الخصم التلقائي عند الغياب والتأخير</label>
-                            <div class="input-field">
-                                <select class="w-100 border-0 ">
-                                    <option>نعم</option>
-                                    <option>السؤال قبل ذلك</option>
-    
-                                </select>
-                            </div> 
-                            <small class="error-message"></small>
-    
-                        </div>
-                  
-                    </div>
-                    <div class="flex-box">
-                        
-                        <div class="form-group">
-                            <label>المدة بين إجازتين ( يوم )</label>
-                            <div class="input-field">
-                                <input type="text" >
-                            </div> 
-                            <small class="error-message"></small>
-    
-                        </div>
-                        <div class="form-group">
-                            <label>تقديم الأجازة قبل بدايتها ب (عدد الأيام)</label>
-                            <div class="input-field">
-                                <input type="text" >
-                            </div> 
-                            <small class="error-message"></small>
-    
-                        </div>
-                  
-                    </div>
-
-
-
-                </div>
-                <div class="flex-box">
                     <div class="form-group">
-                        <label>موافقة تلقائية عند إنشاء تعريف من حساب موظف</label>
+                        <label>اسم الفرع</label>
                         <div class="input-field">
-                            <select class="w-100 border-0 ">
-                                <option>نعم</option>
-                                <option> لا, يجب الرجوع للمشرف</option>
-
-                            </select>
+                            <input class="" type="text" id="workLocation_name">
                         </div> 
                         <small class="error-message"></small>
+                        
 
                     </div>
+                    <div class="form-group">
+                        <label>الموقع علي جوجل ماب</label>
+                        <div class="input-field">
+                            <input class="" type="text" id="Google_Map_Location">
+                        </div> 
+                        <small class="error-message"></small>
+                       
+
+                    </div>
+                    
                 </div>
+                <div class="">
+                    <button class="primary-button " id="add_Name_Location">إضافة</button>
+                    
+
+                </div>
+               
+
+
+
+            </div>
+            <div class="work-Locations-box" id="work-locations-box">
+                <label class="mb-2">الفروع</label>
+                <div class="work-locations p-3 rounded border ">
+
+                    <!-- If There Is countries in data base from brevious submittion you can get them and display ther using below code  -->
+
+                   
+                    <!-- <span class="work-location">
+                        السعودية
+                        <span class="delete-work-location" id="`+index+`"><img class="icon" src="assets/images/close.webp" loading="lazy" alt="delete"></span>
+                    </span> -->
+                
+                    
+                </div>
+                <div class="input-field">
+                    <textarea  id="allWorkLocation"></textarea>
+                </div> 
+            </div>
+                  
+                    
+               
           </form>
         </div>
           
@@ -614,170 +458,140 @@
 
     <script src="assets/js/main_script.js"></script>
     <script>
-        let CountriesBox=document.querySelector(".selected-countries-box ");
-        let CountriesDiv=document.querySelector(".selected-countries-box .countries");
+        let WorkLocationsBox=document.querySelector("#work-locations-box ");
+        let workLocationsDiv=document.querySelector("#work-locations-box .work-locations");
+        let add_Name_Location=document.getElementById("add_Name_Location");
         var selectCountryFromSelectBox = document.getElementById("select_country");
-        let selected_Countries_string_input_field=document.getElementById("selected_countries_string");
-        let countriesArray=[];
-        let daysBox=document.querySelector(".selected-days-box ");
-        let daysDiv=document.querySelector(".selected-days-box .days");
-        var selectDayFromSelectBox = document.getElementById("select_day");
-        let selected_days_string_input_field=document.getElementById("selected_days_string");
-        let daysArray=[];
+        let allWorkLocationsTextArea=document.getElementById("allWorkLocation");
+        let workLocation_name=document.getElementById("workLocation_name");
+        let Google_Map_Location=document.getElementById("Google_Map_Location")
+        let error_messages=document.querySelectorAll(".form-group .error-message");
+
+        let workLocations_Array=[];
+       
         
-        //when select country from select box
 
-        selectCountryFromSelectBox.addEventListener("change", (e) => {
-        // log(`e.target`, e.target);
-        const select = e.target;
-        const country = select.selectedOptions[0].text;
-        
-        if(countriesArray.length==0){
-            countriesArray.push(country);
-
-        }else{
-            let checkExist=countriesArray.filter((value)=>value==country);
-            console.log(checkExist);
-            if(checkExist.length>0){
-                console.log("true")
-            }else{
-                countriesArray.push(country);
-
-            }
-        }
-
-        //DON'T DISPLAY THE SELECTED days DIV IF USER DON'T SELECT ANY day YET
-        if(countriesArray.length>0){
-            CountriesBox.style.display="block";
-        }
-        else{
-            CountriesBox.style.display="none";
-
-
-        }
-        CountriesDiv.innerHTML="";
-        selected_Countries_string_input_field.value=countriesArray.join(",");
-
-        countriesArray.forEach((country,index)=>{
-            CountriesDiv.innerHTML+=
-            `
-            <span class="country">`+country+`
-                <span class="delete-country" id="`+index+`"><img class="icon" src="assets/images/close.webp" loading="lazy" alt="delete"></span>
-            </span>
-            
-            `
-        })
-    });
-
-
-    //delete selected day
-    document.onclick=function(e){
+       //check validaty of work location name
 
        
-    }
+       function check_validaty_of_workLocation_name(){
+        console.log(workLocation_name.value)
 
-
-
-    //when select from select box
-
-    selectDayFromSelectBox.addEventListener("change", (e) => {
-        // log(`e.target`, e.target);
-        const select = e.target;
-        const day = select.selectedOptions[0].text;
-        
-        if(daysArray.length==0){
-            daysArray.push(day);
-
-        }else{
-            let checkExist=daysArray.filter((value)=>value==day);
-            console.log(checkExist);
-            if(checkExist.length>0){
-                console.log("true")
-            }else{
-                daysArray.push(day);
-
+            if(workLocation_name.value!=""){
+                error_messages[0].innerHTML="";
+                return true; 
+                
+            }
+            else{
+                error_messages[0].innerHTML="برجاء إدخال إسم الفرع";
+                return false;
+               
             }
         }
 
-        //DON'T DISPLAY THE SELECTED days DIV IF USER DON'T SELECT ANY day YET
-        if(daysArray.length>0){
-            daysBox.style.display="block";
+        //check validaty of Google_Map_Location
+        function check_validaty_of_Google_Map_Location(){
+            if(Google_Map_Location.value!=""){
+                error_messages[1].innerHTML="";
+                return true; 
+                
+            }
+            else{
+                error_messages[1].innerHTML="برجاء إدخال موقع الفرع من جوجل ماب ";
+                return false;
+                
+            }
         }
-        else{
-            daysBox.style.display="none";
 
-
-        }
-        daysDiv.innerHTML="";
-        selected_days_string_input_field.value=daysArray.join(",");
-
-        daysArray.forEach((day,index)=>{
-            daysDiv.innerHTML+=
-            `
-            <span class="day">`+day+`
-                <span class="delete-day" id="`+index+`"><img class="icon" src="assets/images/close.webp" loading="lazy" alt="delete"></span>
-            </span>
-            
-            `
-        })
-    });
+        function addLocation(name, mapLocation) {
+            this.name = name;
+            this.mapLocation = mapLocation;
+       
+            }
 
 
     document.onclick=function(e){
 
-        //on case of delete country
-        if(e.target.parentElement.classList.contains('delete-country')){
+        //on case of delete work location
+        if(e.target.parentElement.classList.contains('delete-work-location')){
         var id=e.target.parentElement.id;
-        countriesArray.splice(id,1);
-        if(countriesArray.length>0){
-            CountriesBox.style.display="block";
+        workLocations_Array.splice(id,1);
+        if(workLocations_Array.length>0){
+            WorkLocationsBox.style.display="block";
         }
         else{
-            CountriesBox.style.display="none";
+            WorkLocationsBox.style.display="none";
 
 
         }
-        CountriesDiv.innerHTML="";
+        workLocationsDiv.innerHTML="";
+                allWorkLocationsTextArea.value=JSON.stringify(workLocations_Array);
+
+                workLocations_Array.forEach((worklocation,index)=>{
+                    workLocationsDiv.innerHTML+=
+                    `
+                    <span class="work-location">`+worklocation.name+`
+                        <span class="delete-work-location" id="`+index+`"><img class="icon" src="assets/images/close.webp" loading="lazy" alt="delete"></span>
+                    </span>
+                    
+                    `
+                })
         
-        selected_Countries_string_input_field.value=countriesArray.join(",");
-
-        countriesArray.forEach((country,index)=>{
-            CountriesDiv.innerHTML+=
-            `
-            <span class="country">`+country+`
-                <span class="delete-country" id="`+index+`"><img class="icon"  src="assets/images/close.webp" loading="lazy" alt="delete"></span>
-            </span>
-            
-            `;
-        })
         }
-
-        //on case of delete day
-        if(e.target.parentElement.classList.contains('delete-day')){
-        var id=e.target.parentElement.id;
-        daysArray.splice(id,1);
-        if(daysArray.length>0){
-            daysBox.style.display="block";
-        }
-        else{
-            daysBox.style.display="none";
-
-
-        }
-        daysDiv.innerHTML="";
         
-        selected_days_string_input_field.value=daysArray.join(",");
+        //when user click on 
+        if(e.target.id=="add_Name_Location"){
+            e.preventDefault();
+            let workLocation_name_is_Exist= check_validaty_of_workLocation_name();
+            let Google_Map_Location_is_Exist=check_validaty_of_Google_Map_Location();
 
-        daysArray.forEach((day,index)=>{
-            daysDiv.innerHTML+=
-            `
-            <span class="day">`+day+`
-                <span class="delete-day" id="`+index+`"><img class="icon"  src="assets/images/close.webp" loading="lazy" alt="delete"></span>
-            </span>
+            if(workLocation_name_is_Exist && Google_Map_Location_is_Exist){
+
+                if(workLocations_Array.length==0){
+                workLocations_Array.push(new addLocation(workLocation_name.value,Google_Map_Location.value));
+
+
+
+            }else{
+                let checkExist=workLocations_Array.filter((value)=>value.name==workLocation_name.value);
+                console.log(checkExist);
+                if(checkExist.length>0){
+                    console.log("true")
+                }else{
+                    workLocations_Array.push(new addLocation(workLocation_name.value,Google_Map_Location.value));
+
+                }
+            }
+
+                //DON'T DISPLAY THE SELECTED days DIV IF USER DON'T SELECT ANY day YET
+                if(workLocations_Array.length>0){
+                    WorkLocationsBox.style.display="block";
+                }
+                else{
+                    WorkLocationsBox.style.display="none";
+
+
+                }
+                workLocationsDiv.innerHTML="";
+                allWorkLocationsTextArea.value=JSON.stringify(workLocations_Array);
+
+                workLocations_Array.forEach((worklocation,index)=>{
+                    workLocationsDiv.innerHTML+=
+                    `
+                    <span class="work-location">`+worklocation.name+`
+                        <span class="delete-work-location" id="`+index+`"><img class="icon" src="assets/images/close.webp" loading="lazy" alt="delete"></span>
+                    </span>
+                    
+                    `
+                })
+
+            }
+            else{
             
-            `;
-        })
-        }
+            }
+            }
+
+       
     }
 
     </script>
