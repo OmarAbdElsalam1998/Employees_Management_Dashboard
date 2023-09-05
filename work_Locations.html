@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
     <link rel="stylesheet" href="assets/css/main_style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -104,6 +107,19 @@
             .table tbody tr:last-child{
                 border-bottom:0px solid transparent;
             } 
+            .pop-up .inner{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 700px;
+                max-width: 90vw;
+                background-color: #FFF;
+                padding:30px !important;
+                border-radius: 12px;
+                transform: translate(-50%,-50%) !important;
+                transition: all .3s ease-in-out;
+
+    }
      
     </style>
 </head>
@@ -462,18 +478,30 @@
                
                 </div>
          </div>   
+
+           <!-- Confirmation pop up -->
+           <div class="pop-up " >
+            <div class="inner p-5">
+                <h4 class="mb-5">هل انت متأكد من حذف هذا المستخدم؟</h4>
+                    <button id="delete" class="primary-button">حذف</button>
+                    <button id="ClosePopUP" class="third-button">إلغاء</button>
+           
+            </div>
+          </div>
+
+          <!-- End confirmation pop up -->
           
     </main>
 
    
-
+    <script src="assets/js/popUpConfirmationMessage.js"></script>
     <script src="assets/js/main_script.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
         var actions = `<a class="add" title="إضافة" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                                 <a class="edit" title="تعديل" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a class="delete" title="حذف" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>`
+                                <a class="delete " title="حذف" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>`
         // Append table with add row form on add new button click
         $(".add-new").click(function(){
          $(".table-responsive").addClass("active")   ;
@@ -520,10 +548,22 @@
         });
         // Delete row on delete button click
         $(document).on("click", ".delete", function(){
-        $(this).parents("tr").remove();
-        $(".add-new").removeAttr("disabled");
+        $(".pop-up").addClass("show");
+        var self=$(this);
+
+        $("#delete").on("click",function(){
+            $(".add-new").removeAttr("disabled");
+            self.parents("tr").remove();
+            $(".pop-up").removeClass("show");
+
+
+
+
+        })
+        
         });
         });
+        
         </script>
     
 
