@@ -480,10 +480,10 @@
          </div>   
 
            <!-- Confirmation pop up -->
-           <div class="pop-up " >
+           <div class="pop-up delete_workLocation" >
             <div class="inner p-5">
-                <h4 class="mb-5">هل انت متأكد من حذف هذا المستخدم؟</h4>
-                    <button id="delete" class="primary-button">حذف</button>
+                <h4 class="mb-5">هل انت متأكد من حذف هذا الفرع ؟</h4>
+                    <button id="delete" class="primary-button">تأكيد</button>
                     <button id="ClosePopUP" class="third-button">إلغاء</button>
            
             </div>
@@ -491,6 +491,7 @@
 
           <!-- End confirmation pop up -->
           
+           
     </main>
 
    
@@ -548,7 +549,9 @@
         });
         // Delete row on delete button click
         $(document).on("click", ".delete", function(){
-        $(".pop-up").addClass("show");
+        $(".pop-up.delete_workLocation").addClass("show");
+        $
+
         var self=$(this);
 
         $("#delete").on("click",function(){
